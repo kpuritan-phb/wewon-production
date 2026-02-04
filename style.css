@@ -294,10 +294,16 @@ section {
 
 .contact-link {
     font-family: var(--font-display);
-    font-size: 5vw;
+    font-size: clamp(1.5rem, 3.5vw, 5rem);
+    /* Reduced from 5vw to fit long email */
     font-weight: 800;
     border-bottom: 2px solid transparent;
     transition: border-color 0.3s;
+    word-wrap: break-word;
+    /* Ensure it wraps if absolutely necessary */
+    max-width: 90vw;
+    /* Prevent screen overflow */
+    display: inline-block;
 }
 
 .contact-link:hover {
@@ -349,18 +355,23 @@ footer {
         /* Mobile menu needed */
     }
 }
+
 /* Sticky Project Section - Noah Demeuldre Style */
 .sticky-project-section {
     position: relative;
-    padding: 0; /* Full bleed usually */
+    padding: 0;
+    /* Full bleed usually */
     margin: 10vh 0;
 }
 
 .sticky-container {
     position: sticky;
-    top: 10vh; /* Leave space for header */
-    height: 80vh; /* Large visual area */
-    width: 60%; /* Visual occupies left side */
+    top: 10vh;
+    /* Leave space for header */
+    height: 80vh;
+    /* Large visual area */
+    width: 60%;
+    /* Visual occupies left side */
     float: left;
     display: flex;
     justify-content: center;
@@ -377,7 +388,7 @@ footer {
     border-radius: 4px;
 }
 
-.sticky-visual img, 
+.sticky-visual img,
 .sticky-visual video {
     width: 100%;
     height: 100%;
@@ -386,14 +397,17 @@ footer {
 }
 
 .scroll-list {
-    width: 40%; /* Text occupies right side */
+    width: 40%;
+    /* Text occupies right side */
     float: right;
-    padding-top: 10vh; /* Start lower */
+    padding-top: 10vh;
+    /* Start lower */
     padding-bottom: 20vh;
 }
 
 .scroll-item {
-    height: 60vh; /* Each item has height to trigger scroll */
+    height: 60vh;
+    /* Each item has height to trigger scroll */
     display: flex;
     align-items: center;
     padding: 0 4vw;
@@ -407,7 +421,7 @@ footer {
 }
 
 .item-content {
-    border-left: 2px solid rgba(255,255,255,0.1);
+    border-left: 2px solid rgba(255, 255, 255, 0.1);
     padding-left: 2rem;
     transition: border-color 0.3s;
 }
@@ -467,6 +481,7 @@ footer {
         height: auto;
         padding: 2rem 5vw;
         margin-bottom: 2rem;
-        opacity: 1; /* Always visible on mobile */
+        opacity: 1;
+        /* Always visible on mobile */
     }
 }
