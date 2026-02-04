@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="shortcut icon" href="favicon.png">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://wwwwwo.co.kr/omniverse.html">
+    <meta property="og:title" content="WWWWWO OMNIVERSE">
+    <meta property="og:description" content="크리에이터와 콘텐츠가 연결된 세계관, 곧 공개됩니다.">
+    <meta property="og:image" content="https://wwwwwo.co.kr/favicon.png">
+
+    <title>WWWWWO OMNIVERSE</title>
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- GSAP -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <style>
+        .omniverse-container {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            position: relative;
+            z-index: 10;
+        }
+
+        .omniverse-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle at center, #1a1a1a 0%, #0d0d0d 70%);
+            z-index: -1;
+            opacity: 0.5;
+        }
+
+        .back-home {
+            position: absolute;
+            top: 5vh;
+            left: 5vw;
+            color: #666;
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            transition: color 0.3s;
+            z-index: 20;
+        }
+
+        .back-home:hover {
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+
+    <a href="/" class="back-home">← Return to Main</a>
+
+    <div class="omniverse-bg"></div>
+
+    <main class="omniverse-container">
+        <h1 class="display-text reveal-text" style="font-size: clamp(2rem, 5vw, 6rem);">WWWWWO<br>OMNIVERSE</h1>
+
+        <div class="reveal-text" style="margin-top: 3rem; transition-delay: 0.2s;">
+            <p style="font-size: 1.2rem; margin-bottom: 1rem; color: #fff;">
+                WWWWWO OMNIVERSE는 현재 구축 중입니다.
+            </p>
+            <p style="font-size: 1rem; color: #888; font-family: var(--font-display);">
+                크리에이터와 콘텐츠가 연결된 세계관, 곧 공개됩니다.
+            </p>
+        </div>
+    </main>
+
+    <script src="main.js"></script>
+</body>
+
+</html>
