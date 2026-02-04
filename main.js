@@ -1,38 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
 
-    // --- Custom Cursor Logic ---
-    const cursorDot = document.querySelector('.cursor-dot');
-    const cursorOutline = document.querySelector('.cursor-outline');
-
-    // Hide default cursor if needed via CSS, but ensure elements exist
-    if (cursorDot && cursorOutline) {
-        window.addEventListener('mousemove', (e) => {
-            const posX = e.clientX;
-            const posY = e.clientY;
-
-            // Dot follows instantly
-            cursorDot.style.left = `${posX}px`;
-            cursorDot.style.top = `${posY}px`;
-
-            // Outline follows with slight delay (animation in CSS or via JS keyframes)
-            cursorOutline.animate({
-                left: `${posX}px`,
-                top: `${posY}px`
-            }, { duration: 500, fill: "forwards" });
-        });
-
-        // Add hover effect for links and interactive elements
-        const interactiveElements = document.querySelectorAll('a, button, .project-item, .system-item');
-        interactiveElements.forEach(el => {
-            el.addEventListener('mouseenter', () => {
-                document.body.classList.add('hovering');
-            });
-            el.addEventListener('mouseleave', () => {
-                document.body.classList.remove('hovering');
-            });
-        });
-    }
-
     // --- Loading Animation (Simple Fade In) ---
     gsap.from("header", {
         y: -50,

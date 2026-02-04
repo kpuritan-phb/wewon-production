@@ -28,8 +28,6 @@ body {
     overflow-x: hidden;
     scroll-behavior: smooth;
     -webkit-font-smoothing: antialiased;
-    cursor: none;
-    /* Custom cursor */
 }
 
 h1,
@@ -45,43 +43,10 @@ h6 {
 a {
     text-decoration: none;
     color: inherit;
-    cursor: none;
 }
 
 ul {
     list-style: none;
-}
-
-/* Custom Cursor */
-.cursor-dot,
-.cursor-outline {
-    position: fixed;
-    top: 0;
-    left: 0;
-    transform: translate(-50%, -50%);
-    border-radius: 50%;
-    z-index: 9999;
-    pointer-events: none;
-}
-
-.cursor-dot {
-    width: 8px;
-    height: 8px;
-    background-color: white;
-}
-
-.cursor-outline {
-    width: 40px;
-    height: 40px;
-    border: 1px solid rgba(255, 255, 255, 0.5);
-    transition: width 0.2s, height 0.2s, background-color 0.2s;
-}
-
-body.hovering .cursor-outline {
-    width: 60px;
-    height: 60px;
-    background-color: rgba(255, 255, 255, 0.1);
-    border-color: transparent;
 }
 
 /* Typography Utility */
