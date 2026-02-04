@@ -48,65 +48,52 @@
             </div>
         </section>
 
-        <!-- Projects / Portfolio Section -->
-        <section id="projects" class="projects-section">
-            <div class="section-header reveal-text">
-                <h2 class="section-title">Selected Works</h2>
-                <div class="filter-controls">
-                    <!-- Future filters -->
+        <!-- Projects / Portfolio Section (Sticky Scroll Style) -->
+        <section id="projects" class="sticky-project-section">
+            <div class="sticky-container">
+                <div class="sticky-visual">
+                    <img id="dynamic-visual"
+                        src="https://images.unsplash.com/photo-1492691523567-61125645e34b?auto=format&fit=crop&q=80&w=800"
+                        alt="Project Visual">
+                    <!-- Video Element Placeholder (Hidden by default) -->
+                    <video id="dynamic-video" loop muted playsinline style="display:none;"></video>
                 </div>
             </div>
 
-            <!-- 
-                NOTE: Use this structure to populate from Notion data.
-                Each .project-item represents a portfolio entry.
-            -->
-            <div class="project-grid">
-                <!-- Item 1 -->
-                <div class="project-item reveal-text">
-                    <div class="project-thumb">
-                        <img src="https://images.unsplash.com/photo-1492691523567-61125645e34b?auto=format&fit=crop&q=80&w=800"
-                            alt="Project 1">
-                    </div>
-                    <div class="project-info">
-                        <h3 class="project-title">Brand Commercial</h3>
-                        <span class="project-cat">TVC / Campaign</span>
+            <div class="scroll-list">
+                <div class="scroll-item"
+                    data-img="https://images.unsplash.com/photo-1492691523567-61125645e34b?auto=format&fit=crop&q=80&w=800">
+                    <div class="item-content">
+                        <span class="item-cat">TVC / Campaign</span>
+                        <h2 class="item-title">Brand Commercial</h2>
+                        <p class="item-desc">Creating a new standard for visual storytelling.</p>
                     </div>
                 </div>
 
-                <!-- Item 2 -->
-                <div class="project-item reveal-text">
-                    <div class="project-thumb">
-                        <img src="https://images.unsplash.com/photo-1550745619-7214ad4a0913?auto=format&fit=crop&q=80&w=800"
-                            alt="Project 2">
-                    </div>
-                    <div class="project-info">
-                        <h3 class="project-title">Music Video Project</h3>
-                        <span class="project-cat">M/V</span>
+                <div class="scroll-item"
+                    data-img="https://images.unsplash.com/photo-1550745619-7214ad4a0913?auto=format&fit=crop&q=80&w=800">
+                    <div class="item-content">
+                        <span class="item-cat">M/V Production</span>
+                        <h2 class="item-title">Music Video Project</h2>
+                        <p class="item-desc">Visualizing sound through dynamic motion.</p>
                     </div>
                 </div>
 
-                <!-- Item 3 -->
-                <div class="project-item reveal-text">
-                    <div class="project-thumb">
-                        <img src="https://images.unsplash.com/photo-1485846234645-a62644f84728?auto=format&fit=crop&q=80&w=800"
-                            alt="Project 3">
-                    </div>
-                    <div class="project-info">
-                        <h3 class="project-title">Documentary Series</h3>
-                        <span class="project-cat">Short Film</span>
+                <div class="scroll-item"
+                    data-img="https://images.unsplash.com/photo-1485846234645-a62644f84728?auto=format&fit=crop&q=80&w=800">
+                    <div class="item-content">
+                        <span class="item-cat">Short Film</span>
+                        <h2 class="item-title">Documentary Series</h2>
+                        <p class="item-desc">Capturing real moments with cinematic depth.</p>
                     </div>
                 </div>
 
-                <!-- Item 4 -->
-                <div class="project-item reveal-text">
-                    <div class="project-thumb">
-                        <img src="https://images.unsplash.com/photo-1579546929518-9e396f3cc809?auto=format&fit=crop&q=80&w=800"
-                            alt="Project 4">
-                    </div>
-                    <div class="project-info">
-                        <h3 class="project-title">Corporate Vision</h3>
-                        <span class="project-cat">Brand Film</span>
+                <div class="scroll-item"
+                    data-img="https://images.unsplash.com/photo-1579546929518-9e396f3cc809?auto=format&fit=crop&q=80&w=800">
+                    <div class="item-content">
+                        <span class="item-cat">Brand Film</span>
+                        <h2 class="item-title">Corporate Vision</h2>
+                        <p class="item-desc">Defining identity through powerful imagery.</p>
                     </div>
                 </div>
             </div>
