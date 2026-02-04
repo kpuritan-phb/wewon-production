@@ -82,62 +82,96 @@ document.addEventListener('DOMContentLoaded', () => {
 
 });
 
-    // --- Sticky Scroll Logic ---
-    const scrollItems = document.querySelectorAll('.scroll-item');
-    const dynamicVisual = document.getElementById('dynamic-visual');
-    const dynamicVideo = document.getElementById('dynamic-video');
-    
-    if (scrollItems.length > 0 && dynamicVisual) {
-        const observerOptions = {
-            root: null,
-            rootMargin: '-40% 0px -40% 0px', // Trigger when item is near center
-            threshold: 0
-        };
+// --- Sticky Scroll Logic ---
+const scrollItems = document.querySelectorAll('.scroll-item');
+const dynamicVisual = document.getElementById('dynamic-visual');
+const dynamicVideo = document.getElementById('dynamic-video');
 
-        const stickyObserver = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    // Update Active State
-                    scrollItems.forEach(item => item.classList.remove('active'));
-                    entry.target.classList.add('active');
+if (scrollItems.length > 0 && dynamicVisual) {
+    const observerOptions = {
+        root: null,
+        rootMargin: '-40% 0px -40% 0px', // Trigger when item is near center
+        threshold: 0
+    };
 
-                    // Update Visual
-                    const newImgSrc = entry.target.dataset.img;
-                    const newVideoSrc = entry.target.dataset.video;
+    const stickyObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                // Update Active State
+                scrollItems.forEach(item => item.classList.remove('active'));
+                entry.target.classList.add('active');
 
-                    // Transition Output (Simple Fade)
-                    
-                    if (newVideoSrc && dynamicVideo) {
-                        // Switch to Video
-                        dynamicVisual.style.opacity = 0;
-                        dynamicVideo.style.display = 'block';
-                        dynamicVideo.style.opacity = 1;
-                        if(dynamicVideo.src !== newVideoSrc) {
-                            dynamicVideo.src = newVideoSrc;
-                            dynamicVideo.play().catch(e => console.log('Autoplay blocked', e));
-                        }
-                    } else if (newImgSrc) {
-                        // Switch to Image
-                        if(dynamicVideo) {
-                            dynamicVideo.style.opacity = 0;
-                            setTimeout(() => { dynamicVideo.style.display = 'none'; }, 500);
-                        }
-                        
-                        // Cross-fade image
-                        // Preload first to avoid blink, then swap
-                        const tempImg = new Image();
-                        tempImg.src = newImgSrc;
-                        tempImg.onload = () => {
-                            dynamicVisual.style.opacity = 0;
-                            setTimeout(() => {
-                                dynamicVisual.src = newImgSrc;
-                                dynamicVisual.style.opacity = 1;
-                            }, 300); // Wait for fade out
-                        };
+                // Update Visual
+                const newImgSrc = entry.target.dataset.img;
+                const newVideoSrc = entry.target.dataset.video;
+
+                // Transition Output (Simple Fade)
+
+                if (newVideoSrc && dynamicVideo) {
+                    // Switch to Video
+                    dynamicVisual.style.opacity = 0;
+                    dynamicVideo.style.display = 'block';
+                    dynamicVideo.style.opacity = 1;
+                    if (dynamicVideo.src !== newVideoSrc) {
+                        dynamicVideo.src = newVideoSrc;
+                        dynamicVideo.play().catch(e => console.log('Autoplay blocked', e));
                     }
-                }
-            });
-        }, observerOptions);
+                } else if (newImgSrc) {
+                    // Switch to Image
+                    if (dynamicVideo) {
+                        dynamicVideo.style.opacity = 0;
+                        setTimeout(() => { dynamicVideo.style.display = 'none'; }, 500);
+                    }
 
-        scrollItems.forEach(item => stickyObserver.observe(item));
+                    // Cross-fade image
+                    // Preload first to avoid blink, then swap
+                    const tempImg = new Image();
+                    tempImg.src = newImgSrc;
+                    tempImg.onload = () => {
+                        dynamicVisual.style.opacity = 0;
+                        setTimeout(() => {
+                            dynamicVisual.src = newImgSrc;
+                            dynamicVisual.style.opacity = 1;
+                        }, 300); // Wait for fade out
+                    };
+                }
+            }
+        });
+    }, observerOptions);
+
+    scrollItems.forEach(item => stickyObserver.observe(item));
+}
+
+// --- Interactive Navigation Logic for Mobile ---
+const navContainers = document.querySelectorAll('.nav-item-container');
+
+navContainers.forEach(container => {
+    const link = container.querySelector('.nav-item');
+    if (!link) return;
+
+    link.addEventListener('click', (e) => {
+        // Only apply "double tap" logic on mobile or small screens
+        if (window.innerWidth <= 768) {
+            // If not already active, prevent default navigation and show info
+            if (!container.classList.contains('active')) {
+                e.preventDefault();
+
+                // Reset others
+                navContainers.forEach(c => c.classList.remove('active'));
+
+                // Activate current
+                container.classList.add('active');
+            }
+            // If already active, allow click to proceed (navigate)
+        }
+    });
+});
+
+// Close menu when clicking outside on mobile
+document.addEventListener('click', (e) => {
+    if (window.innerWidth <= 768) {
+        if (!e.target.closest('.brand-nav')) {
+            navContainers.forEach(c => c.classList.remove('active'));
+        }
     }
+});
