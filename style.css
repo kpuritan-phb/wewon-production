@@ -1,5 +1,5 @@
 /* Font Imports */
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Syne:wght@400;700;800&display=swap');
 
 :root {
     --bg-color: #0d0d0d;
@@ -9,6 +9,8 @@
     --nav-height: 80px;
     --transition-speed: 0.6s;
     --easing: cubic-bezier(0.22, 1, 0.36, 1);
+    --font-display: 'Syne', sans-serif;
+    --font-body: 'Inter', sans-serif;
 }
 
 * {
@@ -22,12 +24,22 @@ body {
     width: 100%;
     background-color: var(--bg-color);
     color: var(--text-color);
-    font-family: 'Inter', sans-serif;
+    font-family: var(--font-body);
     overflow-x: hidden;
     scroll-behavior: smooth;
     -webkit-font-smoothing: antialiased;
     cursor: none;
     /* Custom cursor */
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: var(--font-display);
+    font-weight: 800;
 }
 
 a {
@@ -74,14 +86,17 @@ body.hovering .cursor-outline {
 
 /* Typography Utility */
 .serif {
-    font-family: 'Playfair Display', serif;
+    font-family: var(--font-display);
+    font-weight: 800;
 }
 
 .display-text {
+    font-family: var(--font-display);
     font-size: clamp(3rem, 8vw, 10rem);
     line-height: 0.9;
-    letter-spacing: -0.03em;
-    font-weight: 400;
+    letter-spacing: -0.02em;
+    font-weight: 800;
+    text-transform: uppercase;
 }
 
 /* Header */
@@ -100,8 +115,9 @@ header {
 }
 
 .logo {
-    font-size: 1.2rem;
-    font-weight: 600;
+    font-family: var(--font-display);
+    font-size: 1.5rem;
+    font-weight: 800;
     letter-spacing: 0.05em;
     text-transform: uppercase;
 }
@@ -250,9 +266,9 @@ section {
 }
 
 .project-title {
-    font-family: 'Playfair Display', serif;
+    font-family: var(--font-display);
     font-size: 1.8rem;
-    font-weight: 400;
+    font-weight: 800;
 }
 
 .project-cat {
@@ -291,12 +307,15 @@ section {
     font-size: 0.9rem;
     margin-bottom: 1rem;
     display: block;
-    font-family: 'Inter', sans-serif;
+    font-family: var(--font-body);
+    /* Number looks better in Inter usually */
+    font-weight: 600;
 }
 
 .system-title {
     font-size: 3rem;
-    font-family: 'Playfair Display', serif;
+    font-family: var(--font-display);
+    font-weight: 800;
 }
 
 /* Contact */
@@ -309,8 +328,9 @@ section {
 }
 
 .contact-link {
-    font-family: 'Playfair Display', serif;
+    font-family: var(--font-display);
     font-size: 5vw;
+    font-weight: 800;
     border-bottom: 2px solid transparent;
     transition: border-color 0.3s;
 }
