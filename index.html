@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WI-WON PRODUCTION</title>
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- GSAP for Smooth Animations (Noah style) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+</head>
+
+<body>
+
+    <!-- Custom Cursor -->
+    <div class="cursor-dot"></div>
+    <div class="cursor-outline"></div>
+
+    <!-- Navigation -->
+    <header>
+        <a href="#" class="logo">WI-WON</a>
+        <nav class="nav-menu">
+            <a href="#projects" class="nav-link">PROJECTS</a>
+            <a href="#system" class="nav-link">SYSTEM</a>
+            <a href="#about" class="nav-link">ABOUT</a>
+            <a href="#contact" class="nav-link">CONTACT</a>
+        </nav>
+        <div class="mobile-toggle" style="display:none;">MENU</div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-text-container">
+                <h1 class="display-text reveal-text">WE WANT,</h1>
+                <h1 class="display-text reveal-text" style="padding-left: 10vw;">WE WON,</h1>
+                <h1 class="display-text reveal-text serif">WE ONE.</h1>
+            </div>
+            <div class="hero-sub reveal-text" style="transition-delay: 0.3s;">
+                <p>단순한 영상을 넘어 브랜드를 완성하는 미디어 프로덕션, 위원입니다.<br>
+                    Creative Media Production rooted in Strategy.</p>
+            </div>
+
+            <div class="hero-overlay">
+                <!-- Placeholder Image - Replace with Notion 'Main Hero' image if available -->
+                <img src="https://images.unsplash.com/photo-1536440136628-849c177e76a1?auto=format&fit=crop&q=80&w=800"
+                    alt="Cinematic Camera">
+            </div>
+        </section>
+
+        <!-- Projects / Portfolio Section -->
+        <section id="projects" class="projects-section">
+            <div class="section-header reveal-text">
+                <h2 class="section-title">Selected Works</h2>
+                <div class="filter-controls">
+                    <!-- Future filters -->
+                </div>
+            </div>
+
+            <!-- 
+                NOTE: Use this structure to populate from Notion data.
+                Each .project-item represents a portfolio entry.
+            -->
+            <div class="project-grid">
+                <!-- Item 1 -->
+                <div class="project-item reveal-text">
+                    <div class="project-thumb">
+                        <img src="https://images.unsplash.com/photo-1492691523567-61125645e34b?auto=format&fit=crop&q=80&w=800"
+                            alt="Project 1">
+                    </div>
+                    <div class="project-info">
+                        <h3 class="project-title">Brand Commercial</h3>
+                        <span class="project-cat">TVC / Campaign</span>
+                    </div>
+                </div>
+
+                <!-- Item 2 -->
+                <div class="project-item reveal-text">
+                    <div class="project-thumb">
+                        <img src="https://images.unsplash.com/photo-1550745619-7214ad4a0913?auto=format&fit=crop&q=80&w=800"
+                            alt="Project 2">
+                    </div>
+                    <div class="project-info">
+                        <h3 class="project-title">Music Video Project</h3>
+                        <span class="project-cat">M/V</span>
+                    </div>
+                </div>
+
+                <!-- Item 3 -->
+                <div class="project-item reveal-text">
+                    <div class="project-thumb">
+                        <img src="https://images.unsplash.com/photo-1485846234645-a62644f84728?auto=format&fit=crop&q=80&w=800"
+                            alt="Project 3">
+                    </div>
+                    <div class="project-info">
+                        <h3 class="project-title">Documentary Series</h3>
+                        <span class="project-cat">Short Film</span>
+                    </div>
+                </div>
+
+                <!-- Item 4 -->
+                <div class="project-item reveal-text">
+                    <div class="project-thumb">
+                        <img src="https://images.unsplash.com/photo-1579546929518-9e396f3cc809?auto=format&fit=crop&q=80&w=800"
+                            alt="Project 4">
+                    </div>
+                    <div class="project-info">
+                        <h3 class="project-title">Corporate Vision</h3>
+                        <span class="project-cat">Brand Film</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- System (Process) Section -->
+        <section id="system">
+            <div class="section-header reveal-text">
+                <h2 class="section-title">The System</h2>
+            </div>
+
+            <div class="system-section">
+                <div class="system-desc reveal-text">
+                    <p style="font-size: 1.1rem; line-height: 1.6; color: #aaa;">
+                        위원 프로덕션은 체계적이고 투명한 프로세스를 통해<br>
+                        클라이언트와의 신뢰를 최우선으로 합니다.
+                    </p>
+                </div>
+                <div class="system-list">
+                    <div class="system-item reveal-text">
+                        <span class="system-num">01</span>
+                        <h3 class="system-title">Planning</h3>
+                        <p style="margin-top:10px; color:#666;">컨셉 도출 및 스토리보드 기획</p>
+                    </div>
+                    <div class="system-item reveal-text">
+                        <span class="system-num">02</span>
+                        <h3 class="system-title">Pre-Production</h3>
+                        <p style="margin-top:10px; color:#666;">로케이션, 캐스팅, 스케줄링</p>
+                    </div>
+                    <div class="system-item reveal-text">
+                        <span class="system-num">03</span>
+                        <h3 class="system-title">Production</h3>
+                        <p style="margin-top:10px; color:#666;">촬영, 조명, 사운드</p>
+                    </div>
+                    <div class="system-item reveal-text">
+                        <span class="system-num">04</span>
+                        <h3 class="system-title">Post-Production</h3>
+                        <p style="margin-top:10px; color:#666;">편집, DI, 사운드 믹싱</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" style="padding-bottom: 0;">
+            <div class="section-header reveal-text">
+                <h2 class="section-title">About Us</h2>
+            </div>
+            <div style="font-size: clamp(1.5rem, 3vw, 2.5rem); line-height: 1.4; font-weight: 300;" class="reveal-text">
+                We create value through visuals.<br>
+                Based in Seoul, working globally.
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact-section">
+            <div class="reveal-text">
+                <p style="margin-bottom: 2rem; letter-spacing: 0.2em; font-size: 0.9rem; text-transform: uppercase;">
+                    Start a Project</p>
+                <a href="mailto:contact@wwwwwo.kr" class="contact-link">contact@wwwwwo.kr</a>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <div>&copy; 2026 WI-WON PRODUCTION</div>
+        <div>INSTAGRAM</div>
+        <div>SEOUL, KOREA</div>
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+
+</html>
