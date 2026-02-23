@@ -826,3 +826,132 @@ footer {
         font-size: 1.2rem;
     }
 }
+
+/* Subpage & MVP Utilities */
+.subpage-hero {
+    min-height: 40vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: var(--nav-height) 5vw 2rem 5vw;
+}
+
+.subpage-title {
+    font-size: clamp(3rem, 10vw, 8rem);
+    text-transform: uppercase;
+    line-height: 1;
+    margin-bottom: 2rem;
+}
+
+.subpage-desc {
+    font-size: 1.2rem;
+    color: var(--accent-color);
+    max-width: 600px;
+    line-height: 1.6;
+}
+
+.content-section {
+    padding: 5vh 5vw;
+}
+
+.mvp-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 3rem;
+    margin-top: 3rem;
+}
+
+/* FAQ Style (Reusing system-item logic) */
+.faq-item {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 2rem 0;
+    cursor: pointer;
+}
+
+.faq-question {
+    font-family: var(--font-display);
+    font-size: 1.8rem;
+    font-weight: 700;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s var(--easing), margin-top 0.5s;
+    color: #888;
+    line-height: 1.6;
+}
+
+.faq-item.active .faq-answer {
+    max-height: 500px;
+    margin-top: 1.5rem;
+}
+
+.faq-icon {
+    transition: transform 0.3s;
+}
+
+.faq-item.active .faq-icon {
+    transform: rotate(45deg);
+}
+
+/* CTA Section */
+.cta-section {
+    padding: 15vh 5vw;
+    text-align: center;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.cta-sub {
+    font-size: 0.8rem;
+    letter-spacing: 0.3em;
+    color: #666;
+    text-transform: uppercase;
+    margin-bottom: 2rem;
+    display: block;
+}
+
+/* Brand Grid for With Us */
+.brand-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 4rem;
+    align-items: center;
+    opacity: 0.5;
+    margin: 4rem 0;
+}
+
+.brand-item {
+    text-align: center;
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: 1.2rem;
+    letter-spacing: 0.1em;
+}
+
+/* Subpage Nav Active State */
+.nav-item-container.active-page .nav-word {
+    max-width: 200px;
+    opacity: 1;
+    margin-left: 2px;
+}
+
+/* Dark mode forced for subpages unless specified */
+body.dark-subpage {
+    background-color: #0d0d0d;
+    color: #f0f0f0;
+}
+
+body.dark-subpage header {
+    background: transparent;
+    border-bottom: none;
+    backdrop-filter: none;
+}
+
+body.dark-subpage .nav-item,
+body.dark-subpage .separator {
+    color: #fff !important;
+}

@@ -7,14 +7,7 @@
     <link rel="icon" type="image/png" href="favicon.png">
     <link rel="shortcut icon" href="favicon.png">
 
-    <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://wwwwwo.co.kr/omniverse.html">
-    <meta property="og:title" content="WWWWWO OMNIVERSE">
-    <meta property="og:description" content="크리에이터와 콘텐츠가 연결된 세계관, 곧 공개됩니다.">
-    <meta property="og:image" content="https://wwwwwo.co.kr/favicon.png">
-
-    <title>WWWWWO OMNIVERSE</title>
+    <title>WHO | WE WON PRODUCTION</title>
     <!-- CSS -->
     <link rel="stylesheet" href="style.css">
     <!-- Font Awesome -->
@@ -22,45 +15,6 @@
     <!-- GSAP -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
-    <style>
-        .omniverse-container {
-            height: 100vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            position: relative;
-            z-index: 10;
-        }
-
-        .omniverse-bg {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: radial-gradient(circle at center, #1a1a1a 0%, #0d0d0d 70%);
-            z-index: -1;
-            opacity: 0.5;
-        }
-
-        .back-home {
-            position: absolute;
-            top: 5vh;
-            left: 5vw;
-            color: #666;
-            font-size: 0.8rem;
-            text-transform: uppercase;
-            letter-spacing: 0.1em;
-            transition: color 0.3s;
-            z-index: 20;
-        }
-
-        .back-home:hover {
-            color: white;
-        }
-    </style>
 </head>
 
 <body class="dark-subpage">
@@ -113,22 +67,51 @@
         </nav>
     </header>
 
-    <div class="omniverse-bg"></div>
+    <main>
+        <!-- MVP Hero -->
+        <section class="subpage-hero">
+            <h1 class="subpage-title reveal-text">WHO</h1>
+            <p class="subpage-desc reveal-text">WE CREATE VALUE THROUGH VISUALS.</p>
+        </section>
 
-    <main class="omniverse-container">
-        <h1 class="display-text reveal-text" style="font-size: clamp(2rem, 5vw, 6rem);">WWWWWO<br>OMNIVERSE</h1>
+        <!-- MVP Content: 3줄 요약 & 팀 -->
+        <section class="content-section">
+            <div class="reveal-text" style="font-size: 1.5rem; line-height: 1.8; margin-bottom: 5rem;">
+                <p>1. 우리는 브랜드의 본질을 파고드는 전략적인 영상을 제작합니다.</p>
+                <p>2. 유행을 따르기보다 시대를 이끄는 아트워크를 제안합니다.</p>
+                <p>3. 기획부터 포스트 프로덕션까지 모든 과정을 완벽하게 통제합니다.</p>
+            </div>
 
-        <div class="reveal-text" style="margin-top: 3rem; transition-delay: 0.2s;">
-            <p style="font-size: 1.2rem; margin-bottom: 1rem; color: #fff;">
-                WWWWWO OMNIVERSE는 현재 구축 중입니다.
-            </p>
-            <p style="font-size: 1rem; color: #888; font-family: var(--font-display);">
-                크리에이터와 콘텐츠가 연결된 세계관, 곧 공개됩니다.
-            </p>
-        </div>
+            <div class="section-header reveal-text">
+                <h2 class="section-title" style="font-size: 1.5rem;">OUR TEAM</h2>
+            </div>
+            <div class="mvp-grid reveal-text" style="gap: 1.5rem;">
+                <div style="border-left: 2px solid rgba(255,255,255,0.2); padding-left: 1.5rem;">
+                    <h3 style="font-size: 1.2rem; margin-bottom: 0.5rem;">Executive Producer</h3>
+                    <p style="color: #888; font-size: 0.9rem;">Sumin</p>
+                </div>
+                <!-- Additional Team Members Placeholder -->
+                <div style="border-left: 2px solid rgba(255,255,255,0.2); padding-left: 1.5rem;">
+                    <h3 style="font-size: 1.2rem; margin-bottom: 0.5rem;">Creative Director</h3>
+                    <p style="color: #888; font-size: 0.9rem;">Wewon</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="cta-section reveal-text">
+            <span class="cta-sub">READY TO START?</span>
+            <a href="with-us.html" class="contact-link" style="font-size: clamp(2rem, 5vw, 4rem);">WITH US →</a>
+        </section>
     </main>
 
-    <script src="main.js"></script>
+    <footer>
+        <div>&copy; 2026 WE WON PRODUCTION</div>
+        <div>INSTAGRAM</div>
+        <div>SEOUL, KOREA</div>
+    </footer>
+
+    <script type="module" src="main.js"></script>
 </body>
 
 </html>

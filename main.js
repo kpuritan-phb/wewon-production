@@ -2,6 +2,18 @@ import works from './works.js';
 
 document.addEventListener('DOMContentLoaded', () => {
 
+    // --- Active Page Highlighting ---
+    const currentPath = window.location.pathname;
+    const navLinks = document.querySelectorAll('.nav-item');
+    navLinks.forEach(link => {
+        const href = link.getAttribute('href');
+        if (href !== '/' && currentPath.includes(href.replace('.html', ''))) {
+            link.closest('.nav-item-container').classList.add('active-page');
+        } else if (href === '/' && (currentPath === '/' || currentPath.endsWith('index.html'))) {
+            // Home is handled by default often, but can be explicit
+        }
+    });
+
     // --- Loading Animation ---
     gsap.from("header", {
         y: -50,
@@ -11,23 +23,8 @@ document.addEventListener('DOMContentLoaded', () => {
         delay: 0.5
     });
 
-    // --- Scroll Animations ---
-    const heroTexts = document.querySelectorAll('.hero .reveal-text');
-    if (heroTexts.length > 0) {
-        gsap.fromTo(heroTexts,
-            { y: 100, opacity: 0 },
-            {
-                y: 0,
-                opacity: 1,
-                duration: 1.2,
-                stagger: 0.2,
-                ease: "power3.out",
-                delay: 0.2
-            }
-        );
-    }
-
-    const revealElements = document.querySelectorAll('.reveal-text:not(.hero .reveal-text)');
+    // --- Scroll Animations (Reveal Text) ---
+    const revealElements = document.querySelectorAll('.reveal-text');
     const observerOptions = {
         root: null,
         rootMargin: '0px',
@@ -53,7 +50,7 @@ document.addEventListener('DOMContentLoaded', () => {
         sectionObserver.observe(el);
     });
 
-    // --- Sticky Scroll Logic (For index.html) ---
+    // --- Sticky Scroll Logic (Only for index.html) ---
     const scrollItems = document.querySelectorAll('.scroll-item');
     const dynamicVisual = document.getElementById('dynamic-visual');
     const dynamicVideo = document.getElementById('dynamic-video');
@@ -98,7 +95,7 @@ document.addEventListener('DOMContentLoaded', () => {
         scrollItems.forEach(item => stickyObserver.observe(item));
     }
 
-    // --- Works Logic (For works.html) ---
+    // --- Works Grid Logic (Only for works.html) ---
     const worksGrid = document.getElementById('works-grid');
     if (worksGrid) {
         const filterItems = document.querySelectorAll('.filter-item');
@@ -126,12 +123,14 @@ document.addEventListener('DOMContentLoaded', () => {
                     </div>
                 `;
                 workItem.addEventListener('click', () => {
-                    modalTitle.textContent = work.title;
-                    modalClient.textContent = work.client;
-                    modalDesc.textContent = work.description;
-                    modalIframe.src = work.videoUrl;
-                    modal.style.display = 'flex';
-                    document.body.style.overflow = 'hidden';
+                    if (modal) {
+                        modalTitle.textContent = work.title;
+                        modalClient.textContent = work.client;
+                        modalDesc.textContent = work.description;
+                        modalIframe.src = work.videoUrl;
+                        modal.style.display = 'flex';
+                        document.body.style.overflow = 'hidden';
+                    }
                 });
                 worksGrid.appendChild(workItem);
                 sectionObserver.observe(workItem);
@@ -158,18 +157,29 @@ document.addEventListener('DOMContentLoaded', () => {
             item.addEventListener('click', () => {
                 filterItems.forEach(i => i.classList.remove('active'));
                 item.classList.add('active');
-                renderWorks(item.dataset.filter);
+                renderWorks(item.getAttribute('data-filter'));
             });
         });
 
         renderWorks();
     }
 
+    // --- FAQ Logic (Only for workflow.html) ---
+    const faqItems = document.querySelectorAll('.faq-item');
+    faqItems.forEach(item => {
+        item.addEventListener('click', () => {
+            const isActive = item.classList.contains('active');
+            faqItems.forEach(i => i.classList.remove('active'));
+            if (!isActive) item.classList.add('active');
+        });
+    });
+
     // --- Navigation Logic for Mobile ---
     const navContainers = document.querySelectorAll('.nav-item-container');
     navContainers.forEach(container => {
         const link = container.querySelector('.nav-item');
         if (!link) return;
+
         link.addEventListener('click', (e) => {
             if (window.innerWidth <= 768) {
                 if (!container.classList.contains('active')) {
