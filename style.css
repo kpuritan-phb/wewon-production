@@ -481,6 +481,100 @@ footer {
     }
 }
 
+/* Sticky Project Section - Noah Demeuldre Style */
+.sticky-project-section {
+    position: relative;
+    padding: 0;
+    margin: 10vh 0;
+}
+
+.sticky-container {
+    position: sticky;
+    top: 10vh;
+    height: 80vh;
+    width: 60%;
+    float: left;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 5vw;
+    z-index: 10;
+}
+
+.sticky-visual {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+    border-radius: 4px;
+}
+
+.sticky-visual img,
+.sticky-visual video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.scroll-list {
+    width: 40%;
+    float: right;
+    padding-top: 10vh;
+    padding-bottom: 20vh;
+}
+
+.scroll-item {
+    height: 60vh;
+    display: flex;
+    align-items: center;
+    padding: 0 4vw;
+    opacity: 0.3;
+    transition: opacity 0.3s;
+    cursor: pointer;
+}
+
+.scroll-item.active {
+    opacity: 1;
+}
+
+.item-content {
+    border-left: 2px solid rgba(255, 255, 255, 0.1);
+    padding-left: 2rem;
+    transition: border-color 0.3s;
+}
+
+.scroll-item.active .item-content {
+    border-left-color: white;
+}
+
+.item-cat {
+    display: block;
+    font-size: 0.8rem;
+    color: #666;
+    margin-bottom: 0.5rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+}
+
+.item-title {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    line-height: 1.1;
+}
+
+.item-desc {
+    color: #aaa;
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+.sticky-project-section::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
 /* Works Section (4BFILM Style) */
 .works-section {
     padding: 15vh 0 0 0;
@@ -514,8 +608,11 @@ footer {
 
 /* Filters */
 .works-filter-container {
-    padding: 0 5vw;
-    margin-bottom: 5rem;
+    background-color: #ffffff;
+    padding: 2rem 5vw;
+    position: sticky;
+    top: 0;
+    z-index: 100;
 }
 
 .works-filters {
@@ -682,6 +779,32 @@ footer {
 @media (max-width: 1024px) {
     .works-grid {
         grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .sticky-container {
+        position: relative;
+        width: 100%;
+        height: 50vh;
+        float: none;
+        top: 0;
+        padding: 0 5vw;
+        margin-bottom: 2rem;
+    }
+
+    .scroll-list {
+        width: 100%;
+        float: none;
+        padding-top: 0;
+        padding-bottom: 5vh;
+    }
+
+    .scroll-item {
+        height: auto;
+        padding: 2rem 5vw;
+        margin-bottom: 2rem;
+        opacity: 1;
     }
 }
 
