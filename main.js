@@ -129,22 +129,33 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // 썸네일 URL을 지능적으로 결정하는 헬퍼 함수
         function deduceThumbnail(work) {
-            // 1. 이미 정의된 썸네일이 있으면 사용
-            if (work.thumbnail && !work.thumbnail.includes('unsplash')) return work.thumbnail;
+            // 1. 이미 정의된 썸네일(로컬 포함)이 있으면 우선 사용
+            if (work.thumbnail && (work.thumbnail.includes('images/') || !work.thumbnail.includes('unsplash'))) {
+                return work.thumbnail;
+            }
 
             const url = work.videoUrl;
-            if (!url) return 'images/placeholder-works.jpg';
+            if (!url) return work.thumbnail || 'https://images.unsplash.com/photo-1492691523567-61125645e34b?auto=format&fit=crop&q=80&w=800';
 
             // 2. 유튜브 썸네일 자동 추출
             if (url.includes('youtube.com') || url.includes('youtu.be')) {
-                // embed URL에서 ID 추출
-                const parts = url.split('/');
-                const videoId = parts[parts.length - 1].split('?')[0];
+                let videoId = '';
+                if (url.includes('embed/')) {
+                    videoId = url.split('embed/')[1].split('?')[0];
+                } else if (url.includes('v=')) {
+                    videoId = url.split('v=')[1].split('&')[0];
+                } else {
+                    videoId = url.split('/').pop().split('?')[0];
+                }
+
+                // 테스트용 샘플 ID일 경우 기존 썸네일 유지
+                if (videoId === 'dQw4w9WgXcQ' && work.thumbnail) return work.thumbnail;
+
                 return `https://img.youtube.com/vi/${videoId}/maxresdefault.jpg`;
             }
 
             // 3. 기타 (기본 수동 입력된 썸네일 또는 기본 이미지)
-            return work.thumbnail || 'images/placeholder-works.jpg';
+            return work.thumbnail || 'https://images.unsplash.com/photo-1492691523567-61125645e34b?auto=format&fit=crop&q=80&w=800';
         }
 
         // 카드 DOM 생성
