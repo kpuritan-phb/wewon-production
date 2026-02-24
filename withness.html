@@ -39,6 +39,8 @@
             width: 100%;
             height: 100%;
             object-fit: cover;
+            object-position: center 20%;
+            /* 얼굴이 위쪽에 있는 경우가 많으므로 상단 위주 배치 */
             display: block;
             filter: grayscale(100%) brightness(0.85);
             transition: filter 0.6s var(--easing), transform 0.6s var(--easing);
@@ -50,18 +52,65 @@
             transform: scale(1.03);
         }
 
-        /* ── 촘촘한 배치 (3컬럼 기반) ── */
-        .tile-1 { grid-column: span 8; grid-row: span 6; }
-        .tile-2 { grid-column: span 4; grid-row: span 6; }
-        .tile-3 { grid-column: span 3; grid-row: span 10; }
-        .tile-4 { grid-column: span 5; grid-row: span 5; }
-        .tile-5 { grid-column: span 4; grid-row: span 5; }
-        .tile-6 { grid-column: span 5; grid-row: span 5; }
-        .tile-7 { grid-column: span 4; grid-row: span 5; }
-        .tile-8 { grid-column: span 6; grid-row: span 6; }
-        .tile-9 { grid-column: span 6; grid-row: span 6; }
-        .tile-10 { grid-column: span 12; grid-row: span 8; }
-        .tile-11 { grid-column: span 12; grid-row: span 9; }
+        /* ── Portrait-Focused Mosaic Layout ── */
+        .tile-1 {
+            grid-column: span 4;
+            grid-row: span 10;
+        }
+
+        /* Portrait */
+        .tile-2 {
+            grid-column: span 4;
+            grid-row: span 5;
+        }
+
+        /* Square */
+        .tile-3 {
+            grid-column: span 4;
+            grid-row: span 10;
+        }
+
+        /* Portrait */
+        .tile-4 {
+            grid-column: span 4;
+            grid-row: span 5;
+        }
+
+        /* Square (under tile-2) */
+        .tile-5 {
+            grid-column: span 4;
+            grid-row: span 6;
+        }
+
+        .tile-6 {
+            grid-column: span 4;
+            grid-row: span 6;
+        }
+
+        .tile-7 {
+            grid-column: span 4;
+            grid-row: span 6;
+        }
+
+        .tile-8 {
+            grid-column: span 6;
+            grid-row: span 8;
+        }
+
+        .tile-9 {
+            grid-column: span 6;
+            grid-row: span 8;
+        }
+
+        .tile-10 {
+            grid-column: span 12;
+            grid-row: span 8;
+        }
+
+        .tile-11 {
+            grid-column: span 12;
+            grid-row: span 9;
+        }
 
         /* ── 모바일 ── */
         @media (max-width: 768px) {
