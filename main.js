@@ -163,24 +163,20 @@ document.addEventListener('DOMContentLoaded', () => {
             const el = document.createElement('div');
             el.className = 'work-item reveal-text';
 
-            // 영상 화면이 바로 나오게 iframe 사용
-            let visualElement = '';
-            if (work.videoUrl) {
-                let iframeSrc = work.videoUrl;
-                visualElement = `<iframe src="${iframeSrc}"
-                                        style="width: 100%; height: 100%; pointer-events: none; border: none; background: black; transform: scale(1.01);"
-                                        allowfullscreen
-                                        loading="lazy"></iframe>`;
-            } else {
-                const thumbUrl = deduceThumbnail(work);
-                visualElement = `<img src="${thumbUrl}" 
-                     alt="${work.title}" 
-                     loading="lazy"
-                     onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1492691523567-61125645e34b?auto=format&fit=crop&q=80&w=800';">`;
+            const thumbUrl = deduceThumbnail(work);
+
+            // 만약 유튜브 maxresdefault가 없다면 hqdefault로 폴백을 시도하는 로직
+            let onErrorAttr = "this.onerror=null; this.src='https://images.unsplash.com/photo-1492691523567-61125645e34b?auto=format&fit=crop&q=80&w=800';";
+            if (thumbUrl.includes('maxresdefault.jpg')) {
+                const fallbackUrl = thumbUrl.replace('maxresdefault.jpg', 'hqdefault.jpg');
+                onErrorAttr = `this.onerror=function(){ this.onerror=null; this.src='${fallbackUrl}'; };`;
             }
 
             el.innerHTML = `
-                ${visualElement}
+                <img src="${thumbUrl}" 
+                     alt="${work.title}" 
+                     loading="lazy"
+                     onerror="${onErrorAttr}">
                 <div class="work-overlay">
                     <h3 class="work-title-inner">${work.title}</h3>
                     <p class="work-client-inner">${work.client}</p>

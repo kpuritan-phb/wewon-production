@@ -813,8 +813,7 @@ footer {
 }
 
 
-.work-item img,
-.work-item iframe {
+.work-item img {
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -822,8 +821,7 @@ footer {
     filter: brightness(0.9);
 }
 
-.work-item:hover img,
-.work-item:hover iframe {
+.work-item:hover img {
     transform: scale(1.03);
     filter: brightness(1);
 }
