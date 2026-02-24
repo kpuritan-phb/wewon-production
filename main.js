@@ -186,6 +186,10 @@ document.addEventListener('DOMContentLoaded', () => {
                     modalIframe.src = work.videoUrl;
                     modal.style.display = 'flex';
                     document.body.style.overflow = 'hidden';
+
+                    if (window.history && window.history.pushState) {
+                        window.history.pushState({ modalOpen: true }, '', window.location.href);
+                    }
                 }
             });
             return el;
@@ -275,18 +279,34 @@ document.addEventListener('DOMContentLoaded', () => {
         });
 
         // 모달 닫기
+        function closeVideoModal() {
+            modal.style.display = 'none';
+            modalIframe.src = '';
+            document.body.style.overflow = 'auto';
+        }
+
         if (closeModal) {
             closeModal.addEventListener('click', () => {
-                modal.style.display = 'none';
-                modalIframe.src = '';
-                document.body.style.overflow = 'auto';
+                if (window.history.state && window.history.state.modalOpen) {
+                    window.history.back();
+                } else {
+                    closeVideoModal();
+                }
             });
         }
         window.addEventListener('click', (e) => {
             if (e.target === modal) {
-                modal.style.display = 'none';
-                modalIframe.src = '';
-                document.body.style.overflow = 'auto';
+                if (window.history.state && window.history.state.modalOpen) {
+                    window.history.back();
+                } else {
+                    closeVideoModal();
+                }
+            }
+        });
+
+        window.addEventListener('popstate', (e) => {
+            if (modal.style.display === 'flex') {
+                closeVideoModal();
             }
         });
 
