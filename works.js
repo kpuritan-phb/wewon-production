@@ -81,7 +81,37 @@ const works = [
         description: "Raw energy and light from a sold-out live performance."
     },
 
-    // PORTRAIT (9:16 세로형)
+    // PORTRAIT (9:16 세로형) - 신규 영상을 최상단으로 이동
+    {
+        id: 14,
+        title: "TikTok: Creative Edit",
+        client: "@1ndian2wins",
+        category: "BRAND",
+        orientation: "portrait",
+        thumbnail: "https://images.unsplash.com/photo-1622564619424-658f8ed97d39?auto=format&fit=crop&q=80&w=450&h=800",
+        videoUrl: "https://www.tiktok.com/embed/v2/7600738854332665109",
+        description: "Fast-paced vertical edit specifically designed for TikTok's visual language."
+    },
+    {
+        id: 15,
+        title: "Threads: Storytelling",
+        client: "@1ndian2wins",
+        category: "BRAND",
+        orientation: "portrait",
+        thumbnail: "https://images.unsplash.com/photo-1512314889357-e157c22f938d?auto=format&fit=crop&q=80&w=450&h=800",
+        videoUrl: "https://www.threads.net/t/DUCiAXOAWxT/embed",
+        description: "Engaging and raw storytelling produced for the Threads platform."
+    },
+    {
+        id: 16,
+        title: "Instagram: Cinematic Reel",
+        client: "@1ndian2wins",
+        category: "FASHION",
+        orientation: "portrait",
+        thumbnail: "https://images.unsplash.com/photo-1496747611176-843222e1e57c?auto=format&fit=crop&q=80&w=450&h=800",
+        videoUrl: "https://www.instagram.com/reel/DTfRhxVE6f9/embed",
+        description: "A premium cinematic expression exploring style through Instagram Reels."
+    },
     {
         id: 5,
         title: "Fashion Film: Noir",
@@ -131,36 +161,6 @@ const works = [
         thumbnail: "https://images.unsplash.com/photo-1522386167-97116F33e21F?auto=format&fit=crop&q=80&w=450&h=800",
         videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
         description: "Short-form storytelling optimized for social feed."
-    },
-    {
-        id: 14,
-        title: "TikTok: Brand Story",
-        client: "@1ndian2wins",
-        category: "BRAND",
-        orientation: "portrait",
-        thumbnail: "https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7?auto=format&fit=crop&q=80&w=450&h=800",
-        videoUrl: "https://www.tiktok.com/embed/v2/7600738854332665109",
-        description: "Dynamic vertical storytelling for TikTok platform."
-    },
-    {
-        id: 15,
-        title: "Threads: Storytelling",
-        client: "@1ndian2wins",
-        category: "BRAND",
-        orientation: "portrait",
-        thumbnail: "https://images.unsplash.com/photo-1611162616305-c69b3fa7fbe0?auto=format&fit=crop&q=80&w=450&h=800",
-        videoUrl: "https://www.threads.net/t/DUCiAXOAWxT/embed",
-        description: "Candid and engaging content produced for Threads."
-    },
-    {
-        id: 16,
-        title: "Instagram: Cinematic Reel",
-        client: "@1ndian2wins",
-        category: "BRAND",
-        orientation: "portrait",
-        thumbnail: "https://images.unsplash.com/photo-1611224923853-80b023f02d71?auto=format&fit=crop&q=80&w=450&h=800",
-        videoUrl: "https://www.instagram.com/reel/DTfRhxVE6f9/embed",
-        description: "Premium cinematic vertical reel for Instagram."
     },
 ];
 
