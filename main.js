@@ -127,12 +127,38 @@ document.addEventListener('DOMContentLoaded', () => {
         const urlParams = new URLSearchParams(window.location.search);
         let activeView = urlParams.get('view') === 'portrait' ? 'portrait' : 'landscape';
 
+        // 썸네일 URL을 지능적으로 결정하는 헬퍼 함수
+        function deduceThumbnail(work) {
+            // 1. 이미 정의된 썸네일이 있으면 사용
+            if (work.thumbnail && !work.thumbnail.includes('unsplash')) return work.thumbnail;
+
+            const url = work.videoUrl;
+            if (!url) return 'images/placeholder-works.jpg';
+
+            // 2. 유튜브 썸네일 자동 추출
+            if (url.includes('youtube.com') || url.includes('youtu.be')) {
+                // embed URL에서 ID 추출
+                const parts = url.split('/');
+                const videoId = parts[parts.length - 1].split('?')[0];
+                return `https://img.youtube.com/vi/${videoId}/maxresdefault.jpg`;
+            }
+
+            // 3. 기타 (기본 수동 입력된 썸네일 또는 기본 이미지)
+            return work.thumbnail || 'images/placeholder-works.jpg';
+        }
+
         // 카드 DOM 생성
         function createWorkCard(work) {
             const el = document.createElement('div');
             el.className = 'work-item reveal-text';
+
+            const thumbUrl = deduceThumbnail(work);
+
             el.innerHTML = `
-                <img src="${work.thumbnail}" alt="${work.title}" loading="lazy">
+                <img src="${thumbUrl}" 
+                     alt="${work.title}" 
+                     loading="lazy"
+                     onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1492691523567-61125645e34b?auto=format&fit=crop&q=80&w=800';">
                 <div class="work-overlay">
                     <h3 class="work-title-inner">${work.title}</h3>
                     <p class="work-client-inner">${work.client}</p>
