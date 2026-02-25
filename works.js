@@ -1,6 +1,76 @@
 const works = [
     // LANDSCAPE (16:9 가로형)
     {
+        id: 39,
+        title: "지하니_수분라인-1",
+        client: "Vimeo",
+        category: "BRAND",
+        orientation: "landscape",
+        thumbnail: "https://i.vimeocdn.com/video/2125713132-e9aaaf337903130fc6b3ca6edc27dfb70ee5114aacd249086143e6b93819127b-d_295x166?region=us",
+        videoUrl: "https://player.vimeo.com/video/1167646145",
+        description: "지하니 피부 수분라인 소개 영상입니다."
+    },
+    {
+        id: 40,
+        title: "온누리상품권이별-1",
+        client: "Vimeo",
+        category: "BRAND",
+        orientation: "landscape",
+        thumbnail: "https://i.vimeocdn.com/video/2125713291-2265b8cfd78d386b9d6236b5520ba24709e88bf642c276fa490cbe169ef82dbc-d_295x166?region=us",
+        videoUrl: "https://player.vimeo.com/video/1167646253",
+        description: "온누리상품권 이별 단편 영상입니다."
+    },
+    {
+        id: 41,
+        title: "온누리상품권500원이_없어서-1",
+        client: "Vimeo",
+        category: "BRAND",
+        orientation: "landscape",
+        thumbnail: "https://i.vimeocdn.com/video/2125713326-a54dabd4eda07d326a4e72c1c290f9258f4580b5bedd933953fd0b0d0bda2038-d_295x166?region=us",
+        videoUrl: "https://player.vimeo.com/video/1167646281",
+        description: "온누리상품권 500원이 없어서 생긴 에피소드 영상입니다."
+    },
+    {
+        id: 42,
+        title: "김다현 1390만 유튜버 대선배 햄지님과 먹방 했습니다😋🍴 #김다현 #김다현tv",
+        client: "김다현",
+        category: "BRAND",
+        orientation: "landscape",
+        thumbnail: "https://img.youtube.com/vi/OaGTS4ybsYQ/hqdefault.jpg",
+        videoUrl: "https://www.youtube.com/embed/OaGTS4ybsYQ",
+        description: "1390만 유튜버 햄지님과의 먹방 콜라보레이션 영상입니다."
+    },
+    {
+        id: 43,
+        title: "[안전로드 퀴즈쇼] 드디어 등장한 현대모비스 아이돌?✨ 우리 회사 자랑 좀 들어보세요😎 | 현대모비스 본사",
+        client: "현대모비스",
+        category: "BRAND",
+        orientation: "landscape",
+        thumbnail: "https://img.youtube.com/vi/PofMcsINkHc/hqdefault.jpg",
+        videoUrl: "https://www.youtube.com/embed/PofMcsINkHc",
+        description: "현대모비스 본사에서 진행된 안전로드 퀴즈쇼 영상입니다."
+    },
+    {
+        id: 44,
+        title: "Mercedes-AMG G 63 오너의 남다른 일상 ㅣ 한성 SEE. Vol.2",
+        client: "한성자동차",
+        category: "BRAND",
+        orientation: "landscape",
+        thumbnail: "https://img.youtube.com/vi/P0brARRRS_c/hqdefault.jpg",
+        videoUrl: "https://www.youtube.com/embed/P0brARRRS_c",
+        description: "Mercedes-AMG G 63 오너의 남다른 일상을 담은 한성 SEE. Vol.2 영상입니다."
+    },
+    {
+        id: 45,
+        title: "📢숨겨진 최고의 인증 중고차 보물을 찾아라! 한성트레저 두번째 이야기💎",
+        client: "한성자동차",
+        category: "BRAND",
+        orientation: "landscape",
+        thumbnail: "https://img.youtube.com/vi/ZeiWlxHSKWY/hqdefault.jpg",
+        videoUrl: "https://www.youtube.com/embed/ZeiWlxHSKWY",
+        description: "최고의 인증 중고차를 찾는 한성트레저 두 번째 이야기 영상입니다."
+    },
+    {
         id: 36,
         title: "대전 최대 규모 스포츠센터, CNU 스포렉스 센터",
         client: "충남대학교",
