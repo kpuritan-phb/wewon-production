@@ -127,17 +127,11 @@ document.addEventListener('DOMContentLoaded', () => {
         const urlParams = new URLSearchParams(window.location.search);
         let activeView = urlParams.get('view') === 'portrait' ? 'portrait' : 'landscape';
 
-        // 썸네일 URL을 지능적으로 결정하는 헬퍼 함수
+        // 썸네일 URL을 지능적으로 결정하는 헬퍼 함수 (플레이 버튼 제거 최적화)
         function deduceThumbnail(work) {
-            // 1. 이미 정의된 썸네일(로컬 포함)이 있으면 우선 사용
-            if (work.thumbnail && (work.thumbnail.includes('images/') || !work.thumbnail.includes('unsplash'))) {
-                return work.thumbnail;
-            }
+            const url = work.videoUrl || '';
 
-            const url = work.videoUrl;
-            if (!url) return work.thumbnail || 'https://images.unsplash.com/photo-1492691523567-61125645e34b?auto=format&fit=crop&q=80&w=800';
-
-            // 2. 유튜브 썸네일 자동 추출
+            // 1. 유튜브 썸네일 (maxresdefault 사용으로 버튼 제거)
             if (url.includes('youtube.com') || url.includes('youtu.be')) {
                 let videoId = '';
                 if (url.includes('embed/')) {
@@ -147,14 +141,29 @@ document.addEventListener('DOMContentLoaded', () => {
                 } else {
                     videoId = url.split('/').pop().split('?')[0];
                 }
-
-                // 테스트용 샘플 ID일 경우 기존 썸네일 유지
-                if (videoId === 'dQw4w9WgXcQ' && work.thumbnail) return work.thumbnail;
-
-                return `https://img.youtube.com/vi/${videoId}/maxresdefault.jpg`;
+                if (videoId) return `https://img.youtube.com/vi/${videoId}/maxresdefault.jpg`;
             }
 
-            // 3. 기타 (기본 수동 입력된 썸네일 또는 기본 이미지)
+            // 2. 인스타그램 & 쓰레드 (공식 media API로 버튼 없는 이미지 추출)
+            if (url.includes('instagram.com') || url.includes('threads.net')) {
+                let postId = '';
+                if (url.includes('/reel/')) postId = url.split('/reel/')[1].split('/')[0];
+                else if (url.includes('/reels/')) postId = url.split('/reels/')[1].split('/')[0];
+                else if (url.includes('/p/')) postId = url.split('/p/')[1].split('/')[0];
+                else if (url.includes('/post/')) postId = url.split('/post/')[1].split('/')[0];
+
+                if (postId) {
+                    // /media/?size=l 주소는 플레이 버튼이 없는 원본 이미지를 반환함
+                    return `https://www.instagram.com/p/${postId}/media/?size=l`;
+                }
+            }
+
+            // 3. 이미 정의된 수동 썸네일 (로컬 포함) 처리
+            if (work.thumbnail && (work.thumbnail.includes('images/') || !work.thumbnail.includes('unsplash'))) {
+                return work.thumbnail;
+            }
+
+            // 4. 기본 이미지
             return work.thumbnail || 'https://images.unsplash.com/photo-1492691523567-61125645e34b?auto=format&fit=crop&q=80&w=800';
         }
 
