@@ -142,14 +142,14 @@ const works = [
         description: "딥플로우 - 지금 한국 힙합에서 제일 허슬하는 래퍼, 인터뷰 영상입니다."
     },
     {
-        id: 39,
-        title: "지하니_수분라인-1",
-        client: "Vimeo",
-        category: "BRAND",
+        id: 49,
+        title: "지코, 한국 힙합과 K-POP을 넘나들며 | INTERVIEW",
+        client: "JJK",
+        category: "DOCUMENTARY",
         orientation: "landscape",
-        thumbnail: "https://i.vimeocdn.com/video/2125713132-e9aaaf337903130fc6b3ca6edc27dfb70ee5114aacd249086143e6b93819127b-d_1280?region=us",
-        videoUrl: "https://player.vimeo.com/video/1167646145",
-        description: "지하니 피부 수분라인 소개 영상입니다."
+        thumbnail: "https://img.youtube.com/vi/BggUcEa3Ess/maxresdefault.jpg",
+        videoUrl: "https://www.youtube.com/embed/BggUcEa3Ess",
+        description: "지코 - 한국 힙합과 K-POP을 넘나들며, 인터뷰 영상입니다."
     },
     {
         id: 40,
@@ -172,14 +172,14 @@ const works = [
         description: "온누리상품권 500원이 없어서 생긴 에피소드 영상입니다."
     },
     {
-        id: 49,
-        title: "지코, 한국 힙합과 K-POP을 넘나들며 | INTERVIEW",
-        client: "JJK",
-        category: "DOCUMENTARY",
+        id: 39,
+        title: "지하니_수분라인-1",
+        client: "Vimeo",
+        category: "BRAND",
         orientation: "landscape",
-        thumbnail: "https://img.youtube.com/vi/BggUcEa3Ess/maxresdefault.jpg",
-        videoUrl: "https://www.youtube.com/embed/BggUcEa3Ess",
-        description: "지코 - 한국 힙합과 K-POP을 넘나들며, 인터뷰 영상입니다."
+        thumbnail: "https://i.vimeocdn.com/video/2125713132-e9aaaf337903130fc6b3ca6edc27dfb70ee5114aacd249086143e6b93819127b-d_1280?region=us",
+        videoUrl: "https://player.vimeo.com/video/1167646145",
+        description: "지하니 피부 수분라인 소개 영상입니다."
     },
     {
         id: 36,
