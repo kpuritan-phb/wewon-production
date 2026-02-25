@@ -102,14 +102,14 @@ const works = [
         description: "미국 EB3 취업이민을 통한 영주권 취득 기회와 방법을 설명합니다."
     },
     {
-        id: 48,
-        title: "🌙 MELLBEU ASMR |촉촉한 피부를 위한 스킨케어 심포니",
-        client: "멜비유(mellbeu)",
-        category: "BRAND",
+        id: 25,
+        title: "수은등-김연자 l COVER BY 김다현",
+        client: "김다현",
+        category: "MUSIC_VIDEO",
         orientation: "landscape",
-        thumbnail: "https://img.youtube.com/vi/CGRANENdmn0/maxresdefault.jpg",
-        videoUrl: "https://www.youtube.com/embed/CGRANENdmn0",
-        description: "촉촉한 피부를 위한 멜비유 스킨케어 심포니 ASMR 영상입니다."
+        thumbnail: "https://img.youtube.com/vi/uCIRKVpoXb4/maxresdefault.jpg",
+        videoUrl: "https://www.youtube.com/embed/uCIRKVpoXb4",
+        description: "김다현의 '수은등' 커버 영상입니다."
     },
     {
         id: 49,
@@ -322,14 +322,14 @@ const works = [
         description: "MELLBEU 브랜드 영상 'BE YOU' 입니다."
     },
     {
-        id: 25,
-        title: "수은등-김연자 l COVER BY 김다현",
-        client: "김다현",
-        category: "MUSIC_VIDEO",
+        id: 48,
+        title: "🌙 MELLBEU ASMR |촉촉한 피부를 위한 스킨케어 심포니",
+        client: "멜비유(mellbeu)",
+        category: "BRAND",
         orientation: "landscape",
-        thumbnail: "https://img.youtube.com/vi/uCIRKVpoXb4/maxresdefault.jpg",
-        videoUrl: "https://www.youtube.com/embed/uCIRKVpoXb4",
-        description: "김다현의 '수은등' 커버 영상입니다."
+        thumbnail: "https://img.youtube.com/vi/CGRANENdmn0/maxresdefault.jpg",
+        videoUrl: "https://www.youtube.com/embed/CGRANENdmn0",
+        description: "촉촉한 피부를 위한 멜비유 스킨케어 심포니 ASMR 영상입니다."
     },
     {
         id: 26,
