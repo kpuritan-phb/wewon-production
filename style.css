@@ -803,7 +803,7 @@ footer {
 
 .work-item {
     position: relative;
-    aspect-ratio: 16/10;
+    aspect-ratio: 16/9;
     overflow: hidden;
     cursor: pointer;
 }
