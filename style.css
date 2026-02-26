@@ -1014,6 +1014,10 @@ footer {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
+    /* Added */
+    text-align: center;
+    /* Added */
     padding: var(--nav-height) 5vw 2rem 5vw;
 }
 
@@ -1027,9 +1031,13 @@ footer {
 .subpage-desc {
     font-size: 1.2rem;
     color: var(--accent-color);
-    max-width: 600px;
+    max-width: 800px;
+    /* Slightly wider for centered look */
     line-height: 1.6;
+    margin: 0 auto;
+    /* Added for safety */
 }
+
 
 .content-section {
     padding: 5vh 5vw;
