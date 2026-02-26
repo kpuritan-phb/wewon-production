@@ -1,6 +1,46 @@
 const works = [
     // LANDSCAPE (16:9 가로형)
     {
+        id: 47,
+        title: "[월간한성📅] 11월 한성자동차 전시장 혜택 및 프로모션 모아보기!",
+        client: "한성자동차",
+        category: "BRAND",
+        orientation: "landscape",
+        thumbnail: "https://img.youtube.com/vi/WzI1WeaABbk/maxresdefault.jpg",
+        videoUrl: "https://www.youtube.com/embed/WzI1WeaABbk",
+        description: "11월 한성자동차 전시장 혜택 및 프로모션을 소개하는 영상입니다."
+    },
+    {
+        id: 46,
+        title: "📢숨겨진 최고의 인증 중고차 보물을 찾아라! 한성트레저 EP.1💎",
+        client: "한성자동차",
+        category: "BRAND",
+        orientation: "landscape",
+        thumbnail: "https://img.youtube.com/vi/ClX7DnBhzL4/maxresdefault.jpg",
+        videoUrl: "https://www.youtube.com/embed/ClX7DnBhzL4",
+        description: "최고의 인증 중고차를 찾는 한성트레저 첫 번째 이야기 영상입니다."
+    },
+    {
+        id: 45,
+        title: "📢숨겨진 최고의 인증 중고차 보물을 찾아라! 한성트레저 두번째 이야기💎",
+        client: "한성자동차",
+        category: "BRAND",
+        orientation: "landscape",
+        thumbnail: "https://img.youtube.com/vi/ZeiWlxHSKWY/maxresdefault.jpg",
+        videoUrl: "https://www.youtube.com/embed/ZeiWlxHSKWY",
+        description: "최고의 인증 중고차를 찾는 한성트레저 두 번째 이야기 영상입니다."
+    },
+    {
+        id: 44,
+        title: "Mercedes-AMG G 63 오너의 남다른 일상 ㅣ 한성 SEE. Vol.2",
+        client: "한성자동차",
+        category: "BRAND",
+        orientation: "landscape",
+        thumbnail: "https://img.youtube.com/vi/P0brARRRS_c/maxresdefault.jpg",
+        videoUrl: "https://www.youtube.com/embed/P0brARRRS_c",
+        description: "Mercedes-AMG G 63 오너의 남다른 일상을 담은 한성 SEE. Vol.2 영상입니다."
+    },
+    {
         id: 119,
         title: "이제 디바이스로 이거까지 발라보세요｜쿼드쎄라 실험일기 #1",
         client: "쿼드쎄라",
@@ -89,46 +129,6 @@ const works = [
         thumbnail: "https://i.vimeocdn.com/video/2126203783-fea41d760f2fd16f70009d98dea9528cbdc68b6b24166379d57622fc57222eb0-d?f=webp&region=us",
         videoUrl: "https://player.vimeo.com/video/1168006627",
         description: "온누리 상품권으로 알바비를 받는 독특한 상황을 연출한 영상입니다.",
-    },
-    {
-        id: 46,
-        title: "📢숨겨진 최고의 인증 중고차 보물을 찾아라! 한성트레저 EP.1💎",
-        client: "한성자동차",
-        category: "BRAND",
-        orientation: "landscape",
-        thumbnail: "https://img.youtube.com/vi/ClX7DnBhzL4/maxresdefault.jpg",
-        videoUrl: "https://www.youtube.com/embed/ClX7DnBhzL4",
-        description: "최고의 인증 중고차를 찾는 한성트레저 첫 번째 이야기 영상입니다."
-    },
-    {
-        id: 47,
-        title: "[월간한성📅] 11월 한성자동차 전시장 혜택 및 프로모션 모아보기!",
-        client: "한성자동차",
-        category: "BRAND",
-        orientation: "landscape",
-        thumbnail: "https://img.youtube.com/vi/WzI1WeaABbk/maxresdefault.jpg",
-        videoUrl: "https://www.youtube.com/embed/WzI1WeaABbk",
-        description: "11월 한성자동차 전시장 혜택 및 프로모션을 소개하는 영상입니다."
-    },
-    {
-        id: 44,
-        title: "Mercedes-AMG G 63 오너의 남다른 일상 ㅣ 한성 SEE. Vol.2",
-        client: "한성자동차",
-        category: "BRAND",
-        orientation: "landscape",
-        thumbnail: "https://img.youtube.com/vi/P0brARRRS_c/maxresdefault.jpg",
-        videoUrl: "https://www.youtube.com/embed/P0brARRRS_c",
-        description: "Mercedes-AMG G 63 오너의 남다른 일상을 담은 한성 SEE. Vol.2 영상입니다."
-    },
-    {
-        id: 45,
-        title: "📢숨겨진 최고의 인증 중고차 보물을 찾아라! 한성트레저 두번째 이야기💎",
-        client: "한성자동차",
-        category: "BRAND",
-        orientation: "landscape",
-        thumbnail: "https://img.youtube.com/vi/ZeiWlxHSKWY/maxresdefault.jpg",
-        videoUrl: "https://www.youtube.com/embed/ZeiWlxHSKWY",
-        description: "최고의 인증 중고차를 찾는 한성트레저 두 번째 이야기 영상입니다."
     },
     {
         id: 43,
