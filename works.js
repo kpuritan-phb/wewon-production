@@ -51,14 +51,14 @@ const works = [
         description: "교차초음파 디바이스 티탄을 사용한 엉뚱한 실험! 화장품 대신 연고를 바르면 어떨까요?",
     },
     {
-        id: 120,
-        title: "쿼드쎄라 4주 챌린지 VLOG #1",
-        client: "쿼드쎄라",
+        id: 43,
+        title: "[안전로드 퀴즈쇼] 드디어 등장한 현대모비스 아이돌?✨ 우리 회사 자랑 좀 들어보세요😎 | 현대모비스 본사",
+        client: "현대모비스",
         category: "BRAND",
         orientation: "landscape",
-        thumbnail: "https://img.youtube.com/vi/hykU5dDZCow/maxresdefault.jpg",
-        videoUrl: "https://www.youtube.com/embed/hykU5dDZCow",
-        description: "4주간 쿼드쎄라와 함께하는 건강한 습관 만들기 브이로그 코너입니다.",
+        thumbnail: "https://img.youtube.com/vi/PofMcsINkHc/maxresdefault.jpg",
+        videoUrl: "https://www.youtube.com/embed/PofMcsINkHc",
+        description: "현대모비스 본사에서 진행된 안전로드 퀴즈쇼 영상입니다."
     },
     {
         id: 121,
@@ -131,14 +131,14 @@ const works = [
         description: "온누리 상품권으로 알바비를 받는 독특한 상황을 연출한 영상입니다.",
     },
     {
-        id: 43,
-        title: "[안전로드 퀴즈쇼] 드디어 등장한 현대모비스 아이돌?✨ 우리 회사 자랑 좀 들어보세요😎 | 현대모비스 본사",
-        client: "현대모비스",
+        id: 120,
+        title: "쿼드쎄라 4주 챌린지 VLOG #1",
+        client: "쿼드쎄라",
         category: "BRAND",
         orientation: "landscape",
-        thumbnail: "https://img.youtube.com/vi/PofMcsINkHc/maxresdefault.jpg",
-        videoUrl: "https://www.youtube.com/embed/PofMcsINkHc",
-        description: "현대모비스 본사에서 진행된 안전로드 퀴즈쇼 영상입니다."
+        thumbnail: "https://img.youtube.com/vi/hykU5dDZCow/maxresdefault.jpg",
+        videoUrl: "https://www.youtube.com/embed/hykU5dDZCow",
+        description: "4주간 쿼드쎄라와 함께하는 건강한 습관 만들기 브이로그 코너입니다.",
     },
     {
         id: 22,
