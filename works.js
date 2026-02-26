@@ -81,14 +81,14 @@ const works = [
         description: "다현이가 보컬 레슨에서 음치인 척 연기하며 벌어지는 코미디 에피소드입니다.",
     },
     {
-        id: 123,
-        title: "노화와 각진 얼굴을 위한 괄사 마사지 팁",
-        client: "뷰티팟TV",
+        id: 42,
+        title: "김다현 1390만 유튜버 대선배 햄지님과 먹방 했습니다😋🍴 #김다현 #김다현tv",
+        client: "김다현",
         category: "BRAND",
         orientation: "landscape",
-        thumbnail: "https://img.youtube.com/vi/AGYSlO00Dp8/maxresdefault.jpg",
-        videoUrl: "https://www.youtube.com/embed/AGYSlO00Dp8",
-        description: "25년 경력 전문가가 전하는 괄사 효과 극대화 방법 설명 영상입니다.",
+        thumbnail: "https://img.youtube.com/vi/OaGTS4ybsYQ/maxresdefault.jpg",
+        videoUrl: "https://www.youtube.com/embed/OaGTS4ybsYQ",
+        description: "1390만 유튜버 햄지님과의 먹방 콜라보레이션 영상입니다."
     },
     {
         id: 124,
@@ -202,14 +202,14 @@ const works = [
         description: "김다현의 '수은등' 커버 영상입니다."
     },
     {
-        id: 42,
-        title: "김다현 1390만 유튜버 대선배 햄지님과 먹방 했습니다😋🍴 #김다현 #김다현tv",
-        client: "김다현",
+        id: 123,
+        title: "노화와 각진 얼굴을 위한 괄사 마사지 팁",
+        client: "뷰티팟TV",
         category: "BRAND",
         orientation: "landscape",
-        thumbnail: "https://img.youtube.com/vi/OaGTS4ybsYQ/maxresdefault.jpg",
-        videoUrl: "https://www.youtube.com/embed/OaGTS4ybsYQ",
-        description: "1390만 유튜버 햄지님과의 먹방 콜라보레이션 영상입니다."
+        thumbnail: "https://img.youtube.com/vi/AGYSlO00Dp8/maxresdefault.jpg",
+        videoUrl: "https://www.youtube.com/embed/AGYSlO00Dp8",
+        description: "25년 경력 전문가가 전하는 괄사 효과 극대화 방법 설명 영상입니다.",
     },
     {
         id: 50,
