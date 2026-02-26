@@ -351,16 +351,7 @@ const works = [
         videoUrl: "https://www.youtube.com/embed/XHGNBDjRgdQ",
         description: "덥덥이의 'Again and Again' 공식 뮤직비디오입니다."
     },
-    {
-        id: 33,
-        title: "랩레슨 싸이퍼 촬영 비하인드",
-        client: "326-2KIDS",
-        category: "DOCUMENTARY",
-        orientation: "landscape",
-        thumbnail: "https://img.youtube.com/vi/hqh2-3iBWM4/maxresdefault.jpg",
-        videoUrl: "https://www.youtube.com/embed/hqh2-3iBWM4",
-        description: "랩레슨 싸이퍼 촬영 비하인드 영상입니다."
-    },
+
     {
         id: 34,
         title: "흉터치료 새살침, 치료 방법과 접근법",
@@ -381,16 +372,7 @@ const works = [
         videoUrl: "https://www.youtube.com/embed/3umEWnQN_oM",
         description: "대전CKL 2차 유튜브 콘테스트 공모작 '집' 영상입니다."
     },
-    {
-        id: 21,
-        title: "인간극장 : 존재의 이유",
-        client: "KOHI",
-        category: "DOCUMENTARY",
-        orientation: "landscape",
-        thumbnail: "https://img.youtube.com/vi/gv_7288qSng/maxresdefault.jpg",
-        videoUrl: "https://www.youtube.com/embed/gv_7288qSng",
-        description: "2023년 KOHI 사회복무요원 SNS 영상 공모전 대상 수상작입니다."
-    },
+
     {
         id: 23,
         title: "피부 고민 하던 지하니, 결국 사버린 찐템은? 🛍",
