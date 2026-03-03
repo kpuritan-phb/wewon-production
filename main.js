@@ -167,6 +167,40 @@ document.addEventListener('DOMContentLoaded', () => {
             return work.thumbnail || 'https://images.unsplash.com/photo-1492691523567-61125645e34b?auto=format&fit=crop&q=80&w=800';
         }
 
+        // 폴백 플레이스홀더 생성 (썸네일 로드 실패 시)
+        function showFallbackPlaceholder(imgEl, work) {
+            const parent = imgEl.parentElement;
+            imgEl.style.display = 'none';
+
+            // 이미 폴백이 있으면 중복 생성 방지
+            if (parent.querySelector('.thumb-fallback')) return;
+
+            const fallback = document.createElement('div');
+            fallback.className = 'thumb-fallback';
+
+            // 랜덤 그라데이션 색상 (세련된 다크톤)
+            const gradients = [
+                'linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%)',
+                'linear-gradient(135deg, #2d1b3d 0%, #1e1233 50%, #0d0d2b 100%)',
+                'linear-gradient(135deg, #1b2838 0%, #0d1b2a 50%, #1c3144 100%)',
+                'linear-gradient(135deg, #2c1810 0%, #1a1a2e 50%, #16213e 100%)',
+                'linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 50%, #1a1a1a 100%)',
+                'linear-gradient(135deg, #0d1117 0%, #161b22 50%, #21262d 100%)',
+            ];
+            const gradient = gradients[work.id % gradients.length];
+            fallback.style.background = gradient;
+
+            fallback.innerHTML = `
+                <div class="fallback-play">
+                    <svg viewBox="0 0 24 24" fill="white" width="36" height="36">
+                        <path d="M8 5v14l11-7z"/>
+                    </svg>
+                </div>
+                <div class="fallback-title">${work.title !== 'Shorts' && work.title !== 'Vertical video content.' ? work.title : (work.client || 'Video')}</div>
+            `;
+            parent.appendChild(fallback);
+        }
+
         // 카드 DOM 생성
         function createWorkCard(work) {
             const el = document.createElement('div');
@@ -174,19 +208,29 @@ document.addEventListener('DOMContentLoaded', () => {
 
             const thumbUrl = deduceThumbnail(work);
 
-            // 만약 유튜브 maxresdefault가 없다면 hqdefault로 폴백을 시도하는 로직
-            let onErrorAttr = "this.onerror=null; this.src='https://images.unsplash.com/photo-1492691523567-61125645e34b?auto=format&fit=crop&q=80&w=800';";
-            if (thumbUrl.includes('maxresdefault.jpg')) {
-                const fallbackUrl = thumbUrl.replace('maxresdefault.jpg', 'hqdefault.jpg');
-                onErrorAttr = `this.onerror=null; this.src='${fallbackUrl}';`;
-            }
+            const img = document.createElement('img');
+            img.src = thumbUrl;
+            img.alt = work.title;
+            img.loading = 'lazy';
 
-            el.innerHTML = `
-                <img src="${thumbUrl}" 
-                     alt="${work.title}" 
-                     loading="lazy"
-                     onerror="${onErrorAttr}">
-            `;
+            // 다단계 폴백 처리
+            img.onerror = function () {
+                if (thumbUrl.includes('maxresdefault.jpg')) {
+                    // 1차 폴백: hqdefault 시도
+                    const hqUrl = thumbUrl.replace('maxresdefault.jpg', 'hqdefault.jpg');
+                    this.onerror = function () {
+                        // 2차 폴백: 플레이스홀더 카드
+                        showFallbackPlaceholder(this, work);
+                    };
+                    this.src = hqUrl;
+                } else {
+                    // 바로 폴백 플레이스홀더
+                    showFallbackPlaceholder(this, work);
+                }
+            };
+
+            el.appendChild(img);
+
             el.addEventListener('click', () => {
                 if (modal) {
                     modalTitle.textContent = work.title;
