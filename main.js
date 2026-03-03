@@ -170,10 +170,14 @@ document.addEventListener('DOMContentLoaded', () => {
         // 폴백 플레이스홀더 생성 (썸네일 로드 실패 시)
         function showFallbackPlaceholder(imgEl, work) {
             const parent = imgEl.parentElement;
-            imgEl.style.display = 'none';
 
             // 이미 폴백이 있으면 중복 생성 방지
-            if (parent.querySelector('.thumb-fallback')) return;
+            if (parent.querySelector('.thumb-fallback')) {
+                imgEl.remove();
+                return;
+            }
+
+            imgEl.remove();
 
             const fallback = document.createElement('div');
             fallback.className = 'thumb-fallback';
@@ -191,11 +195,6 @@ document.addEventListener('DOMContentLoaded', () => {
             fallback.style.background = gradient;
 
             fallback.innerHTML = `
-                <div class="fallback-play">
-                    <svg viewBox="0 0 24 24" fill="white" width="36" height="36">
-                        <path d="M8 5v14l11-7z"/>
-                    </svg>
-                </div>
                 <div class="fallback-title">${work.title !== 'Shorts' && work.title !== 'Vertical video content.' ? work.title : (work.client || 'Video')}</div>
             `;
             parent.appendChild(fallback);

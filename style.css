@@ -849,28 +849,7 @@ footer {
     filter: brightness(1.1);
 }
 
-.fallback-play {
-    width: 56px;
-    height: 56px;
-    border-radius: 50%;
-    background: rgba(255, 255, 255, 0.12);
-    backdrop-filter: blur(8px);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border: 1.5px solid rgba(255, 255, 255, 0.2);
-    transition: transform 0.4s var(--easing), background 0.3s;
-}
 
-.fallback-play svg {
-    margin-left: 3px;
-    opacity: 0.85;
-}
-
-.work-item:hover .fallback-play {
-    transform: scale(1.1);
-    background: rgba(255, 255, 255, 0.2);
-}
 
 .fallback-title {
     font-family: var(--font-body);
