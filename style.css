@@ -1360,3 +1360,203 @@ body.dark-subpage .separator {
         margin-bottom: 1rem;
     }
 }
+
+/* --- Subpage Editorial Layout --- */
+.editorial-section {
+    padding: 15vh 5vw;
+}
+
+.editorial-grid {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 10vw;
+    margin-bottom: 20vh;
+}
+
+.sticky-label {
+    position: sticky;
+    top: 15vh;
+    height: fit-content;
+}
+
+.sticky-label .section-title {
+    font-size: clamp(2rem, 5vw, 4rem);
+    line-height: 1;
+    margin-bottom: 1rem;
+    color: rgba(255,255,255,0.2);
+    transition: color 0.5s;
+    text-transform: uppercase;
+}
+
+.editorial-grid:hover .sticky-label .section-title {
+    color: white;
+}
+
+.editorial-content {
+    font-size: clamp(1.1rem, 1.5vw, 1.4rem);
+    line-height: 1.8;
+}
+
+.editorial-content p {
+    margin-bottom: 2rem;
+    opacity: 0.8;
+}
+
+.editorial-content strong {
+    color: white;
+    font-weight: 600;
+}
+
+/* Bento Roles */
+.bento-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    margin-top: 3rem;
+}
+
+.bento-item {
+    background: rgba(255, 255, 255, 0.03);
+    padding: 2.5rem;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 4px;
+    transition: all 0.3s;
+}
+
+.bento-item:hover {
+    background: rgba(255, 255, 255, 0.07);
+    border-color: rgba(255, 255, 255, 0.2);
+    transform: translateY(-5px);
+}
+
+.bento-icon {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+    color: var(--accent-color);
+}
+
+.bento-item h3 {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+    font-family: var(--font-body);
+    font-weight: 600;
+    letter-spacing: -0.01em;
+}
+
+.bento-item p {
+    font-size: 0.9rem;
+    color: #888;
+    line-height: 1.6;
+}
+
+/* Workflow Timeline */
+.workflow-timeline {
+    position: relative;
+    padding-left: 10vw;
+    margin-bottom: 10vh;
+}
+
+.workflow-timeline::before {
+    content: '';
+    position: absolute;
+    left: 5vw;
+    top: 0;
+    width: 1px;
+    height: 100%;
+    background: linear-gradient(to bottom, transparent, rgba(255,255,255,0.2), transparent);
+}
+
+.workflow-step {
+    position: relative;
+    margin-bottom: 20vh;
+    display: grid;
+    grid-template-columns: 150px 1fr;
+    gap: 5vw;
+}
+
+.step-number {
+    font-family: var(--font-display);
+    font-size: clamp(3rem, 10vw, 8rem);
+    line-height: 0.8;
+    color: transparent;
+    -webkit-text-stroke: 1px rgba(255,255,255,0.2);
+    transition: all 0.5s;
+    opacity: 0.5;
+}
+
+.workflow-step:hover .step-number {
+    color: white;
+    -webkit-text-stroke: 1px white;
+    opacity: 1;
+}
+
+.step-details h2 {
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    margin-bottom: 1.5rem;
+    text-transform: uppercase;
+}
+
+.step-details p.step-lead {
+    font-size: 1.2rem;
+    color: #ccc;
+    max-width: 700px;
+    margin-bottom: 2.5rem;
+    line-height: 1.6;
+}
+
+.step-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+}
+
+.step-list li {
+    font-size: 1rem;
+    color: rgba(255,255,255,0.5);
+    display: flex;
+    align-items: center;
+    gap: 0.7rem;
+    padding: 1rem;
+    background: rgba(255,255,255,0.02);
+    border-radius: 4px;
+}
+
+.step-list li::before {
+    content: '→';
+    font-family: var(--font-display);
+    color: var(--accent-color);
+}
+
+@media (max-width: 1024px) {
+    .editorial-grid {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
+    .sticky-label {
+        position: relative;
+        top: 0;
+    }
+    .bento-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .workflow-timeline {
+        padding-left: 0;
+    }
+    .workflow-timeline::before {
+        display: none;
+    }
+    .workflow-step {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+        margin-bottom: 15vh;
+    }
+    .step-list {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 640px) {
+    .bento-grid {
+        grid-template-columns: 1fr;
+    }
+}
