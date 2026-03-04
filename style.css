@@ -862,7 +862,9 @@ footer {
     text-overflow: ellipsis;
     display: -webkit-box;
     -webkit-line-clamp: 2;
+    line-clamp: 2;
     -webkit-box-orient: vertical;
+
     letter-spacing: 0.02em;
 }
 
@@ -1288,6 +1290,8 @@ body.dark-subpage header.top-bar {
 body.dark-subpage .nav-item,
 body.dark-subpage .separator {
     color: #fff !important;
+}
+
 /* With Us Page - One Screen Layout */
 .with-us-page .subpage-hero {
     min-height: 25vh;
@@ -1346,12 +1350,12 @@ body.dark-subpage .separator {
         flex-direction: column;
         gap: 2rem;
     }
-    
+
     .with-us-page .subpage-hero {
         min-height: auto;
         padding-top: 100px;
     }
-    
+
     .with-us-page .content-group {
         margin-bottom: 1rem;
     }
