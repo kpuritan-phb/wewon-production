@@ -260,16 +260,6 @@ const works = [
     "description": "대전 최대 규모를 자랑하는 CNU 스포렉스 센터의 시설과 활기를 소개하는 영상입니다."
   },
   {
-    "id": 50,
-    "title": "팔로알토의 음악과 태도와 밈까지 다 파헤치다 | INTERVIEW",
-    "client": "JJK",
-    "category": "DOCUMENTARY",
-    "orientation": "landscape",
-    "thumbnail": "https://img.youtube.com/vi/MDsM0hz38H0/maxresdefault.jpg",
-    "videoUrl": "https://www.youtube.com/embed/MDsM0hz38H0",
-    "description": "팔로알토의 음악과 태도, 밈까지 파헤치는 인터뷰 영상입니다."
-  },
-  {
     "id": 51,
     "title": "딥플로우, 지금 한국 힙합에서 제일 허슬하는 래퍼 | INTERVIEW",
     "client": "JJK",
@@ -290,14 +280,24 @@ const works = [
     "description": "지코 - 한국 힙합과 K-POP을 넘나들며, 인터뷰 영상입니다."
   },
   {
-    "id": 123,
-    "title": "노화와 각진 얼굴을 위한 괄사 마사지 팁",
-    "client": "뷰티팟TV",
-    "category": "BRAND",
+    "id": 50,
+    "title": "팔로알토의 음악과 태도와 밈까지 다 파헤치다 | INTERVIEW",
+    "client": "JJK",
+    "category": "DOCUMENTARY",
     "orientation": "landscape",
-    "thumbnail": "https://img.youtube.com/vi/AGYSlO00Dp8/maxresdefault.jpg",
-    "videoUrl": "https://www.youtube.com/embed/AGYSlO00Dp8",
-    "description": "25년 경력 전문가가 전하는 괄사 효과 극대화 방법 설명 영상입니다."
+    "thumbnail": "https://img.youtube.com/vi/MDsM0hz38H0/maxresdefault.jpg",
+    "videoUrl": "https://www.youtube.com/embed/MDsM0hz38H0",
+    "description": "팔로알토의 음악과 태도, 밈까지 파헤치는 인터뷰 영상입니다."
+  },
+  {
+    "id": 27,
+    "title": "영하의 날씨에 버려진 누더기 실버푸들 미용했어요🩷",
+    "client": "YouTube",
+    "category": "OTHERS",
+    "orientation": "landscape",
+    "thumbnail": "https://img.youtube.com/vi/nyiKexi9NSw/maxresdefault.jpg",
+    "videoUrl": "https://www.youtube.com/embed/nyiKexi9NSw",
+    "description": "추운 날씨에 구조된 실버푸들의 미용 과정 영상입니다."
   },
   {
     "id": 37,
@@ -310,14 +310,14 @@ const works = [
     "description": "콜라젠 리프팅 입점 소식과 제품의 매력을 담은 브랜드 영상입니다."
   },
   {
-    "id": 27,
-    "title": "영하의 날씨에 버려진 누더기 실버푸들 미용했어요🩷",
-    "client": "YouTube",
-    "category": "OTHERS",
+    "id": 123,
+    "title": "노화와 각진 얼굴을 위한 괄사 마사지 팁",
+    "client": "뷰티팟TV",
+    "category": "BRAND",
     "orientation": "landscape",
-    "thumbnail": "https://img.youtube.com/vi/nyiKexi9NSw/maxresdefault.jpg",
-    "videoUrl": "https://www.youtube.com/embed/nyiKexi9NSw",
-    "description": "추운 날씨에 구조된 실버푸들의 미용 과정 영상입니다."
+    "thumbnail": "https://img.youtube.com/vi/AGYSlO00Dp8/maxresdefault.jpg",
+    "videoUrl": "https://www.youtube.com/embed/AGYSlO00Dp8",
+    "description": "25년 경력 전문가가 전하는 괄사 효과 극대화 방법 설명 영상입니다."
   },
   {
     "id": 28,
