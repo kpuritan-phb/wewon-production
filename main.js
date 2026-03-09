@@ -54,33 +54,6 @@ document.addEventListener('DOMContentLoaded', () => {
         setTimeout(() => globalBg.classList.add('active'), 100);
     }
 
-    // --- Index Page: Menu Summaries Hover Background ---
-    const summaryItems = document.querySelectorAll('.summary-item');
-    if (summaryItems.length > 0) {
-        let summaryBg = document.querySelector('.summary-bg-layer');
-        if (!summaryBg && document.querySelector('.menu-summaries')) {
-            summaryBg = document.createElement('div');
-            summaryBg.className = 'summary-bg-layer';
-            summaryBg.innerHTML = '<img src="" alt="Summary Background">';
-            document.querySelector('.menu-summaries').appendChild(summaryBg);
-        }
-        if (summaryBg) {
-            const bgImg = summaryBg.querySelector('img');
-            summaryItems.forEach(item => {
-                item.addEventListener('mouseenter', () => {
-                    const bgUrl = item.dataset.bg;
-                    if (bgUrl) {
-                        bgImg.src = bgUrl;
-                        summaryBg.style.opacity = '1';
-                    }
-                });
-                item.addEventListener('mouseleave', () => {
-                    summaryBg.style.opacity = '0';
-                });
-            });
-        }
-    }
-
     // --- Shared Modal Logic ---
     const modal = document.getElementById('video-modal');
     const modalIframe = document.getElementById('modal-iframe');
