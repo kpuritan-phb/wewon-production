@@ -304,10 +304,20 @@ document.addEventListener('DOMContentLoaded', () => {
     const chatTrigger = document.getElementById('chat-trigger');
     const chatClose = document.getElementById('chat-close');
     const chatForm = document.getElementById('chat-form');
+    const chatBody = document.getElementById('chat-body');
+    const chatLeadContainer = document.getElementById('chat-lead-container');
+    const chatInput = document.getElementById('chat-footer-input');
+    const chatSendBtn = document.getElementById('chat-send-btn');
+    
+    let isLeadSubmitted = false;
 
     if (chatTrigger && chatWidget) {
         chatTrigger.addEventListener('click', () => {
             chatWidget.classList.toggle('active');
+            if (chatWidget.classList.contains('active')) {
+                // Remove notification dot if active
+                chatTrigger.style.setProperty('--unread', 'none'); 
+            }
         });
     }
 
@@ -317,28 +327,84 @@ document.addEventListener('DOMContentLoaded', () => {
             chatWidget.classList.remove('active');
         });
     }
+    
+    // Function to add chat bubble
+    const addBubble = (text, type) => {
+        if (!chatBody) return;
+        const bubble = document.createElement('div');
+        bubble.className = `chat-msg-bubble ${type}`;
+        // Preserve newlines
+        bubble.innerHTML = `<p>${text.replace(/\n/g, '<br>')}</p>`;
+        chatBody.appendChild(bubble);
+        chatBody.scrollTop = chatBody.scrollHeight;
+    };
 
     if (chatForm) {
         chatForm.addEventListener('submit', (e) => {
             e.preventDefault();
             const btn = chatForm.querySelector('.chat-submit-btn');
-            const originalText = btn.textContent;
+            
+            // Get data to simulate save
+            const name = document.getElementById('chat-name').value;
+            const email = document.getElementById('chat-email').value;
+            const phone = document.getElementById('chat-phone').value;
+            const message = document.getElementById('chat-message').value;
+            
+            try {
+                const inquiries = JSON.parse(localStorage.getItem('wewon_inquiries') || '[]');
+                inquiries.push({ name, email, phone, message, timestamp: new Date().toLocaleString() });
+                localStorage.setItem('wewon_inquiries', JSON.stringify(inquiries));
+            } catch (err) { }
 
             btn.textContent = '전송 중...';
             btn.disabled = true;
 
-            // Simulate form submission
             setTimeout(() => {
-                alert('메세지가 성공적으로 전송되었습니다.');
-                chatForm.reset();
-                btn.textContent = '제출 완료';
-
+                if (chatLeadContainer) chatLeadContainer.style.display = 'none';
+                isLeadSubmitted = true;
+                
+                // Add user message
+                addBubble(message, 'user');
+                
+                // Add auto-reply
                 setTimeout(() => {
-                    btn.textContent = originalText;
-                    btn.disabled = false;
-                    chatWidget.classList.remove('active');
-                }, 1500);
-            }, 1000);
+                    addBubble(`${name}님, 문의가 성공적으로 접수되었습니다. 최대한 신속하게 답변 드리겠습니다!\n(※ 현재 웹사이트는 테스트 버전이며, 제출 내용은 브라우저 로컬 저장소에 임시 저장되었습니다.)`, 'bot');
+                }, 500);
+
+            }, 800);
+        });
+    }
+    
+    // Footer input handling
+    const handleSendMsg = () => {
+        if (!chatInput) return;
+        const text = chatInput.value.trim();
+        if (!text) return;
+        
+        if (!isLeadSubmitted) {
+            // Fill message field if form is not submitted yet
+            const msgArea = document.getElementById('chat-message');
+            if (msgArea) {
+                msgArea.value = (msgArea.value + (msgArea.value ? "\n" : "") + text).trim();
+                msgArea.focus();
+            }
+            chatInput.value = '';
+            return;
+        }
+        
+        // Chat mode
+        addBubble(text, 'user');
+        chatInput.value = '';
+        
+        setTimeout(() => {
+            addBubble('문의가 접수된 상태입니다. 남겨주신 연락처로 곧 안내해 드리겠습니다.', 'bot');
+        }, 800);
+    };
+
+    if (chatSendBtn && chatInput) {
+        chatSendBtn.addEventListener('click', handleSendMsg);
+        chatInput.addEventListener('keypress', (e) => {
+            if(e.key === 'Enter') handleSendMsg();
         });
     }
 
