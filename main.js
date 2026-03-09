@@ -48,6 +48,26 @@ document.addEventListener('DOMContentLoaded', () => {
         sectionObserver.observe(el);
     });
 
+    // --- Index Page: Latest Shorts Logic ---
+    const latestShortsEl = document.getElementById('index-latest-shorts');
+    if (latestShortsEl) {
+        const latestShortsData = works.find(w => w.orientation === 'portrait');
+        if (latestShortsData) {
+            latestShortsEl.setAttribute('data-id', latestShortsData.id);
+            const img = latestShortsEl.querySelector('img');
+            if (img) {
+                let thumb = latestShortsData.thumbnail;
+                if (!thumb || !thumb.startsWith('thumbnails/')) {
+                    if (latestShortsData.videoUrl && latestShortsData.videoUrl.includes('youtube')) {
+                        const vid = latestShortsData.videoUrl.split('embed/')[1]?.split('?')[0];
+                        if (vid) thumb = `https://img.youtube.com/vi/${vid}/maxresdefault.jpg`;
+                    }
+                }
+                if (thumb) img.src = thumb;
+            }
+        }
+    }
+
     // --- Index Page: Hero & Global Background ---
     const globalBg = document.querySelector('.global-bg-layer');
     if (globalBg) {
@@ -308,7 +328,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const chatLeadContainer = document.getElementById('chat-lead-container');
     const chatInput = document.getElementById('chat-footer-input');
     const chatSendBtn = document.getElementById('chat-send-btn');
-    
+
     let isLeadSubmitted = false;
 
     if (chatTrigger && chatWidget) {
@@ -316,7 +336,7 @@ document.addEventListener('DOMContentLoaded', () => {
             chatWidget.classList.toggle('active');
             if (chatWidget.classList.contains('active')) {
                 // Remove notification dot if active
-                chatTrigger.style.setProperty('--unread', 'none'); 
+                chatTrigger.style.setProperty('--unread', 'none');
             }
         });
     }
@@ -327,7 +347,7 @@ document.addEventListener('DOMContentLoaded', () => {
             chatWidget.classList.remove('active');
         });
     }
-    
+
     // Function to add chat bubble
     const addBubble = (text, type) => {
         if (!chatBody) return;
@@ -343,13 +363,13 @@ document.addEventListener('DOMContentLoaded', () => {
         chatForm.addEventListener('submit', (e) => {
             e.preventDefault();
             const btn = chatForm.querySelector('.chat-submit-btn');
-            
+
             // Get data to simulate save
             const name = document.getElementById('chat-name').value;
             const email = document.getElementById('chat-email').value;
             const phone = document.getElementById('chat-phone').value;
             const message = document.getElementById('chat-message').value;
-            
+
             try {
                 const inquiries = JSON.parse(localStorage.getItem('wewon_inquiries') || '[]');
                 inquiries.push({ name, email, phone, message, timestamp: new Date().toLocaleString() });
@@ -362,10 +382,10 @@ document.addEventListener('DOMContentLoaded', () => {
             setTimeout(() => {
                 if (chatLeadContainer) chatLeadContainer.style.display = 'none';
                 isLeadSubmitted = true;
-                
+
                 // Add user message
                 addBubble(message, 'user');
-                
+
                 // Add auto-reply
                 setTimeout(() => {
                     addBubble(`${name}님, 문의가 성공적으로 접수되었습니다. 최대한 신속하게 답변 드리겠습니다!\n(※ 현재 웹사이트는 테스트 버전이며, 제출 내용은 브라우저 로컬 저장소에 임시 저장되었습니다.)`, 'bot');
@@ -374,13 +394,13 @@ document.addEventListener('DOMContentLoaded', () => {
             }, 800);
         });
     }
-    
+
     // Footer input handling
     const handleSendMsg = () => {
         if (!chatInput) return;
         const text = chatInput.value.trim();
         if (!text) return;
-        
+
         if (!isLeadSubmitted) {
             // Fill message field if form is not submitted yet
             const msgArea = document.getElementById('chat-message');
@@ -391,11 +411,11 @@ document.addEventListener('DOMContentLoaded', () => {
             chatInput.value = '';
             return;
         }
-        
+
         // Chat mode
         addBubble(text, 'user');
         chatInput.value = '';
-        
+
         setTimeout(() => {
             addBubble('문의가 접수된 상태입니다. 남겨주신 연락처로 곧 안내해 드리겠습니다.', 'bot');
         }, 800);
@@ -404,7 +424,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (chatSendBtn && chatInput) {
         chatSendBtn.addEventListener('click', handleSendMsg);
         chatInput.addEventListener('keypress', (e) => {
-            if(e.key === 'Enter') handleSendMsg();
+            if (e.key === 'Enter') handleSendMsg();
         });
     }
 

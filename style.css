@@ -1989,3 +1989,29 @@ body.dark-subpage .separator {
         gap: 5vh;
     }
 }
+
+/* Shorts Item specific styling */
+.shorts-item {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.shorts-badge {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    z-index: 10;
+    background: #fff;
+    color: #000;
+    font-size: 0.7rem;
+    padding: 0.3rem 0.6rem;
+    font-weight: 800;
+    font-family: var(--font-display);
+    border-radius: 4px;
+    letter-spacing: 0.05em;
+}
+
+.shorts-item .featured-thumb {
+    width: 100%;
+}
