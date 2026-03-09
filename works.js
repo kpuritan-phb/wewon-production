@@ -420,16 +420,6 @@ const works = [
     "description": "Instagram Reel content."
   },
   {
-    "id": 138,
-    "title": "Shorts",
-    "client": "YouTube",
-    "category": "BRAND",
-    "orientation": "portrait",
-    "thumbnail": "thumbnails/thumb_138.jpg",
-    "videoUrl": "https://www.youtube.com/embed/mNgNi5kNAW4",
-    "description": "Vertical video content."
-  },
-  {
     "id": 57,
     "title": "Instagram Reel DU-3O4KkmK8",
     "client": "Instagram",
@@ -488,6 +478,16 @@ const works = [
     "thumbnail": "thumbnails/thumb_18.jpg",
     "videoUrl": "https://www.instagram.com/reel/DRwggvgk791/embed",
     "description": "기술력에 대한 브랜드의 자신감. 세계 최초 상단 하이라이트 가열 구조를 가진 오방난로의 오리지널리티를 강조합니다."
+  },
+  {
+    "id": 138,
+    "title": "Shorts",
+    "client": "YouTube",
+    "category": "BRAND",
+    "orientation": "portrait",
+    "thumbnail": "thumbnails/thumb_138.jpg",
+    "videoUrl": "https://www.youtube.com/embed/mNgNi5kNAW4",
+    "description": "Vertical video content."
   },
   {
     "id": 87,
