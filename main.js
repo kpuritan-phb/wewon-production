@@ -279,6 +279,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
+    // --- Navigation Logic for Mobile ---
     const navContainers = document.querySelectorAll('.nav-item-container');
     navContainers.forEach(container => {
         const link = container.querySelector('.nav-item');
@@ -297,5 +298,48 @@ document.addEventListener('DOMContentLoaded', () => {
             navContainers.forEach(c => c.classList.remove('active'));
         }
     });
+
+    // --- Chat Widget Logic ---
+    const chatWidget = document.getElementById('chat-widget');
+    const chatTrigger = document.getElementById('chat-trigger');
+    const chatClose = document.getElementById('chat-close');
+    const chatForm = document.getElementById('chat-form');
+
+    if (chatTrigger && chatWidget) {
+        chatTrigger.addEventListener('click', () => {
+            chatWidget.classList.toggle('active');
+        });
+    }
+
+    if (chatClose && chatWidget) {
+        chatClose.addEventListener('click', (e) => {
+            e.stopPropagation();
+            chatWidget.classList.remove('active');
+        });
+    }
+
+    if (chatForm) {
+        chatForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const btn = chatForm.querySelector('.chat-submit-btn');
+            const originalText = btn.textContent;
+
+            btn.textContent = '전송 중...';
+            btn.disabled = true;
+
+            // Simulate form submission
+            setTimeout(() => {
+                alert('메세지가 성공적으로 전송되었습니다.');
+                chatForm.reset();
+                btn.textContent = '제출 완료';
+
+                setTimeout(() => {
+                    btn.textContent = originalText;
+                    btn.disabled = false;
+                    chatWidget.classList.remove('active');
+                }, 1500);
+            }, 1000);
+        });
+    }
 
 });

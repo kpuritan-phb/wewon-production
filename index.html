@@ -20,6 +20,7 @@
     <title>WE WON PRODUCTION</title>
     <!-- CSS -->
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="chat.css">
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <!-- GSAP -->
@@ -195,6 +196,65 @@
         </div>
         <div class="footer-copy">&copy; wwwwwo</div>
     </footer>
+
+    <!-- Chat Widget -->
+    <div class="chat-widget-container" id="chat-widget">
+        <div class="chat-trigger" id="chat-trigger">
+            <img src="favicon.png" alt="Open Chat">
+        </div>
+
+        <div class="chat-window">
+            <div class="chat-bg-pattern"></div>
+            <div class="chat-header">
+                <div class="chat-header-info">
+                    <div class="chat-profile-img">
+                        <img src="favicon.png" alt="Profile">
+                    </div>
+                    <div class="chat-header-text">
+                        <h4>WE WON PRODUCTION</h4>
+                        <p>최대한 신속하게 응답드리겠습니다.</p>
+                    </div>
+                </div>
+                <div class="chat-close" id="chat-close">&times;</div>
+            </div>
+
+            <div class="chat-body">
+                <div class="chat-msg-bubble">
+                    <p>안녕하세요? WE WON입니다. 저희에게 메시지를 전송할 수 있도록 연락처 정보를 남겨주세요.</p>
+                </div>
+
+                <div class="chat-lead-form">
+                    <form id="chat-form">
+                        <div class="chat-form-group">
+                            <label>이름</label>
+                            <input type="text" name="name" required>
+                        </div>
+                        <div class="chat-form-group">
+                            <label>이메일</label>
+                            <input type="email" name="email" required>
+                        </div>
+                        <div class="chat-form-group">
+                            <label>전화번호</label>
+                            <input type="tel" name="phone" required>
+                        </div>
+                        <div class="chat-form-group">
+                            <label>메세지</label>
+                            <textarea name="message" rows="1" required></textarea>
+                        </div>
+                        <button type="submit" class="chat-submit-btn">제출</button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="chat-footer">
+                <div class="chat-footer-placeholder">메세지를 입력하세요.</div>
+                <div class="chat-footer-icons">
+                    <i class="far fa-smile"></i>
+                    <i class="fas fa-paperclip"></i>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <script type="module" src="main.js"></script>
 </body>
