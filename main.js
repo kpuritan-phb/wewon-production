@@ -90,7 +90,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
         let url = work.videoUrl;
         if (url && (url.includes('youtube.com') || url.includes('youtu.be'))) {
-            url += (url.includes('?') ? '&' : '?') + 'autoplay=1&rel=0';
+            // Use youtube-nocookie.com to avoid session issues and improve privacy
+            url = url.replace('www.youtube.com', 'www.youtube-nocookie.com')
+                .replace('youtube.com', 'www.youtube-nocookie.com');
+
+            const connector = url.includes('?') ? '&' : '?';
+            url += `${connector}autoplay=1&rel=0&enablejsapi=1`;
         }
         modalIframe.src = url;
 
