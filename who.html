@@ -118,163 +118,24 @@
             font-weight: 500;
         }
 
-        /* ── Name Origin ── */
-        .name-block {
-            background: rgba(255, 255, 255, 0.03);
-            border: 1px solid rgba(255, 255, 255, 0.07);
-            border-radius: 4px;
-            padding: clamp(2.5rem, 5vw, 4rem);
-            display: grid;
-            grid-template-columns: auto 1fr;
-            gap: 2.5rem 4rem;
-            align-items: center;
+        /* ── Responsive Grids ── */
+        .process-grid.grid-3 {
+            grid-template-columns: repeat(3, 1fr);
         }
 
-        @media (max-width: 640px) {
-            .name-block {
-                grid-template-columns: 1fr;
-                gap: 2rem;
-            }
-        }
-
-        .name-letters {
-            font-size: clamp(3.5rem, 8vw, 6rem);
-            font-weight: 900;
-            letter-spacing: -0.05em;
-            line-height: 1;
-            color: rgba(255, 255, 255, 0.12);
-        }
-
-        .name-meaning-list {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-            display: flex;
-            flex-direction: column;
-            gap: 1.2rem;
-        }
-
-        .name-meaning-list li {
-            display: flex;
-            align-items: baseline;
-            gap: 1rem;
-            font-size: clamp(0.9rem, 1.4vw, 1.05rem);
-            color: rgba(255, 255, 255, 0.55);
-            font-weight: 300;
-            line-height: 1.5;
-        }
-
-        .name-meaning-list li::before {
-            content: attr(data-key);
-            font-size: 0.62rem;
-            letter-spacing: 0.2em;
-            text-transform: uppercase;
-            color: rgba(255, 255, 255, 0.22);
-            white-space: nowrap;
-            flex-shrink: 0;
-        }
-
-        .name-meaning-list li strong {
-            color: rgba(255, 255, 255, 0.9);
-            font-weight: 600;
-        }
-
-        /* ── Questions ── */
-        .question-item {
-            display: grid;
-            grid-template-columns: 2.5rem 1fr;
-            gap: 1.5rem;
-            padding: 1.8rem 0;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.06);
-            align-items: start;
-        }
-
-        .question-item:first-child {
-            border-top: 1px solid rgba(255, 255, 255, 0.06);
-        }
-
-        .q-num {
-            font-size: 0.68rem;
-            color: rgba(255, 255, 255, 0.2);
-            letter-spacing: 0.1em;
-            font-weight: 500;
-            padding-top: 0.2em;
-        }
-
-        .q-text {
-            font-size: clamp(1rem, 2vw, 1.3rem);
-            font-weight: 400;
-            color: rgba(255, 255, 255, 0.75);
-            line-height: 1.5;
-            letter-spacing: -0.01em;
-        }
-
-        /* ── Process Steps ── */
-        .process-grid {
-            display: grid;
+        .process-grid.grid-5 {
             grid-template-columns: repeat(5, 1fr);
-            gap: 1px;
-            background: rgba(255, 255, 255, 0.06);
-            border: 1px solid rgba(255, 255, 255, 0.06);
-            border-radius: 4px;
-            overflow: hidden;
         }
 
-        @media (max-width: 900px) {
-            .process-grid {
-                grid-template-columns: repeat(3, 1fr);
+        @media (max-width: 1024px) {
+
+            .process-grid.grid-3,
+            .process-grid.grid-5 {
+                grid-template-columns: 1fr;
             }
         }
 
-        @media (max-width: 540px) {
-            .process-grid {
-                grid-template-columns: 1fr 1fr;
-            }
-        }
 
-        .process-step {
-            background: rgba(10, 10, 10, 0.6);
-            padding: clamp(1.8rem, 3vw, 2.8rem) clamp(1.2rem, 2vw, 2rem);
-            display: flex;
-            flex-direction: column;
-            gap: 1rem;
-            transition: background 0.25s ease;
-        }
-
-        .process-step:hover {
-            background: rgba(255, 255, 255, 0.04);
-        }
-
-        .step-index {
-            font-size: 0.6rem;
-            letter-spacing: 0.25em;
-            color: rgba(255, 255, 255, 0.2);
-            text-transform: uppercase;
-        }
-
-        .step-eng {
-            font-size: clamp(0.85rem, 1.4vw, 1rem);
-            font-weight: 700;
-            letter-spacing: 0.05em;
-            text-transform: uppercase;
-            color: rgba(255, 255, 255, 0.9);
-        }
-
-        .step-kor {
-            font-size: 0.8rem;
-            color: rgba(255, 255, 255, 0.3);
-            font-weight: 300;
-        }
-
-        .step-desc {
-            font-size: 0.82rem;
-            color: rgba(255, 255, 255, 0.45);
-            line-height: 1.7;
-            font-weight: 300;
-            border-top: 1px solid rgba(255, 255, 255, 0.06);
-            padding-top: 1rem;
-            margin-top: auto;
-        }
 
         /* ── Services ── */
         .service-strip {
@@ -427,19 +288,31 @@
         <!-- ③ Name Origin -->
         <section class="who-section">
             <span class="who-tag reveal-text">NAME ORIGIN</span>
-            <div class="name-block reveal-text">
-                <div class="name-letters">wwwwwo</div>
-                <ul class="name-meaning-list">
-                    <li data-key="W · W">
-                        <span><strong>WE WANT</strong> — 우리는 함께 원하는 것을 찾고</span>
-                    </li>
-                    <li data-key="W · W">
-                        <span><strong>WE WON</strong> — 함께 만들어가며</span>
-                    </li>
-                    <li data-key="W · O">
-                        <span><strong>WE ONE</strong> — 결국 하나의 결과로 연결됩니다</span>
-                    </li>
-                </ul>
+            <div class="process-grid reveal-text grid-3">
+                <!-- WE WANT -->
+                <div class="process-card">
+                    <div class="p-header">
+                        <span class="p-num">W · W</span>
+                        <h2 class="p-title">WE WANT</h2>
+                    </div>
+                    <p class="p-desc">우리는 브랜드와 함께 진짜 원하는 가치를 찾습니다.</p>
+                </div>
+                <!-- WE WON -->
+                <div class="process-card">
+                    <div class="p-header">
+                        <span class="p-num">W · W</span>
+                        <h2 class="p-title">WE WON</h2>
+                    </div>
+                    <p class="p-desc">치열한 고민과 감각으로 최상의 결과를 함께 만들어냅니다.</p>
+                </div>
+                <!-- WE ONE -->
+                <div class="process-card">
+                    <div class="p-header">
+                        <span class="p-num">W · O</span>
+                        <h2 class="p-title">WE ONE</h2>
+                    </div>
+                    <p class="p-desc">결국 이 모든 과정은 하나의 단단한 브랜드 유산으로 연결됩니다.</p>
+                </div>
             </div>
         </section>
 
@@ -449,18 +322,27 @@
             <p class="brand-statement-body reveal-text" style="max-width:540px; margin-bottom:2.5rem;">
                 프로젝트를 시작할 때 우리는 먼저 질문합니다.
             </p>
-            <div>
-                <div class="question-item reveal-text">
-                    <span class="q-num">01</span>
-                    <span class="q-text">이 브랜드는 무엇을 말하려 하는가.</span>
+            <div class="process-grid reveal-text grid-3">
+                <div class="process-card">
+                    <div class="p-header">
+                        <span class="p-num">01</span>
+                        <h2 class="p-title">MESSAGE</h2>
+                    </div>
+                    <p class="p-desc">이 브랜드는 무엇을 말하려 하는가.</p>
                 </div>
-                <div class="question-item reveal-text">
-                    <span class="q-num">02</span>
-                    <span class="q-text">이 콘텐츠는 누구에게 닿아야 하는가.</span>
+                <div class="process-card">
+                    <div class="p-header">
+                        <span class="p-num">02</span>
+                        <h2 class="p-title">AUDIENCE</h2>
+                    </div>
+                    <p class="p-desc">이 콘텐츠는 누구에게 닿아야 하는가.</p>
                 </div>
-                <div class="question-item reveal-text">
-                    <span class="q-num">03</span>
-                    <span class="q-text">이 작업이 브랜드에 어떤 의미로 남을 것인가.</span>
+                <div class="process-card">
+                    <div class="p-header">
+                        <span class="p-num">03</span>
+                        <h2 class="p-title">LEGACY</h2>
+                    </div>
+                    <p class="p-desc">이 작업이 브랜드에 어떤 의미로 남을 것인가.</p>
                 </div>
             </div>
         </section>
@@ -469,39 +351,48 @@
         <section class="who-section">
             <span class="who-tag reveal-text">PROCESS</span>
             <p class="brand-statement-body reveal-text" style="max-width:580px; margin-bottom:2.5rem;">
-                그 질문을 바탕으로, 브랜드가 자신만의 이야기를 만들어가는 과정을 함께합니다.<br>
-                이 과정은 단순한 제작 절차가 아닙니다.
+                그 질문을 바탕으로, 브랜드가 자신만의 이야기를 만들어가는 과정을 함께합니다.
             </p>
-            <div class="process-grid reveal-text">
-                <div class="process-step">
-                    <span class="step-index">STEP 01</span>
-                    <span class="step-eng">Diagnose</span>
-                    <span class="step-kor">진단</span>
-                    <p class="step-desc">브랜드의 현재 상황을 분석하고 본질적인 과제를 정의합니다.</p>
+            <div class="process-grid reveal-text grid-5">
+                <!-- STEP 01 -->
+                <div class="process-card">
+                    <div class="p-header">
+                        <span class="p-num">01</span>
+                        <h2 class="p-title">DIAGNOSE<span class="p-title-ko">진단</span></h2>
+                    </div>
+                    <p class="p-desc">브랜드의 현재 상황을 분석하고 핵심 과제를 정의합니다.</p>
                 </div>
-                <div class="process-step">
-                    <span class="step-index">STEP 02</span>
-                    <span class="step-eng">Design</span>
-                    <span class="step-kor">설계</span>
-                    <p class="step-desc">브랜드에 최적화된 콘텐츠 전략과 방향성을 설계합니다.</p>
+                <!-- STEP 02 -->
+                <div class="process-card">
+                    <div class="p-header">
+                        <span class="p-num">02</span>
+                        <h2 class="p-title">DESIGN<span class="p-title-ko">설계</span></h2>
+                    </div>
+                    <p class="p-desc">브랜드에 최적화된 콘텐츠 전략과 방향성을 설계합니다.</p>
                 </div>
-                <div class="process-step">
-                    <span class="step-index">STEP 03</span>
-                    <span class="step-eng">Produce</span>
-                    <span class="step-kor">제작</span>
-                    <p class="step-desc">전략을 기반으로 영상 콘텐츠를 완성합니다.</p>
+                <!-- STEP 03 -->
+                <div class="process-card">
+                    <div class="p-header">
+                        <span class="p-num">03</span>
+                        <h2 class="p-title">PRODUCE<span class="p-title-ko">제작</span></h2>
+                    </div>
+                    <p class="p-desc">전략을 기반으로 고밀도의 영상 콘텐츠를 완성합니다.</p>
                 </div>
-                <div class="process-step">
-                    <span class="step-index">STEP 04</span>
-                    <span class="step-eng">Refine</span>
-                    <span class="step-kor">정제</span>
-                    <p class="step-desc">결과물의 완성도를 세밀하게 다듬고 검토합니다.</p>
+                <!-- STEP 04 -->
+                <div class="process-card">
+                    <div class="p-header">
+                        <span class="p-num">04</span>
+                        <h2 class="p-title">REFINE<span class="p-title-ko">정제</span></h2>
+                    </div>
+                    <p class="p-desc">결과물의 완성도를 세밀하게 다듬어 정체성을 강화합니다.</p>
                 </div>
-                <div class="process-step">
-                    <span class="step-index">STEP 05</span>
-                    <span class="step-eng">Scale</span>
-                    <span class="step-kor">확장</span>
-                    <p class="step-desc">콘텐츠가 더 넓은 곳으로 퍼져나갈 수 있도록 돕습니다.</p>
+                <!-- STEP 05 -->
+                <div class="process-card">
+                    <div class="p-header">
+                        <span class="p-num">05</span>
+                        <h2 class="p-title">SCALE<span class="p-title-ko">확장</span></h2>
+                    </div>
+                    <p class="p-desc">콘텐츠가 더 넓은 접점으로 퍼져나갈 수 있도록 돕습니다.</p>
                 </div>
             </div>
         </section>
