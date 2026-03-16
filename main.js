@@ -99,6 +99,13 @@ document.addEventListener('DOMContentLoaded', () => {
         }
         modalIframe.src = url;
 
+        // Handle Orientation Class
+        if (work.orientation === 'portrait') {
+            modal.classList.add('is-portrait');
+        } else {
+            modal.classList.remove('is-portrait');
+        }
+
         modal.style.display = 'flex';
         document.body.style.overflow = 'hidden';
 
@@ -111,6 +118,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if (!modal) return;
         modal.style.display = 'none';
         modalIframe.src = '';
+        modal.classList.remove('is-portrait'); // Always cleanup orientation class
         document.body.style.overflow = 'auto';
     }
 

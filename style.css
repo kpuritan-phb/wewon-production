@@ -962,6 +962,22 @@ footer {
     overflow: hidden;
 }
 
+/* Portrait Mode Adjustments */
+.video-modal.is-portrait .modal-content {
+    max-width: 50vh;
+    /* Limit width in portrait so it's not too tall on Desktop */
+}
+
+@media (max-width: 768px) {
+    .video-modal.is-portrait .modal-content {
+        max-width: 100%;
+    }
+}
+
+.video-modal.is-portrait .video-container {
+    aspect-ratio: 9/16;
+}
+
 .video-container iframe {
     position: absolute;
     top: 0;
