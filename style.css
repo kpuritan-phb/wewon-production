@@ -2016,8 +2016,8 @@ body.dark-subpage .separator {
     justify-content: center;
     gap: 1.5rem;
     width: 100%;
-    max-width: 1600px;
-    /* Optimal width for 5 cards */
+    max-width: 1300px;
+    /* Reduced to naturally fit 3 large cards per row */
 }
 
 .process-grid.grid-3 .process-card {
@@ -2025,7 +2025,8 @@ body.dark-subpage .separator {
 }
 
 .process-grid.grid-5 .process-card {
-    flex: 0 1 300px;
+    flex: 0 1 380px;
+    /* Slightly wider to force 3+2 layout */
 }
 
 @media (max-width: 1200px) {
@@ -2036,9 +2037,6 @@ body.dark-subpage .separator {
 }
 
 @media (max-width: 1024px) {
-
-    .process-grid.grid-3 .process-card,
-    .process-grid.grid-4 .process-card,
     .process-grid.grid-5 .process-card {
         flex: 1 1 100%;
         max-width: 450px;
@@ -2094,8 +2092,7 @@ body.dark-subpage .separator {
     transition: all 0.4s var(--easing);
 
     /* Perfect Centering */
-    flex: 1 1 280px;
-    max-width: 320px;
+    flex: 1 1 350px;
     text-align: center;
     align-items: center;
 }
