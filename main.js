@@ -278,8 +278,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const chatBody = document.getElementById('chat-body');
     const chatInput = document.getElementById('chat-footer-input');
     const chatSendBtn = document.getElementById('chat-send-btn');
-    const chatFooter = document.getElementById('chat-footer');
-    const chatLeadContainer = document.getElementById('chat-lead-container'); // [수정] 누락된 변수 정의 추가
+    const chatFooter = document.getElementById('chat-footer-form'); // [ID 수정] chat-footer -> chat-footer-form
+    const chatLeadContainer = document.getElementById('chat-lead-container');
 
     // localStorage에서 제출 여부 확인
     let isLeadSubmitted = localStorage.getItem('wewon_chat_submitted') === 'true';
@@ -433,10 +433,11 @@ document.addEventListener('DOMContentLoaded', () => {
         }, 1000);
     };
 
-    if (chatSendBtn && chatInput) {
-        chatSendBtn.addEventListener('click', handleSendMsg);
-        chatInput.addEventListener('keypress', (e) => {
-            if (e.key === 'Enter') handleSendMsg();
+    const chatFooterForm = document.getElementById('chat-footer-form');
+    if (chatFooterForm && chatInput) {
+        chatFooterForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            handleSendMsg();
         });
     }
 

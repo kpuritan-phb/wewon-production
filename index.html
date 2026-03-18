@@ -20,7 +20,7 @@
     <title>WE WON PRODUCTION</title>
     <!-- CSS -->
     <link rel="stylesheet" href="style.css?v=20260316_v6">
-    <link rel="stylesheet" href="chat.css">
+    <link rel="stylesheet" href="chat.css?v=20260318_v3">
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <!-- GSAP -->
@@ -249,18 +249,18 @@
                 </div>
             </div>
 
-            <div class="chat-footer" id="chat-footer" style="display:none;">
+            <form class="chat-footer" id="chat-footer-form" style="display:none;">
                 <input type="text" id="chat-footer-input" placeholder="메시지를 입력하세요..." class="chat-input-field">
-                <div class="chat-footer-icons" id="chat-send-btn">
+                <button type="submit" class="chat-footer-icons" id="chat-send-btn">
                     <i class="fas fa-paper-plane"></i>
-                </div>
-            </div>
+                </button>
+            </form>
         </div>
     </div>
 
     <!-- EmailJS -->
     <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
-    <script type="module" src="main.js?v=20260318_v2"></script>
+    <script type="module" src="main.js?v=20260318_v3"></script>
 </body>
 
 </html>

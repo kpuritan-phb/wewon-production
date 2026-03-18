@@ -124,6 +124,62 @@
     pointer-events: none;
 }
 
+/* Footer (Bottom Input) */
+.chat-footer {
+    background: #1a1a1a;
+    padding: 15px 20px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    border-top: 1px solid var(--chat-border);
+}
+
+.chat-input-field {
+    flex: 1;
+    background: transparent;
+    border: none;
+    outline: none;
+    color: #fff;
+    font-size: 0.95rem;
+    padding: 10px 0;
+}
+
+.chat-footer-icons {
+    color: rgba(255, 255, 255, 0.4);
+    cursor: pointer;
+    transition: all 0.3s;
+    font-size: 1.1rem;
+}
+
+.chat-footer-icons:hover {
+    color: #fff;
+    transform: scale(1.1);
+}
+
+/* Quick Question Buttons */
+.chat-quick-wrap {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 5px;
+}
+
+.quick-btn {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: rgba(255, 255, 255, 0.8);
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.quick-btn:hover {
+    background: #fff;
+    color: #000;
+}
+
 /* Header */
 .chat-header {
     background: rgba(0, 0, 0, 0.4);
