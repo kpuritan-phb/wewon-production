@@ -147,13 +147,16 @@
     height: 48px;
     background: #fff;
     border-radius: 50%;
-    padding: 6px;
+    padding: 2px;
+    /* 패딩을 줄여서 로고가 꽉 차게 함 */
     display: flex;
     justify-content: center;
     align-items: center;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
     flex-shrink: 0;
     aspect-ratio: 1 / 1;
+    overflow: hidden;
+    /* 로고가 원을 벗어나지 않게 처리 */
 }
 
 .chat-profile-img img {
