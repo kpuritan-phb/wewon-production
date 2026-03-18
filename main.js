@@ -342,7 +342,8 @@ document.addEventListener('DOMContentLoaded', () => {
             };
 
             emailjs.send('service_kexvgmp', 'template_pkc36ws', params)
-                .then(() => {
+                .then(function (response) {
+                    console.log('SUCCESS!', response.status, response.text);
                     if (chatLeadContainer) chatLeadContainer.style.display = 'none';
                     if (chatFooter) chatFooter.style.display = 'flex';
 
@@ -353,12 +354,11 @@ document.addEventListener('DOMContentLoaded', () => {
                     setTimeout(() => {
                         addBubble(`${name}님, 문의가 성공적으로 접수되었습니다. 담당자가 확인 후 연락드리겠습니다!`, 'bot');
                     }, 800);
-                })
-                .catch((err) => {
+                }, function (error) {
+                    console.log('FAILED...', error);
                     btn.textContent = '제출';
                     btn.disabled = false;
-                    alert('전송에 실패했습니다. 키 값이 올바른지 확인해주세요.');
-                    console.error('EmailJS Error:', err);
+                    alert('전송 중 오류가 발생했습니다. (관리자 확인 필요)');
                 });
         });
     }
