@@ -279,6 +279,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const chatInput = document.getElementById('chat-footer-input');
     const chatSendBtn = document.getElementById('chat-send-btn');
     const chatFooter = document.getElementById('chat-footer');
+    const chatLeadContainer = document.getElementById('chat-lead-container'); // [수정] 누락된 변수 정의 추가
 
     // localStorage에서 제출 여부 확인
     let isLeadSubmitted = localStorage.getItem('wewon_chat_submitted') === 'true';
@@ -344,21 +345,27 @@ document.addEventListener('DOMContentLoaded', () => {
             emailjs.send('service_kexvgmp', 'template_pkc36ws', params)
                 .then(function (response) {
                     console.log('SUCCESS!', response.status, response.text);
+
+                    // UI 상태 전환
                     if (chatLeadContainer) chatLeadContainer.style.display = 'none';
                     if (chatFooter) chatFooter.style.display = 'flex';
 
                     isLeadSubmitted = true;
                     localStorage.setItem('wewon_chat_submitted', 'true');
 
+                    // 대화 내용 업데이트
                     addBubble(message, 'user');
                     setTimeout(() => {
-                        addBubble(`${name}님, 문의가 성공적으로 접수되었습니다. 담당자가 확인 후 연락드리겠습니다!`, 'bot');
-                    }, 800);
-                }, function (error) {
+                        addBubble(`문의 확인했습니다. 24시간 이내에 남겨주신 연락처로 연락드릴게요! 감사합니다 🙏`, 'bot');
+                    }, 500);
+                })
+                .catch(function (error) {
                     console.log('FAILED...', error);
-                    btn.textContent = '제출';
-                    btn.disabled = false;
-                    alert('전송 중 오류가 발생했습니다. (관리자 확인 필요)');
+                    if (btn) {
+                        btn.textContent = '제출';
+                        btn.disabled = false;
+                    }
+                    alert('전송 중 오류가 발생했습니다. 잠시 후 다시 시도해 주세요.');
                 });
         });
     }
