@@ -379,11 +379,21 @@
                 }
 
                 const categories = ['BRAND', 'BEAUTY', 'SPORTS', 'VIRAL', 'YOUTUBE', 'AD', 'MUSIC', 'OTHERS'];
+                const catLabels = {
+                    'BRAND': '브랜드',
+                    'BEAUTY': '뷰티',
+                    'SPORTS': '스포츠',
+                    'VIRAL': '바이럴',
+                    'YOUTUBE': '유튜브',
+                    'AD': '광고',
+                    'MUSIC': '뮤직',
+                    'OTHERS': '기타'
+                };
                 const itemCats = Array.isArray(item.category) ? item.category : (item.category ? [item.category] : []);
                 const catCheckboxes = categories.map(cat =>
                     `<label class="cat-check">
                         <input type="checkbox" value="${cat}" ${itemCats.includes(cat) ? 'checked' : ''}>
-                        <span>${cat}</span>
+                        <span>${catLabels[cat]}</span>
                     </label>`
                 ).join('');
 
