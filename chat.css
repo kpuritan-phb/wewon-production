@@ -112,6 +112,13 @@
     transform: translateY(0) scale(1);
 }
 
+/* 채팅 활성화 시 메인 배경 이미지 숨김 (잔상 방지) */
+body.chat-active .global-bg-layer {
+    opacity: 0 !important;
+    transition: opacity 0.3s ease;
+}
+
+
 .chat-bg-pattern {
     position: absolute;
     top: 0;

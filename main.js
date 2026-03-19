@@ -375,7 +375,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if (chatTrigger && chatWidget) {
         chatTrigger.addEventListener('click', () => {
-            chatWidget.classList.toggle('active');
+            const isNowActive = chatWidget.classList.toggle('active');
+            document.body.classList.toggle('chat-active', isNowActive);
             if (chatWidget.classList.contains('active')) {
                 document.body.classList.add('chat-active');
                 // 알림 점 제거
