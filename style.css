@@ -749,15 +749,19 @@ footer {
     background-color: var(--bg-color);
     border-bottom: 1px solid rgba(255, 255, 255, 0.05);
     overflow-x: auto;
-    scrollbar-width: none; /* Firefox */
-    -ms-overflow-style: none; /* IE 10+ */
+    scrollbar-width: none;
+    /* Firefox */
+    -ms-overflow-style: none;
+    /* IE 10+ */
     position: sticky;
-    top: calc(80px + 64px); /* Header + Tab Bar */
+    top: calc(80px + 64px);
+    /* Header + Tab Bar */
     z-index: 980;
 }
 
 .category-filter-bar::-webkit-scrollbar {
-    display: none; /* Chrome, Safari, Edge */
+    display: none;
+    /* Chrome, Safari, Edge */
 }
 
 .category-btn {
@@ -790,9 +794,10 @@ footer {
     .category-filter-bar {
         gap: 0.8rem;
         padding: 1rem 5vw;
-        top: calc(60px + 52px); /* Adjusted for mobile header/tabs */
+        top: calc(60px + 52px);
+        /* Adjusted for mobile header/tabs */
     }
-    
+
     .category-btn {
         padding: 0.4rem 1rem;
         font-size: 0.75rem;
@@ -1106,7 +1111,13 @@ footer {
     flex-direction: column;
     justify-content: center;
     border-left: 1px solid rgba(255, 255, 255, 0.1);
-    background: #0a0a0a;
+    background: var(--chat-bg);
+}
+
+body.chat-active {
+    overflow: hidden;
+    position: fixed;
+    width: 100%;
 }
 
 @media (max-width: 1024px) {

@@ -335,13 +335,41 @@ document.addEventListener('DOMContentLoaded', () => {
     // localStorage에서 제출 여부 확인
     let isLeadSubmitted = localStorage.getItem('wewon_chat_submitted') === 'true';
 
+    // 실시간 채팅 초기화 함수
+    const initRealtimeChat = () => {
+        if (!window.realtimeDb || !chatId) {
+            console.warn("⚠️ Firebase 실시간 데이터베이스가 설정되지 않았습니다.");
+            return;
+        }
+
+        console.log("🚀 실시간 채팅 리스너 초기화: ", chatId);
+        const messagesRef = window.realtimeDb.ref('chats/' + chatId + '/messages');
+
+        // 기존 리스너 제거 후 다시 등록 (중복 방지)
+        messagesRef.off();
+
+        messagesRef.on('child_added', (snapshot) => {
+            const msg = snapshot.val();
+            // 봇이나 관리자의 메시지만 화면에 추가
+            if (msg.sender === 'bot' || msg.sender === 'admin') {
+                addBubble(msg.text, 'bot');
+            }
+        });
+    };
+
     // 이미 제출했다면 폼 숨기고 채팅 모드(Footer 보임)로 시작
     if (isLeadSubmitted && chatLeadContainer && chatFooter) {
         chatLeadContainer.style.display = 'none';
         chatFooter.style.display = 'flex';
-        // 초기 안내 메시지 하나 더 추가 (선택사항)
+
+        initRealtimeChat();
+
+        // 초기 안내 메시지 (메시지가 없을 때만)
         setTimeout(() => {
-            addBubble('문의가 접수된 상태입니다. 추가로 궁금하신 점을 남겨주시면 확인 후 연락드리겠습니다.', 'bot');
+            const bubbles = chatBody.querySelectorAll('.chat-msg-bubble');
+            if (bubbles.length <= 1) {
+                addBubble('문의가 접수된 상태입니다. 추가로 궁금하신 점을 남겨주시면 확인 후 연락드리겠습니다.', 'bot');
+            }
         }, 1000);
     }
 
@@ -349,6 +377,7 @@ document.addEventListener('DOMContentLoaded', () => {
         chatTrigger.addEventListener('click', () => {
             chatWidget.classList.toggle('active');
             if (chatWidget.classList.contains('active')) {
+                document.body.classList.add('chat-active');
                 // 알림 점 제거
                 chatTrigger.style.setProperty('--unread', 'none');
 
@@ -388,6 +417,7 @@ document.addEventListener('DOMContentLoaded', () => {
         chatClose.addEventListener('click', (e) => {
             e.stopPropagation();
             chatWidget.classList.remove('active');
+            document.body.classList.remove('chat-active');
         });
     }
 
@@ -426,7 +456,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 .then(function (response) {
                     console.log('SUCCESS!', response.status, response.text);
 
-                    // Firebase에 리드 정보 생성
+                    // 실시간 리스너 및 데이터 생성
                     if (window.realtimeDb) {
                         window.realtimeDb.ref('chats/' + chatId + '/info').set({
                             name: name,
@@ -439,29 +469,8 @@ document.addEventListener('DOMContentLoaded', () => {
                             text: message,
                             timestamp: Date.now()
                         });
-                    }
 
-                    // UI 상태 전환
-                    if (chatLeadContainer) chatLeadContainer.style.display = 'none';
-                    if (chatFooter) chatFooter.style.display = 'flex';
-
-                    isLeadSubmitted = true;
-                    localStorage.setItem('wewon_chat_submitted', 'true');
-
-                    // 대화 내용 업데이트
-                    addBubble(message, 'user');
-                    setTimeout(() => {
-                        addBubble(`문의 확인했습니다. 24시간 이내에 남겨주신 연락처로 연락드릴게요! 감사합니다 🙏`, 'bot');
-                    }, 500);
-
-                    // 실시간 리스너 활성화
-                    if (window.realtimeDb) {
-                        window.realtimeDb.ref('chats/' + chatId + '/messages').on('child_added', (snapshot) => {
-                            const msg = snapshot.val();
-                            if (msg.sender === 'bot' || msg.sender === 'admin') {
-                                addBubble(msg.text, 'bot');
-                            }
-                        });
+                        initRealtimeChat();
                     }
                 })
                 .catch(function (error) {
@@ -520,16 +529,7 @@ document.addEventListener('DOMContentLoaded', () => {
     };
 
 
-    // Firebase 메시지 리스너 (이미 제출한 경우에만 활성화)
-    if (window.realtimeDb && isLeadSubmitted) {
-        window.realtimeDb.ref('chats/' + chatId + '/messages').on('child_added', (snapshot) => {
-            const msg = snapshot.val();
-            // 중복 방지 (사용자가 직접 보낸 메시지가 아닐 때만 버블 추가)
-            if (msg.sender === 'bot' || msg.sender === 'admin') {
-                addBubble(msg.text, 'bot');
-            }
-        });
-    }
+    // (구식 리스너 제거됨 - initRealtimeChat에서 관리)
 
     const chatFooterForm = document.getElementById('chat-footer-form');
     if (chatFooterForm && chatInput) {
