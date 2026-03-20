@@ -51,8 +51,8 @@ const works = [
   },
   {
     "id": 22,
-    "title": "Mirabelle Korea 2025 Brand Film",
-    "client": "Mirabelle Korea",
+    "title": "미라벨 코리아 2025 브랜드 필름 (Mirabelle Korea)",
+    "client": "미라벨 코리아 (Mirabelle Korea)",
     "category": ["BEAUTY"],
     "orientation": "landscape",
     "thumbnail": "https://img.youtube.com/vi/tjn6_Tp6bGo/maxresdefault.jpg",
@@ -481,7 +481,7 @@ const works = [
   },
   {
     "id": 113,
-    "title": "Shorts",
+    "title": "쇼츠 (Shorts)",
     "client": "Instagram",
     "category": ["BRAND"],
     "orientation": "portrait",
@@ -491,7 +491,7 @@ const works = [
   },
   {
     "id": 87,
-    "title": "Shorts",
+    "title": "쇼츠 (Shorts)",
     "client": "Instagram",
     "category": ["BRAND"],
     "orientation": "portrait",
@@ -501,7 +501,7 @@ const works = [
   },
   {
     "id": 85,
-    "title": "Shorts",
+    "title": "쇼츠 (Shorts)",
     "client": "Instagram",
     "category": ["BRAND"],
     "orientation": "portrait",
@@ -511,7 +511,7 @@ const works = [
   },
   {
     "id": 86,
-    "title": "Shorts",
+    "title": "쇼츠 (Shorts)",
     "client": "Instagram",
     "category": ["BRAND"],
     "orientation": "portrait",
@@ -521,7 +521,7 @@ const works = [
   },
   {
     "id": 104,
-    "title": "Shorts",
+    "title": "쇼츠 (Shorts)",
     "client": "YouTube",
     "category": ["BRAND"],
     "orientation": "portrait",
@@ -531,8 +531,8 @@ const works = [
   },
   {
     "id": 72,
-    "title": "Mirabelle Korea on Instagram",
-    "client": "Mirabelle Korea",
+    "title": "미라벨 코리아 인스타그램 (Mirabelle Korea on Instagram)",
+    "client": "미라벨 코리아 (Mirabelle Korea)",
     "category": ["BEAUTY"],
     "orientation": "portrait",
     "thumbnail": "thumbnails/thumb_72.jpg",
@@ -541,8 +541,8 @@ const works = [
   },
   {
     "id": 73,
-    "title": "Mirabelle Korea: Brand Story (Her)",
-    "client": "Mirabelle Korea",
+    "title": "미라벨 코리아: 브랜드 스토리 (Her)",
+    "client": "미라벨 코리아 (Mirabelle Korea)",
     "category": ["BEAUTY"],
     "orientation": "portrait",
     "thumbnail": "thumbnails/thumb_73.jpg",
@@ -551,8 +551,8 @@ const works = [
   },
   {
     "id": 74,
-    "title": "Mirabelle Korea: Brand Story (Him)",
-    "client": "Mirabelle Korea",
+    "title": "미라벨 코리아: 브랜드 스토리 (Him)",
+    "client": "미라벨 코리아 (Mirabelle Korea)",
     "category": ["BEAUTY"],
     "orientation": "portrait",
     "thumbnail": "thumbnails/thumb_74.jpg",
@@ -561,8 +561,8 @@ const works = [
   },
   {
     "id": 19,
-    "title": "Mirabelle Korea: K-Solutions",
-    "client": "Mirabelle Korea",
+    "title": "미라벨 코리아: K-Solutions",
+    "client": "미라벨 코리아 (Mirabelle Korea)",
     "category": ["BEAUTY"],
     "orientation": "portrait",
     "thumbnail": "images/works/thumb_hq_19.jpg",
@@ -571,8 +571,8 @@ const works = [
   },
   {
     "id": 18,
-    "title": "Obang Heater: Originality",
-    "client": "오방난로",
+    "title": "오방 히터: 오리지널리티 (Obang Heater)",
+    "client": "오방 히터 (Obang Heater)",
     "category": ["BRAND"],
     "orientation": "portrait",
     "thumbnail": "images/works/thumb_hq_18.jpg",
@@ -581,7 +581,7 @@ const works = [
   },
   {
     "id": 138,
-    "title": "Shorts",
+    "title": "쇼츠 (Shorts)",
     "client": "YouTube",
     "category": ["BRAND"],
     "orientation": "portrait",
@@ -691,7 +691,7 @@ const works = [
   },
   {
     "id": 88,
-    "title": "Shorts",
+    "title": "쇼츠 (Shorts)",
     "client": "Instagram",
     "category": ["BRAND"],
     "orientation": "portrait",
@@ -701,7 +701,7 @@ const works = [
   },
   {
     "id": 89,
-    "title": "Shorts",
+    "title": "쇼츠 (Shorts)",
     "client": "Instagram",
     "category": ["BRAND"],
     "orientation": "portrait",
@@ -711,7 +711,7 @@ const works = [
   },
   {
     "id": 90,
-    "title": "Shorts",
+    "title": "쇼츠 (Shorts)",
     "client": "Instagram",
     "category": ["BRAND"],
     "orientation": "portrait",
@@ -721,7 +721,7 @@ const works = [
   },
   {
     "id": 95,
-    "title": "Shorts",
+    "title": "쇼츠 (Shorts)",
     "client": "Instagram",
     "category": ["BRAND"],
     "orientation": "portrait",
@@ -731,7 +731,7 @@ const works = [
   },
   {
     "id": 92,
-    "title": "Shorts",
+    "title": "쇼츠 (Shorts)",
     "client": "Instagram",
     "category": ["BRAND"],
     "orientation": "portrait",
@@ -741,7 +741,7 @@ const works = [
   },
   {
     "id": 93,
-    "title": "Shorts",
+    "title": "쇼츠 (Shorts)",
     "client": "Instagram",
     "category": ["BRAND"],
     "orientation": "portrait",
@@ -751,7 +751,7 @@ const works = [
   },
   {
     "id": 94,
-    "title": "Shorts",
+    "title": "쇼츠 (Shorts)",
     "client": "Instagram",
     "category": ["BRAND"],
     "orientation": "portrait",
@@ -761,7 +761,7 @@ const works = [
   },
   {
     "id": 91,
-    "title": "Shorts",
+    "title": "쇼츠 (Shorts)",
     "client": "Instagram",
     "category": ["BRAND"],
     "orientation": "portrait",
@@ -771,7 +771,7 @@ const works = [
   },
   {
     "id": 96,
-    "title": "Shorts",
+    "title": "쇼츠 (Shorts)",
     "client": "Instagram",
     "category": ["BRAND"],
     "orientation": "portrait",
@@ -781,7 +781,7 @@ const works = [
   },
   {
     "id": 97,
-    "title": "Shorts",
+    "title": "쇼츠 (Shorts)",
     "client": "Instagram",
     "category": ["BRAND"],
     "orientation": "portrait",
@@ -791,7 +791,7 @@ const works = [
   },
   {
     "id": 98,
-    "title": "Shorts",
+    "title": "쇼츠 (Shorts)",
     "client": "Instagram",
     "category": ["BRAND"],
     "orientation": "portrait",
@@ -801,7 +801,7 @@ const works = [
   },
   {
     "id": 99,
-    "title": "Shorts",
+    "title": "쇼츠 (Shorts)",
     "client": "Instagram",
     "category": ["BRAND"],
     "orientation": "portrait",
@@ -811,7 +811,7 @@ const works = [
   },
   {
     "id": 100,
-    "title": "Shorts",
+    "title": "쇼츠 (Shorts)",
     "client": "Instagram",
     "category": ["BRAND"],
     "orientation": "portrait",
@@ -821,7 +821,7 @@ const works = [
   },
   {
     "id": 101,
-    "title": "Shorts",
+    "title": "쇼츠 (Shorts)",
     "client": "Instagram",
     "category": ["BRAND"],
     "orientation": "portrait",
@@ -831,7 +831,7 @@ const works = [
   },
   {
     "id": 102,
-    "title": "Shorts",
+    "title": "쇼츠 (Shorts)",
     "client": "Instagram",
     "category": ["BRAND"],
     "orientation": "portrait",
@@ -841,7 +841,7 @@ const works = [
   },
   {
     "id": 103,
-    "title": "Shorts",
+    "title": "쇼츠 (Shorts)",
     "client": "Instagram",
     "category": ["BRAND"],
     "orientation": "portrait",
@@ -851,7 +851,7 @@ const works = [
   },
   {
     "id": 105,
-    "title": "Shorts",
+    "title": "쇼츠 (Shorts)",
     "client": "Instagram",
     "category": ["BRAND"],
     "orientation": "portrait",
@@ -861,7 +861,7 @@ const works = [
   },
   {
     "id": 106,
-    "title": "Shorts",
+    "title": "쇼츠 (Shorts)",
     "client": "Instagram",
     "category": ["BRAND"],
     "orientation": "portrait",
@@ -871,7 +871,7 @@ const works = [
   },
   {
     "id": 107,
-    "title": "Shorts",
+    "title": "쇼츠 (Shorts)",
     "client": "Instagram",
     "category": ["BRAND"],
     "orientation": "portrait",
@@ -881,7 +881,7 @@ const works = [
   },
   {
     "id": 108,
-    "title": "Shorts",
+    "title": "쇼츠 (Shorts)",
     "client": "Instagram",
     "category": ["BRAND"],
     "orientation": "portrait",
@@ -891,7 +891,7 @@ const works = [
   },
   {
     "id": 109,
-    "title": "Shorts",
+    "title": "쇼츠 (Shorts)",
     "client": "YouTube",
     "category": ["BRAND"],
     "orientation": "portrait",
@@ -901,7 +901,7 @@ const works = [
   },
   {
     "id": 110,
-    "title": "Shorts",
+    "title": "쇼츠 (Shorts)",
     "client": "YouTube",
     "category": ["BRAND"],
     "orientation": "portrait",
@@ -911,7 +911,7 @@ const works = [
   },
   {
     "id": 111,
-    "title": "Shorts",
+    "title": "쇼츠 (Shorts)",
     "client": "YouTube",
     "category": ["BRAND"],
     "orientation": "portrait",
@@ -931,7 +931,7 @@ const works = [
   },
   {
     "id": 114,
-    "title": "Shorts",
+    "title": "쇼츠 (Shorts)",
     "client": "Instagram",
     "category": ["BRAND"],
     "orientation": "portrait",
@@ -941,7 +941,7 @@ const works = [
   },
   {
     "id": 115,
-    "title": "Shorts",
+    "title": "쇼츠 (Shorts)",
     "client": "Instagram",
     "category": ["BRAND"],
     "orientation": "portrait",
@@ -951,7 +951,7 @@ const works = [
   },
   {
     "id": 116,
-    "title": "Shorts",
+    "title": "쇼츠 (Shorts)",
     "client": "Instagram",
     "category": ["BRAND"],
     "orientation": "portrait",
@@ -961,7 +961,7 @@ const works = [
   },
   {
     "id": 117,
-    "title": "Shorts",
+    "title": "쇼츠 (Shorts)",
     "client": "Instagram",
     "category": ["BRAND"],
     "orientation": "portrait",
@@ -971,7 +971,7 @@ const works = [
   },
   {
     "id": 118,
-    "title": "Shorts",
+    "title": "쇼츠 (Shorts)",
     "client": "Instagram",
     "category": ["BRAND"],
     "orientation": "portrait",
@@ -1201,8 +1201,8 @@ const works = [
   },
   {
     "id": 17,
-    "title": "Maison de Onu: Party Pool",
-    "client": "Maison de Onu",
+    "title": "메종 드 오뉴: 파티 풀 (Maison de Onu)",
+    "client": "메종 드 오뉴 (Maison de Onu)",
     "category": ["BRAND"],
     "orientation": "portrait",
     "thumbnail": "images/works/thumb_hq_17.jpg",
