@@ -202,7 +202,7 @@ const works = [
   {
     "id": 126,
     "title": "온누리 상품권 120원 편",
-    "client": "위원 (Wewon)",
+    "client": "위원프로덕션 (WE WON PRODUCTION)",
     "category": ["AD"],
     "orientation": "landscape",
     "thumbnail": "https://i.vimeocdn.com/video/2126205168-1f52af03fc1a6b86b91ebd12fdf8578b340e49f92edf5a18489e685ca411afbb-d?f=webp&region=us",
@@ -212,7 +212,7 @@ const works = [
   {
     "id": 127,
     "title": "온누리 상품권 알바비 편",
-    "client": "위원 (Wewon)",
+    "client": "위원프로덕션 (WE WON PRODUCTION)",
     "category": ["AD"],
     "orientation": "landscape",
     "thumbnail": "https://i.vimeocdn.com/video/2126203783-fea41d760f2fd16f70009d98dea9528cbdc68b6b24166379d57622fc57222eb0-d?f=webp&region=us",
