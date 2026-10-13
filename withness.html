@@ -65,45 +65,29 @@
 
         /* ── Portrait-Focused Mosaic Layout ── */
         .tile-1 {
-            grid-column: span 4;
+            grid-column: span 5;
             grid-row: span 10;
         }
 
-        /* Portrait */
         .tile-2 {
-            grid-column: span 4;
+            grid-column: span 7;
             grid-row: span 5;
         }
 
-        /* Square */
-        .tile-3 {
-            grid-column: span 4;
-            grid-row: span 10;
-        }
-
-        /* Portrait */
         .tile-4 {
-            grid-column: span 4;
+            grid-column: span 7;
             grid-row: span 5;
-        }
-
-        /* Square (under tile-2) */
-        .tile-5 {
-            grid-column: span 4;
-            grid-row: span 6;
         }
 
         .tile-6 {
-            grid-column: span 4;
-            grid-row: span 6;
+            grid-column: span 6;
+            grid-row: span 7;
         }
 
         .tile-7 {
-            grid-column: span 4;
-            grid-row: span 6;
+            grid-column: span 6;
+            grid-row: span 7;
         }
-
-
 
         .tile-11 {
             grid-column: span 12;
@@ -124,11 +108,12 @@
                 aspect-ratio: 16/10;
             }
 
-            .tile-3 {
-                aspect-ratio: 2/3;
+            .tile-1 {
+                grid-column: span 2 !important;
+                aspect-ratio: 4/5;
             }
 
-            .tile-1 {
+            .tile-11 {
                 grid-column: span 2 !important;
             }
         }
@@ -214,19 +199,9 @@
                     <img src="images/withness/behind_02.jpg" alt="Pre-Production" loading="lazy">
                 </div>
 
-                <!-- 3: 세로 카메라 인물 (키 크게) -->
-                <div class="behind-tile tile-3 reveal-text">
-                    <img src="images/withness/behind_03.jpg" alt="Camera Work" loading="lazy">
-                </div>
-
                 <!-- 4: 사운드 스튜디오 -->
                 <div class="behind-tile tile-4 reveal-text">
                     <img src="images/withness/behind_04.jpeg" alt="Sound Studio" loading="lazy">
-                </div>
-
-                <!-- 5: 노란배경 촬영 현장 -->
-                <div class="behind-tile tile-5 reveal-text">
-                    <img src="images/withness/behind_05.jpeg" alt="On Set" loading="lazy">
                 </div>
 
                 <!-- 6: 추가 비하인드 -->
