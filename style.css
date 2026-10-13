@@ -911,10 +911,8 @@ footer {
 }
 
 .portrait-grid .work-item img {
-    object-fit: contain !important;
-    /* Never crop portrait thumbnails */
+    object-fit: cover !important;
     background-color: #000;
-    /* Black bars if needed */
 }
 
 .work-item:hover img {

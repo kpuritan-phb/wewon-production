@@ -211,7 +211,7 @@ const works = [
       "BRAND"
     ],
     "orientation": "portrait",
-    "thumbnail": "https://img.youtube.com/vi/jrcBQZH-a_M/maxresdefault.jpg",
+    "thumbnail": "thumbnails/thumb_156.jpg",
     "videoUrl": "https://www.youtube.com/embed/jrcBQZH-a_M",
     "description": "옆집대표 임지은의 세로형 숏폼 영상 콘텐츠입니다."
   },
@@ -223,7 +223,7 @@ const works = [
       "BRAND"
     ],
     "orientation": "portrait",
-    "thumbnail": "https://img.youtube.com/vi/VPjKsoBHiBI/maxresdefault.jpg",
+    "thumbnail": "thumbnails/thumb_157.jpg",
     "videoUrl": "https://www.youtube.com/embed/VPjKsoBHiBI",
     "description": "옆집대표 임지은의 세로형 숏폼 영상 콘텐츠입니다."
   },
@@ -235,7 +235,7 @@ const works = [
       "BRAND"
     ],
     "orientation": "portrait",
-    "thumbnail": "https://img.youtube.com/vi/LhqmKYnkmu8/maxresdefault.jpg",
+    "thumbnail": "thumbnails/thumb_158.jpg",
     "videoUrl": "https://www.youtube.com/embed/LhqmKYnkmu8",
     "description": "옆집대표 임지은의 세로형 숏폼 영상 콘텐츠입니다."
   },
@@ -247,7 +247,7 @@ const works = [
       "BEAUTY"
     ],
     "orientation": "portrait",
-    "thumbnail": "https://img.youtube.com/vi/kJnA7Bwlk4I/maxresdefault.jpg",
+    "thumbnail": "thumbnails/thumb_159.jpg",
     "videoUrl": "https://www.youtube.com/embed/kJnA7Bwlk4I",
     "description": "라인만드는 의사 DR.권병소의 세로형 숏폼 영상 콘텐츠입니다."
   },
@@ -259,7 +259,7 @@ const works = [
       "BEAUTY"
     ],
     "orientation": "portrait",
-    "thumbnail": "https://img.youtube.com/vi/gKRd58gsDHM/maxresdefault.jpg",
+    "thumbnail": "thumbnails/thumb_160.jpg",
     "videoUrl": "https://www.youtube.com/embed/gKRd58gsDHM",
     "description": "라인만드는 의사 DR.권병소의 세로형 숏폼 영상 콘텐츠입니다."
   },
@@ -271,7 +271,7 @@ const works = [
       "BEAUTY"
     ],
     "orientation": "portrait",
-    "thumbnail": "https://img.youtube.com/vi/s0bgLvMmwlU/maxresdefault.jpg",
+    "thumbnail": "thumbnails/thumb_161.jpg",
     "videoUrl": "https://www.youtube.com/embed/s0bgLvMmwlU",
     "description": "라인만드는 의사 DR.권병소의 세로형 숏폼 영상 콘텐츠입니다."
   },

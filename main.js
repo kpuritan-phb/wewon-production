@@ -133,7 +133,11 @@ document.addEventListener('DOMContentLoaded', () => {
                 if (url.includes('embed/')) videoId = url.split('embed/')[1].split('?')[0];
                 else if (url.includes('v=')) videoId = url.split('v=')[1].split('&')[0];
                 else videoId = url.split('/').pop().split('?')[0];
-                if (videoId) return `https://img.youtube.com/vi/${videoId}/maxresdefault.jpg`;
+                if (videoId) {
+                    return work.orientation === 'portrait'
+                        ? `https://i.ytimg.com/vi/${videoId}/oardefault.jpg`
+                        : `https://img.youtube.com/vi/${videoId}/maxresdefault.jpg`;
+                }
             }
             if (url.includes('instagram.com') || url.includes('threads.net')) {
                 let postId = '';
