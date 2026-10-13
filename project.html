@@ -221,7 +221,12 @@
             let videoUrl = project.videoUrl;
 
             // Apply correct aspect ratio class
-            videoWrapper.classList.add(project.orientation === 'portrait' ? 'aspect-portrait' : 'aspect-landscape');
+            const isCardNews = (videoUrl && videoUrl.includes('/p/')) || (project.title && project.title.includes('카드뉴스'));
+            if (isCardNews) {
+                videoWrapper.classList.add('aspect-cardnews');
+            } else {
+                videoWrapper.classList.add(project.orientation === 'portrait' ? 'aspect-portrait' : 'aspect-landscape');
+            }
 
             if (videoUrl.includes('youtube.com') || videoUrl.includes('youtu.be')) {
                 // Ensure proper embed URL

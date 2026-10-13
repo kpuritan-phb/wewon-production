@@ -2651,6 +2651,13 @@ body.dark-subpage .separator {
     margin: 0 auto;
 }
 
+.video-wrapper.aspect-cardnews {
+    max-width: 540px;
+    height: 680px;
+    aspect-ratio: unset;
+    margin: 0 auto;
+}
+
 .video-wrapper iframe {
     position: absolute;
     top: 0;
@@ -2666,6 +2673,14 @@ body.dark-subpage .separator {
         width: auto;
         aspect-ratio: 9/16;
         height: auto;
+    }
+
+    .video-wrapper.aspect-cardnews {
+        width: 100%;
+        max-width: 100%;
+        height: 560px;
+        aspect-ratio: unset;
+        max-height: none;
     }
 }
 
