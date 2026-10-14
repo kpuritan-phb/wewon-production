@@ -7,18 +7,23 @@
     <title>ADMIN MANAGER | WWWWWO PRODUCTION</title>
     <link rel="stylesheet" href="style.css?v=20260318_v5">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Noto+Sans+KR:wght@300;400;500;700;900&display=swap" rel="stylesheet">
     <style>
         :root {
-            --admin-bg: #070707;
-            --admin-card: #121212;
-            --admin-card-hover: #181818;
+            --admin-bg: #09090b;
+            --admin-card: #141416;
+            --admin-card-hover: #1c1c20;
             --admin-accent: #ffffff;
             --admin-gold: #f59e0b;
-            --admin-text: #f0f0f0;
-            --admin-secondary: #777;
-            --admin-border: #222;
-            --admin-border-light: #333;
+            --admin-gold-glow: rgba(245, 158, 11, 0.25);
+            --admin-text: #f4f4f5;
+            --admin-secondary: #71717a;
+            --admin-border: #27272a;
+            --admin-border-light: #3f3f46;
+        }
+
+        * {
+            box-sizing: border-box;
         }
 
         body.admin-body {
@@ -26,13 +31,13 @@
             color: var(--admin-text);
             font-family: 'Inter', 'Noto Sans KR', sans-serif;
             margin: 0;
-            padding: 40px 24px 80px;
+            padding: 30px 24px 80px;
             min-height: 100vh;
             -webkit-font-smoothing: antialiased;
         }
 
         .admin-container {
-            max-width: 1300px;
+            max-width: 1360px;
             margin: 0 auto;
         }
 
@@ -41,8 +46,8 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            margin-bottom: 35px;
-            padding-bottom: 24px;
+            margin-bottom: 28px;
+            padding-bottom: 20px;
             border-bottom: 1px solid var(--admin-border);
             gap: 20px;
             flex-wrap: wrap;
@@ -50,8 +55,8 @@
 
         .admin-title-group h1 {
             margin: 0;
-            font-size: 1.8rem;
-            font-weight: 800;
+            font-size: 1.7rem;
+            font-weight: 900;
             letter-spacing: -0.5px;
             text-transform: uppercase;
             display: flex;
@@ -65,12 +70,12 @@
             color: #000;
             padding: 3px 8px;
             border-radius: 4px;
-            font-weight: 700;
+            font-weight: 800;
             letter-spacing: 1px;
         }
 
         .admin-title-group p {
-            margin: 6px 0 0;
+            margin: 5px 0 0;
             color: var(--admin-secondary);
             font-size: 0.88rem;
         }
@@ -78,28 +83,28 @@
         .header-actions {
             display: flex;
             align-items: center;
-            gap: 12px;
+            gap: 10px;
         }
 
         .btn-action {
             display: inline-flex;
             align-items: center;
             gap: 8px;
-            padding: 12px 22px;
+            padding: 11px 20px;
             border-radius: 50px;
             font-size: 0.85rem;
             font-weight: 600;
             cursor: pointer;
-            transition: all 0.25s cubic-bezier(0.165, 0.84, 0.44, 1);
+            transition: all 0.2s cubic-bezier(0.165, 0.84, 0.44, 1);
             text-decoration: none;
             border: 1px solid var(--admin-border-light);
-            background: #151515;
+            background: #18181b;
             color: #fff;
         }
 
         .btn-action:hover {
-            border-color: #555;
-            background: #202020;
+            border-color: #71717a;
+            background: #27272a;
             transform: translateY(-2px);
         }
 
@@ -110,7 +115,7 @@
         }
 
         .btn-primary:hover {
-            background: #e0e0e0;
+            background: #e4e4e7;
             color: #000;
             box-shadow: 0 8px 24px rgba(255, 255, 255, 0.15);
         }
@@ -119,7 +124,7 @@
         .tab-controls {
             display: flex;
             gap: 25px;
-            margin-bottom: 35px;
+            margin-bottom: 30px;
             border-bottom: 1px solid var(--admin-border);
             padding-bottom: 12px;
         }
@@ -131,16 +136,16 @@
             padding: 10px 4px;
             cursor: pointer;
             font-size: 0.95rem;
-            font-weight: 600;
+            font-weight: 700;
             position: relative;
-            transition: all 0.25s;
+            transition: all 0.2s;
             display: flex;
             align-items: center;
             gap: 8px;
         }
 
         .tab-btn:hover {
-            color: #bbb;
+            color: #d4d4d8;
         }
 
         .tab-btn.active {
@@ -158,25 +163,25 @@
         }
 
         .tab-btn .badge-count {
-            background: #222;
-            color: #aaa;
+            background: #27272a;
+            color: #a1a1aa;
             font-size: 0.7rem;
             padding: 2px 7px;
             border-radius: 10px;
         }
 
         .tab-btn.active .badge-count {
-            background: #333;
+            background: #3f3f46;
             color: #fff;
         }
 
         /* ---------------- Featured Manager UI ---------------- */
-        .featured-intro {
-            background: linear-gradient(135deg, rgba(245, 158, 11, 0.08) 0%, rgba(255, 255, 255, 0.02) 100%);
-            border: 1px solid rgba(245, 158, 11, 0.25);
+        .featured-banner {
+            background: linear-gradient(135deg, rgba(245, 158, 11, 0.1) 0%, rgba(255, 255, 255, 0.03) 100%);
+            border: 1px solid rgba(245, 158, 11, 0.3);
             border-radius: 14px;
-            padding: 22px 26px;
-            margin-bottom: 35px;
+            padding: 20px 24px;
+            margin-bottom: 30px;
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -184,263 +189,274 @@
             flex-wrap: wrap;
         }
 
-        .featured-intro-text h3 {
-            margin: 0 0 6px;
-            font-size: 1.1rem;
-            font-weight: 700;
+        .featured-banner-text h3 {
+            margin: 0 0 5px;
+            font-size: 1.05rem;
+            font-weight: 800;
             color: #fff;
             display: flex;
             align-items: center;
             gap: 8px;
         }
 
-        .featured-intro-text p {
+        .featured-banner-text p {
             margin: 0;
             font-size: 0.85rem;
-            color: #aaa;
+            color: #a1a1aa;
             line-height: 1.5;
         }
 
-        .featured-intro-actions {
-            display: flex;
-            gap: 10px;
-        }
-
         .btn-reset-featured {
-            background: rgba(255, 255, 255, 0.06);
-            color: #ccc;
-            border: 1px solid #333;
+            background: rgba(255, 255, 255, 0.08);
+            color: #d4d4d8;
+            border: 1px solid #3f3f46;
             padding: 9px 16px;
             border-radius: 8px;
             font-size: 0.8rem;
             font-weight: 600;
             cursor: pointer;
             transition: all 0.2s;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
         }
 
         .btn-reset-featured:hover {
-            background: rgba(255, 255, 255, 0.12);
+            background: rgba(255, 255, 255, 0.15);
             color: #fff;
         }
 
-        .slots-grid {
+        /* Homepage Simulator Layout */
+        .featured-layout {
             display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 24px;
+            grid-template-columns: 2fr 1fr;
+            gap: 30px;
             margin-bottom: 40px;
         }
 
-        @media (max-width: 1100px) {
-            .slots-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-        }
-
-        @media (max-width: 600px) {
-            .slots-grid {
+        @media (max-width: 950px) {
+            .featured-layout {
                 grid-template-columns: 1fr;
             }
         }
 
+        .featured-section-title {
+            font-size: 0.95rem;
+            font-weight: 800;
+            letter-spacing: 0.5px;
+            color: #a1a1aa;
+            margin-bottom: 14px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .landscape-slots-container {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        /* Slot Card */
         .slot-card {
             background: var(--admin-card);
             border: 1px solid var(--admin-border);
-            border-radius: 14px;
+            border-radius: 16px;
             overflow: hidden;
             display: flex;
-            flex-direction: column;
             transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
             position: relative;
         }
 
         .slot-card:hover {
-            border-color: #444;
-            transform: translateY(-4px);
+            border-color: #52525b;
+            transform: translateY(-2px);
             box-shadow: 0 12px 30px rgba(0, 0, 0, 0.5);
         }
 
-        .slot-card-header {
-            padding: 14px 18px;
-            background: #171717;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            border-bottom: 1px solid var(--admin-border);
+        /* Landscape Slot Card */
+        .slot-card.landscape-card {
+            display: grid;
+            grid-template-columns: 280px 1fr;
         }
 
-        .slot-label {
-            font-size: 0.82rem;
-            font-weight: 800;
-            letter-spacing: 0.5px;
-            color: #fff;
-            display: flex;
-            align-items: center;
-            gap: 8px;
+        @media (max-width: 650px) {
+            .slot-card.landscape-card {
+                grid-template-columns: 1fr;
+            }
         }
 
-        .slot-label i {
-            color: var(--admin-gold);
+        /* Portrait Slot Card (Vertical in Right Column) */
+        .slot-card.portrait-card {
+            flex-direction: column;
         }
 
-        .slot-type-badge {
-            font-size: 0.65rem;
-            background: #252525;
-            color: #aaa;
-            padding: 3px 8px;
-            border-radius: 4px;
-            font-weight: 600;
-            text-transform: uppercase;
-        }
-
-        .slot-thumb-wrapper {
+        .slot-card-thumb-wrap {
             position: relative;
-            width: 100%;
-            aspect-ratio: 16/9;
             background: #000;
             overflow: hidden;
         }
 
-        .slot-card.portrait-slot .slot-thumb-wrapper {
-            aspect-ratio: 9/16;
-            max-height: 380px;
+        .landscape-card .slot-card-thumb-wrap {
+            aspect-ratio: 16/9;
+            width: 100%;
+            height: 100%;
+            min-height: 160px;
         }
 
-        .slot-thumb {
+        .portrait-card .slot-card-thumb-wrap {
+            aspect-ratio: 9/16;
+            width: 100%;
+            max-height: 480px;
+        }
+
+        .slot-card-thumb {
             width: 100%;
             height: 100%;
             object-fit: cover;
+            display: block;
             transition: transform 0.4s ease;
         }
 
-        .slot-card:hover .slot-thumb {
-            transform: scale(1.04);
+        .slot-card:hover .slot-card-thumb {
+            transform: scale(1.03);
         }
 
-        .slot-thumb-overlay {
+        .slot-card-badge {
             position: absolute;
-            inset: 0;
-            background: linear-gradient(180deg, transparent 50%, rgba(0,0,0,0.85) 100%);
-            display: flex;
-            align-items: flex-end;
-            padding: 12px;
-            pointer-events: none;
-        }
-
-        .slot-work-id {
-            position: absolute;
-            top: 10px;
-            left: 10px;
-            background: rgba(0, 0, 0, 0.8);
-            backdrop-filter: blur(4px);
-            padding: 3px 8px;
-            border-radius: 4px;
-            font-size: 0.68rem;
-            font-weight: 700;
+            top: 12px;
+            left: 12px;
+            background: rgba(0, 0, 0, 0.85);
+            backdrop-filter: blur(6px);
+            padding: 5px 10px;
+            border-radius: 6px;
+            font-size: 0.72rem;
+            font-weight: 800;
             color: #fff;
-            border: 1px solid rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            z-index: 2;
         }
 
-        .slot-body {
-            padding: 18px;
+        .slot-card-badge i {
+            color: var(--admin-gold);
+        }
+
+        .slot-card-content {
+            padding: 22px;
             display: flex;
             flex-direction: column;
-            gap: 12px;
-            flex-grow: 1;
+            justify-content: space-between;
+            gap: 16px;
+            flex: 1;
         }
 
-        .slot-client {
+        .slot-card-info {
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+        }
+
+        .slot-card-role-desc {
             font-size: 0.72rem;
             font-weight: 700;
-            color: #888;
+            color: var(--admin-gold);
             text-transform: uppercase;
             letter-spacing: 0.8px;
+        }
+
+        .slot-card-client {
+            font-size: 0.8rem;
+            font-weight: 700;
+            color: #a1a1aa;
+            text-transform: uppercase;
             margin: 0;
         }
 
-        .slot-title {
+        .slot-card-title {
             margin: 0;
-            font-size: 0.95rem;
-            font-weight: 700;
+            font-size: 1.05rem;
+            font-weight: 800;
+            color: #fff;
             line-height: 1.4;
-            color: #f5f5f5;
             display: -webkit-box;
             -webkit-line-clamp: 2;
             line-clamp: 2;
             -webkit-box-orient: vertical;
             overflow: hidden;
-            min-height: 2.8em;
         }
 
-        .slot-meta {
+        .slot-card-meta {
             display: flex;
             gap: 6px;
             flex-wrap: wrap;
             margin-top: 4px;
         }
 
-        .slot-cat-chip {
+        .slot-tag {
             font-size: 0.68rem;
-            background: #1c1c1c;
-            color: #aaa;
-            padding: 2px 7px;
+            background: #27272a;
+            color: #a1a1aa;
+            padding: 3px 8px;
             border-radius: 4px;
-            border: 1px solid #282828;
         }
 
-        .slot-actions {
-            padding: 14px 18px;
-            border-top: 1px solid var(--admin-border);
+        .slot-card-actions {
             display: flex;
             gap: 10px;
-            background: #141414;
+            align-items: center;
         }
 
-        .btn-change-slot {
+        .btn-change-video {
             flex: 1;
             background: #fff;
             color: #000;
             border: none;
-            padding: 10px 14px;
-            border-radius: 8px;
-            font-size: 0.82rem;
-            font-weight: 700;
+            padding: 12px 18px;
+            border-radius: 10px;
+            font-size: 0.88rem;
+            font-weight: 800;
             cursor: pointer;
             display: flex;
             align-items: center;
             justify-content: center;
-            gap: 7px;
+            gap: 8px;
             transition: all 0.2s;
         }
 
-        .btn-change-slot:hover {
-            background: #e2e2e2;
+        .btn-change-video:hover {
+            background: #e4e4e7;
             transform: translateY(-1px);
+            box-shadow: 0 4px 15px rgba(255, 255, 255, 0.2);
         }
 
-        .btn-view-slot {
-            background: #222;
-            color: #ccc;
-            border: 1px solid #333;
-            width: 38px;
-            height: 38px;
-            border-radius: 8px;
+        .btn-preview-video {
+            background: #27272a;
+            color: #d4d4d8;
+            border: 1px solid #3f3f46;
+            width: 44px;
+            height: 44px;
+            border-radius: 10px;
             display: flex;
             align-items: center;
             justify-content: center;
             cursor: pointer;
             transition: all 0.2s;
             text-decoration: none;
+            font-size: 0.95rem;
         }
 
-        .btn-view-slot:hover {
-            background: #333;
+        .btn-preview-video:hover {
+            background: #3f3f46;
             color: #fff;
         }
 
         /* ---------------- Works Reorder List UI ---------------- */
         .reorder-list {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+            grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
             gap: 22px;
             padding: 0;
             list-style: none;
@@ -448,7 +464,7 @@
 
         .reorder-item {
             background: var(--admin-card);
-            border-radius: 12px;
+            border-radius: 14px;
             overflow: hidden;
             cursor: grab;
             transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
@@ -457,7 +473,7 @@
         }
 
         .reorder-item:hover {
-            border-color: #444;
+            border-color: #52525b;
             transform: translateY(-4px);
         }
 
@@ -467,7 +483,7 @@
 
         .reorder-item.ghost {
             opacity: 0.2;
-            background: #222;
+            background: #27272a;
         }
 
         .item-thumb-container {
@@ -486,40 +502,35 @@
             width: 100%;
             height: 100%;
             object-fit: cover;
-            opacity: 0.85;
-            transition: opacity 0.3s;
-        }
-
-        .reorder-item:hover .item-thumb {
-            opacity: 1;
+            display: block;
         }
 
         .item-info {
-            padding: 14px;
+            padding: 16px;
             display: flex;
             flex-direction: column;
-            gap: 10px;
+            gap: 8px;
             cursor: default;
         }
 
         .item-client {
-            font-size: 0.68rem;
+            font-size: 0.7rem;
             font-weight: 700;
-            color: #777;
+            color: #71717a;
             text-transform: uppercase;
             margin: 0;
         }
 
         .item-title {
-            font-size: 0.82rem;
-            font-weight: 600;
+            font-size: 0.85rem;
+            font-weight: 700;
             margin: 0;
             display: -webkit-box;
             -webkit-line-clamp: 2;
             line-clamp: 2;
             -webkit-box-orient: vertical;
             overflow: hidden;
-            color: #ccc;
+            color: #e4e4e7;
             line-height: 1.4;
             height: 2.8em;
         }
@@ -530,12 +541,12 @@
             left: 10px;
             background: rgba(0, 0, 0, 0.85);
             backdrop-filter: blur(4px);
-            padding: 3px 8px;
+            padding: 4px 8px;
             border-radius: 4px;
-            font-size: 0.68rem;
+            font-size: 0.7rem;
             color: #fff;
             z-index: 2;
-            font-weight: 700;
+            font-weight: 800;
         }
 
         .cat-checkboxes {
@@ -550,12 +561,12 @@
             align-items: center;
             gap: 4px;
             font-size: 0.68rem;
-            color: #888;
+            color: #a1a1aa;
             cursor: pointer;
-            background: #181818;
+            background: #18181b;
             padding: 3px 7px;
             border-radius: 4px;
-            border: 1px solid #282828;
+            border: 1px solid #27272a;
             user-select: none;
         }
 
@@ -568,12 +579,12 @@
         }
 
         .cat-check:has(input:checked) {
-            background: #252525;
+            background: #27272a;
             color: #fff;
-            border-color: #444;
+            border-color: #52525b;
         }
 
-        /* ---------------- Modal ---------------- */
+        /* ---------------- Modal (Popups) ---------------- */
         .admin-modal {
             display: none;
             position: fixed;
@@ -581,12 +592,12 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: rgba(0, 0, 0, 0.88);
-            backdrop-filter: blur(8px);
+            background: rgba(0, 0, 0, 0.85);
+            backdrop-filter: blur(10px);
             justify-content: center;
             align-items: center;
             z-index: 2000;
-            padding: 20px;
+            padding: 24px;
             box-sizing: border-box;
         }
 
@@ -595,23 +606,23 @@
         }
 
         .modal-inner {
-            background: #111;
-            padding: 30px;
-            border-radius: 18px;
-            max-width: 950px;
+            background: #121214;
+            padding: 28px;
+            border-radius: 20px;
+            max-width: 1120px;
             width: 100%;
             max-height: 90vh;
             display: flex;
             flex-direction: column;
-            border: 1px solid #252525;
-            animation: modalFadeIn 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
-            box-shadow: 0 25px 60px rgba(0, 0, 0, 0.8);
+            border: 1px solid #27272a;
+            animation: modalFadeIn 0.25s cubic-bezier(0.165, 0.84, 0.44, 1);
+            box-shadow: 0 30px 80px rgba(0, 0, 0, 0.9);
         }
 
         @keyframes modalFadeIn {
             from {
                 opacity: 0;
-                transform: translateY(15px) scale(0.98);
+                transform: translateY(12px) scale(0.98);
             }
             to {
                 opacity: 1;
@@ -625,33 +636,46 @@
             align-items: center;
             margin-bottom: 20px;
             padding-bottom: 16px;
-            border-bottom: 1px solid #222;
+            border-bottom: 1px solid #27272a;
         }
 
-        .modal-header h2 {
-            margin: 0;
+        .modal-header-text h2 {
+            margin: 0 0 4px;
             font-size: 1.35rem;
-            font-weight: 700;
+            font-weight: 800;
             display: flex;
             align-items: center;
             gap: 10px;
         }
 
+        .modal-header-text p {
+            margin: 0;
+            font-size: 0.85rem;
+            color: #a1a1aa;
+        }
+
         .btn-close-modal {
-            background: none;
-            border: none;
-            color: #777;
-            font-size: 1.3rem;
+            background: #27272a;
+            border: 1px solid #3f3f46;
+            color: #d4d4d8;
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            font-size: 1.2rem;
             cursor: pointer;
-            padding: 4px 8px;
-            transition: color 0.2s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.2s;
         }
 
         .btn-close-modal:hover {
             color: #fff;
+            background: #3f3f46;
+            transform: rotate(90deg);
         }
 
-        /* Video Picker Modal Elements */
+        /* Video Picker Controls */
         .picker-controls {
             display: flex;
             flex-direction: column;
@@ -666,21 +690,21 @@
 
         .picker-search-bar i {
             position: absolute;
-            left: 16px;
+            left: 18px;
             top: 50%;
             transform: translateY(-50%);
-            color: #666;
-            font-size: 0.95rem;
+            color: #71717a;
+            font-size: 1rem;
         }
 
         .picker-search-input {
             width: 100%;
-            background: #181818;
-            border: 1px solid #2a2a2a;
+            background: #18181b;
+            border: 1px solid #3f3f46;
             color: #fff;
-            padding: 13px 18px 13px 44px;
-            border-radius: 10px;
-            font-size: 0.92rem;
+            padding: 14px 20px 14px 48px;
+            border-radius: 12px;
+            font-size: 0.95rem;
             outline: none;
             box-sizing: border-box;
             transition: all 0.25s;
@@ -688,7 +712,8 @@
 
         .picker-search-input:focus {
             border-color: #fff;
-            background: #1f1f1f;
+            background: #27272a;
+            box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.1);
         }
 
         .picker-filter-chips {
@@ -699,21 +724,25 @@
         }
 
         .filter-chip {
-            background: #1a1a1a;
-            color: #888;
-            border: 1px solid #282828;
-            padding: 6px 14px;
+            background: #18181b;
+            color: #a1a1aa;
+            border: 1px solid #27272a;
+            padding: 8px 16px;
             border-radius: 50px;
-            font-size: 0.78rem;
-            font-weight: 600;
+            font-size: 0.8rem;
+            font-weight: 700;
             cursor: pointer;
             white-space: nowrap;
             transition: all 0.2s;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
         }
 
         .filter-chip:hover {
             color: #fff;
-            border-color: #444;
+            border-color: #52525b;
+            background: #27272a;
         }
 
         .filter-chip.active {
@@ -722,36 +751,39 @@
             border-color: #fff;
         }
 
+        /* Video Picker Grid - 시원하고 큼직한 카드 UI */
         .picker-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(190px, 1fr));
-            gap: 16px;
+            grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+            gap: 18px;
             overflow-y: auto;
-            max-height: 55vh;
-            padding-right: 6px;
+            max-height: 56vh;
+            padding-right: 8px;
+            padding-bottom: 20px;
         }
 
-        .picker-item-card {
-            background: #161616;
-            border: 1px solid #242424;
-            border-radius: 10px;
+        .picker-card {
+            background: #18181b;
+            border: 1px solid #27272a;
+            border-radius: 12px;
             overflow: hidden;
             cursor: pointer;
-            transition: all 0.2s;
+            transition: all 0.25s cubic-bezier(0.165, 0.84, 0.44, 1);
             display: flex;
             flex-direction: column;
-            text-align: left;
+            position: relative;
         }
 
-        .picker-item-card:hover {
+        .picker-card:hover {
             border-color: #fff;
-            transform: translateY(-3px);
-            background: #1d1d1d;
+            transform: translateY(-4px);
+            background: #222226;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.6);
         }
 
-        .picker-item-card.is-current {
-            border-color: var(--admin-gold);
-            box-shadow: 0 0 15px rgba(245, 158, 11, 0.2);
+        .picker-card.is-current {
+            border: 2px solid var(--admin-gold);
+            box-shadow: 0 0 20px var(--admin-gold-glow);
         }
 
         .picker-thumb-box {
@@ -764,33 +796,91 @@
 
         .picker-thumb-box.portrait {
             aspect-ratio: 9/16;
+            max-height: 280px;
         }
 
-        .picker-thumb {
+        .picker-thumb-img {
             width: 100%;
             height: 100%;
             object-fit: cover;
+            display: block;
+            transition: transform 0.3s ease;
         }
 
-        .picker-card-info {
-            padding: 10px 12px 14px;
+        .picker-card:hover .picker-thumb-img {
+            transform: scale(1.05);
+        }
+
+        /* Hover Overlay with Action Button */
+        .picker-hover-action {
+            position: absolute;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.65);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            transition: opacity 0.2s ease;
+            backdrop-filter: blur(2px);
+        }
+
+        .picker-card:hover .picker-hover-action {
+            opacity: 1;
+        }
+
+        .btn-select-this {
+            background: #fff;
+            color: #000;
+            padding: 10px 18px;
+            border-radius: 50px;
+            font-size: 0.82rem;
+            font-weight: 800;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+            transform: scale(0.95);
+            transition: transform 0.2s;
+        }
+
+        .picker-card:hover .btn-select-this {
+            transform: scale(1);
+        }
+
+        .picker-badge-current {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background: var(--admin-gold);
+            color: #000;
+            font-size: 0.68rem;
+            font-weight: 800;
+            padding: 3px 8px;
+            border-radius: 4px;
+            z-index: 2;
+        }
+
+        .picker-card-body {
+            padding: 14px;
             display: flex;
             flex-direction: column;
-            gap: 4px;
+            gap: 6px;
+            flex: 1;
         }
 
-        .picker-client {
-            font-size: 0.65rem;
+        .picker-card-client {
+            font-size: 0.7rem;
             font-weight: 700;
-            color: #777;
+            color: #a1a1aa;
             text-transform: uppercase;
+            letter-spacing: 0.5px;
         }
 
-        .picker-title {
+        .picker-card-title {
             margin: 0;
-            font-size: 0.78rem;
-            font-weight: 600;
-            color: #ddd;
+            font-size: 0.85rem;
+            font-weight: 700;
+            color: #fff;
             line-height: 1.35;
             display: -webkit-box;
             -webkit-line-clamp: 2;
@@ -800,32 +890,27 @@
             height: 2.7em;
         }
 
-        .picker-badges {
+        .picker-card-footer {
             display: flex;
-            gap: 5px;
-            margin-top: 4px;
-        }
-
-        .picker-badge {
-            font-size: 0.62rem;
-            padding: 2px 6px;
-            border-radius: 3px;
-            background: #252525;
-            color: #aaa;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 6px;
+            font-size: 0.68rem;
+            color: #71717a;
         }
 
         .code-area {
-            background: #050505;
-            color: #00ffaa;
+            background: #09090b;
+            color: #4ade80;
             padding: 20px;
             border-radius: 12px;
             font-family: 'Fira Code', 'Courier New', monospace;
             overflow-y: auto;
             flex-grow: 1;
-            margin: 20px 0;
-            font-size: 0.78rem;
+            margin: 18px 0;
+            font-size: 0.8rem;
             white-space: pre;
-            border: 1px solid #1a1a1a;
+            border: 1px solid #27272a;
             max-height: 50vh;
         }
 
@@ -833,30 +918,30 @@
             display: flex;
             justify-content: flex-end;
             gap: 12px;
-            padding-top: 12px;
-            border-top: 1px solid #222;
+            padding-top: 14px;
+            border-top: 1px solid #27272a;
         }
 
-        /* Toast Notice */
+        /* Toast */
         .admin-toast {
             position: fixed;
             bottom: 30px;
             right: 30px;
-            background: #1c1c1c;
+            background: #18181b;
             color: #fff;
-            padding: 16px 24px;
+            padding: 16px 22px;
             border-radius: 12px;
-            border: 1px solid #333;
-            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.6);
+            border: 1px solid #3f3f46;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.7);
             display: flex;
             align-items: center;
             gap: 12px;
             font-size: 0.88rem;
-            font-weight: 600;
+            font-weight: 700;
             z-index: 3000;
-            transform: translateY(100px);
+            transform: translateY(80px);
             opacity: 0;
-            transition: all 0.35s cubic-bezier(0.165, 0.84, 0.44, 1);
+            transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
             pointer-events: none;
         }
 
@@ -868,6 +953,21 @@
         .admin-toast i {
             color: #10b981;
             font-size: 1.1rem;
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #3f3f46;
+            border-radius: 10px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #121214;
         }
     </style>
 </head>
@@ -900,47 +1000,66 @@
             </button>
             <button class="tab-btn" data-type="landscape">
                 <i class="fas fa-desktop"></i>
-                LONG FORM (Landscape)
+                가로형 영상 (Landscape)
                 <span class="badge-count" id="count-landscape">0</span>
             </button>
             <button class="tab-btn" data-type="portrait">
                 <i class="fas fa-mobile-alt"></i>
-                SHORT FORM (Portrait)
+                쇼츠 / 세로형 (Portrait)
                 <span class="badge-count" id="count-portrait">0</span>
             </button>
         </nav>
 
         <!-- Tab 1: Featured Manager -->
         <main id="featured-container">
-            <div class="featured-intro">
-                <div class="featured-intro-text">
-                    <h3><i class="fas fa-bolt" style="color: var(--admin-gold);"></i> 실시간 대문 영상 관리</h3>
-                    <p>홈페이지 첫 화면(SELECTED PROJECTS)의 4개 슬롯에 노출될 작품을 지정하세요. 교체 즉시 현재 브라우저에 바로 반영되며, 상단의 [순서 확정 및 코드 생성]을 통해 공식 배포용 코드를 내보낼 수 있습니다.</p>
+            <div class="featured-banner">
+                <div class="featured-banner-text">
+                    <h3><i class="fas fa-bolt" style="color: var(--admin-gold);"></i> 실시간 대문 대표작 관리</h3>
+                    <p>홈페이지 첫 화면(SELECTED PROJECTS)의 4개 슬롯입니다. <b>[영상 바꾸기]</b>를 누르면 원하는 영상을 편하게 검색하여 즉시 교체할 수 있습니다.</p>
                 </div>
-                <div class="featured-intro-actions">
-                    <button id="btn-reset-featured" class="btn-reset-featured">
-                        <i class="fas fa-undo"></i> 기본 추천작으로 초기화
-                    </button>
-                </div>
+                <button id="btn-reset-featured" class="btn-reset-featured">
+                    <i class="fas fa-undo"></i> 기본 추천작으로 복원
+                </button>
             </div>
 
-            <div class="slots-grid" id="featured-slots-grid">
-                <!-- Dynamically rendered slots -->
+            <!-- Homepage layout visualizer -->
+            <div class="featured-layout">
+                <!-- Left Column: Landscape Slots (01, 02, 03) -->
+                <div>
+                    <div class="featured-section-title">
+                        <span><i class="fas fa-desktop" style="margin-right:6px;"></i> 메인 가로 영상 (16:9)</span>
+                        <span style="font-size: 0.75rem; color: #71717a;">3개 슬롯</span>
+                    </div>
+                    <div class="landscape-slots-container" id="landscape-slots-box">
+                        <!-- Slots 01, 02, 03 dynamically inserted here -->
+                    </div>
+                </div>
+
+                <!-- Right Column: Portrait Slot (04 Shorts) -->
+                <div>
+                    <div class="featured-section-title">
+                        <span><i class="fas fa-mobile-alt" style="margin-right:6px;"></i> 우측 쇼츠 / 세로 영상 (9:16)</span>
+                        <span style="font-size: 0.75rem; color: #71717a;">1개 슬롯</span>
+                    </div>
+                    <div id="portrait-slot-box">
+                        <!-- Slot 04 dynamically inserted here -->
+                    </div>
+                </div>
             </div>
         </main>
 
         <!-- Tab 2: Landscape Reorder -->
         <main id="landscape-container" style="display: none;">
-            <p style="color: #888; font-size: 0.85rem; margin-bottom: 20px;">
-                <i class="fas fa-info-circle"></i> 카드를 마우스로 드래그하여 포트폴리오 순서를 조정하고, 카테고리를 변경할 수 있습니다.
+            <p style="color: #71717a; font-size: 0.88rem; margin-bottom: 20px;">
+                <i class="fas fa-info-circle"></i> 마우스로 드래그하여 포트폴리오 순서를 조정하거나 카테고리 체크박스를 변경할 수 있습니다.
             </p>
             <ul id="landscape-list" class="reorder-list"></ul>
         </main>
 
         <!-- Tab 3: Portrait Reorder -->
         <main id="portrait-container" style="display: none;">
-            <p style="color: #888; font-size: 0.85rem; margin-bottom: 20px;">
-                <i class="fas fa-info-circle"></i> 세로형(쇼츠) 포트폴리오 순서를 드래그하여 변경할 수 있습니다.
+            <p style="color: #71717a; font-size: 0.88rem; margin-bottom: 20px;">
+                <i class="fas fa-info-circle"></i> 마우스로 드래그하여 세로형(쇼츠) 포트폴리오 순서를 변경할 수 있습니다.
             </p>
             <ul id="portrait-list" class="reorder-list"></ul>
         </main>
@@ -950,23 +1069,29 @@
     <div id="picker-modal" class="admin-modal">
         <div class="modal-inner">
             <div class="modal-header">
-                <h2>
-                    <i class="fas fa-photo-video" style="color: var(--admin-gold);"></i>
-                    <span id="picker-modal-title">작품 선택하기</span>
-                </h2>
-                <button id="close-picker-modal" class="btn-close-modal">&times;</button>
+                <div class="modal-header-text">
+                    <h2>
+                        <i class="fas fa-photo-video" style="color: var(--admin-gold);"></i>
+                        <span id="picker-modal-title">SLOT 01 영상 선택</span>
+                    </h2>
+                    <p id="picker-modal-desc">원하는 영상을 클릭하면 즉시 슬롯에 적용됩니다.</p>
+                </div>
+                <button id="close-picker-modal" class="btn-close-modal" aria-label="닫기">&times;</button>
             </div>
 
             <div class="picker-controls">
+                <!-- Search bar -->
                 <div class="picker-search-bar">
                     <i class="fas fa-search"></i>
-                    <input type="text" id="picker-search-input" class="picker-search-input" placeholder="작품 제목 또는 브랜드(클라이언트) 검색...">
+                    <input type="text" id="picker-search-input" class="picker-search-input" placeholder="작품 제목 또는 브랜드명(클라이언트) 검색...">
                 </div>
 
-                <div class="picker-filter-chips">
-                    <button class="filter-chip active" data-filter="all">전체보기</button>
-                    <button class="filter-chip" data-filter="landscape">가로형 (Landscape)</button>
-                    <button class="filter-chip" data-filter="portrait">쇼츠/세로형 (Portrait)</button>
+                <!-- Filter Chips -->
+                <div class="picker-filter-chips" id="filter-chips-box">
+                    <button class="filter-chip active" data-filter="recommend">⭐ 추천 (슬롯 맞춤)</button>
+                    <button class="filter-chip" data-filter="all">전체보기</button>
+                    <button class="filter-chip" data-filter="landscape">가로형 (16:9)</button>
+                    <button class="filter-chip" data-filter="portrait">쇼츠/세로형 (9:16)</button>
                     <button class="filter-chip" data-filter="BRAND">BRAND</button>
                     <button class="filter-chip" data-filter="BEAUTY">BEAUTY</button>
                     <button class="filter-chip" data-filter="AD">AD</button>
@@ -974,8 +1099,9 @@
                 </div>
             </div>
 
+            <!-- Video Grid -->
             <div id="picker-grid" class="picker-grid">
-                <!-- Dynamically populated video cards -->
+                <!-- Cards dynamically populated -->
             </div>
         </div>
     </div>
@@ -984,12 +1110,12 @@
     <div id="export-modal" class="admin-modal">
         <div class="modal-inner">
             <div class="modal-header">
-                <h2><i class="fas fa-check-circle" style="color: #10b981;"></i> 코드 내보내기 및 배포 준비</h2>
+                <div class="modal-header-text">
+                    <h2><i class="fas fa-check-circle" style="color: #10b981;"></i> 코드 내보내기 및 배포 준비</h2>
+                    <p>대문 슬롯 설정과 변경된 순서가 완벽히 포함된 최신 works.js 코드입니다.</p>
+                </div>
                 <button id="close-export-modal" class="btn-close-modal">&times;</button>
             </div>
-            <p style="color: #888; font-size: 0.88rem; margin: 0 0 10px;">
-                대문(SELECTED PROJECTS) 4개 슬롯 설정 및 변경된 순서/카테고리가 모두 적용된 최신 <code>works.js</code> 코드입니다.
-            </p>
             <div id="code-output" class="code-area"></div>
             <div class="modal-footer">
                 <button id="download-btn" class="btn-action">
@@ -1012,15 +1138,14 @@
     <script type="module">
         import works from './works.js';
 
-        // Deep copy works for local modifications
+        // Deep copy works for local manipulation
         let localWorks = JSON.parse(JSON.stringify(works));
         let sortedLandscape = localWorks.filter(w => w.orientation === 'landscape');
         let sortedPortrait = localWorks.filter(w => w.orientation === 'portrait');
 
-        // Initial default featured IDs
+        // Initial default featured IDs (1: 닥터포헤어, 2: 프리메라, 3: 에스쁘아, 4: 한율 쇼츠)
         const DEFAULT_FEATURED_IDS = [22, 44, 46, 56];
 
-        // Load featured IDs from localStorage or works.js or fallback
         function loadFeaturedIds() {
             const saved = localStorage.getItem('wwwwwo_featured_ids');
             if (saved) {
@@ -1030,11 +1155,11 @@
                         return parsed;
                     }
                 } catch (e) {
-                    console.error('Failed to parse localStorage featured_ids', e);
+                    console.error('Failed to parse wwwwwo_featured_ids from localStorage', e);
                 }
             }
 
-            // Fallback to works marked with featuredSlot
+            // Fallback from works.js featuredSlot
             const marked = [];
             for (let i = 1; i <= 4; i++) {
                 const item = localWorks.find(w => w.featuredSlot === i);
@@ -1044,17 +1169,14 @@
         }
 
         let featuredSlotIds = loadFeaturedIds();
-        let currentTargetSlot = 0; // 0 to 3
+        let currentTargetSlot = 0; // 0: Slot 1, 1: Slot 2, 2: Slot 3, 3: Slot 4
+        let currentFilter = 'recommend';
 
-        const landscapeList = document.getElementById('landscape-list');
-        const portraitList = document.getElementById('portrait-list');
-        const featuredSlotsGrid = document.getElementById('featured-slots-grid');
-
-        // Badge counts
+        // Update badge counts
         document.getElementById('count-landscape').textContent = sortedLandscape.length;
         document.getElementById('count-portrait').textContent = sortedPortrait.length;
 
-        // Thumbnail resolver helper
+        // Resolve thumbnail helper
         function getWorkThumb(item) {
             if (!item) return '';
             let thumb = item.thumbnail;
@@ -1084,14 +1206,18 @@
 
         // ----------------- RENDER FEATURED SLOTS -----------------
         const slotConfig = [
-            { slotNum: 1, name: 'SLOT 01', type: 'Landscape', desc: '대문 상단 메인 와이드 영상 (16:9)', isPortrait: false },
-            { slotNum: 2, name: 'SLOT 02', type: 'Landscape', desc: '대문 중간 와이드 영상 (16:9)', isPortrait: false },
-            { slotNum: 3, name: 'SLOT 03', type: 'Landscape', desc: '대문 하단 와이드 영상 (16:9)', isPortrait: false },
-            { slotNum: 4, name: 'SLOT 04', type: 'Portrait', desc: '대문 우측 쇼츠/세로 영상 (9:16)', isPortrait: true }
+            { slotNum: 1, name: 'SLOT 01', type: 'Landscape', roleDesc: '메인 상단 와이드 (16:9)', isPortrait: false },
+            { slotNum: 2, name: 'SLOT 02', type: 'Landscape', roleDesc: '중간 메인 와이드 (16:9)', isPortrait: false },
+            { slotNum: 3, name: 'SLOT 03', type: 'Landscape', roleDesc: '하단 와이드 (16:9)', isPortrait: false },
+            { slotNum: 4, name: 'SLOT 04', type: 'Portrait', roleDesc: '대문 우측 쇼츠 (9:16)', isPortrait: true }
         ];
 
         function renderFeaturedSlots() {
-            featuredSlotsGrid.innerHTML = '';
+            const landscapeBox = document.getElementById('landscape-slots-box');
+            const portraitBox = document.getElementById('portrait-slot-box');
+
+            landscapeBox.innerHTML = '';
+            portraitBox.innerHTML = '';
 
             slotConfig.forEach((cfg, index) => {
                 const workId = featuredSlotIds[index];
@@ -1099,45 +1225,48 @@
                 const thumb = getWorkThumb(work);
 
                 const card = document.createElement('div');
-                card.className = `slot-card ${cfg.isPortrait ? 'portrait-slot' : ''}`;
-                
+                card.className = `slot-card ${cfg.isPortrait ? 'portrait-card' : 'landscape-card'}`;
+
                 const cats = Array.isArray(work.category) ? work.category : (work.category ? [work.category] : []);
-                const catChips = cats.map(c => `<span class="slot-cat-chip">${c}</span>`).join('');
+                const catTags = cats.map(c => `<span class="slot-tag">${c}</span>`).join('');
 
                 card.innerHTML = `
-                    <div class="slot-card-header">
-                        <span class="slot-label"><i class="fas fa-play-circle"></i> ${cfg.name}</span>
-                        <span class="slot-type-badge">${cfg.type}</span>
+                    <div class="slot-card-thumb-wrap">
+                        <span class="slot-card-badge">
+                            <i class="fas fa-play-circle"></i> ${cfg.name}
+                        </span>
+                        <img src="${thumb}" alt="${work.title}" class="slot-card-thumb" loading="lazy">
                     </div>
-                    <div class="slot-thumb-wrapper">
-                        <span class="slot-work-id">ID #${work.id}</span>
-                        <img src="${thumb}" alt="${work.title}" class="slot-thumb" loading="lazy">
-                        <div class="slot-thumb-overlay">
-                            <span style="font-size: 0.72rem; color: #ccc;">${cfg.desc}</span>
+                    <div class="slot-card-content">
+                        <div class="slot-card-info">
+                            <span class="slot-card-roleDesc">${cfg.roleDesc}</span>
+                            <p class="slot-card-client">${work.client || 'CLIENT'}</p>
+                            <h4 class="slot-card-title">${work.title}</h4>
+                            <div class="slot-card-meta">
+                                <span class="slot-tag">ID #${work.id}</span>
+                                ${catTags}
+                            </div>
                         </div>
-                    </div>
-                    <div class="slot-body">
-                        <p class="slot-client">${work.client || 'CLIENT'}</p>
-                        <h4 class="slot-title">${work.title}</h4>
-                        <div class="slot-meta">
-                            ${catChips}
+                        <div class="slot-card-actions">
+                            <button class="btn-change-video" data-slot-index="${index}">
+                                <i class="fas fa-exchange-alt"></i> 영상 바꾸기
+                            </button>
+                            <a href="project.html?id=${work.id}" target="_blank" class="btn-preview-video" title="상세보기">
+                                <i class="fas fa-arrow-up-right-from-square"></i>
+                            </a>
                         </div>
-                    </div>
-                    <div class="slot-actions">
-                        <button class="btn-change-slot" data-slot-index="${index}">
-                            <i class="fas fa-exchange-alt"></i> 영상 교체하기
-                        </button>
-                        <a href="project.html?id=${work.id}" target="_blank" class="btn-view-slot" title="상세보기">
-                            <i class="fas fa-arrow-up-right-from-square"></i>
-                        </a>
                     </div>
                 `;
 
-                card.querySelector('.btn-change-slot').addEventListener('click', () => {
+                card.querySelector('.btn-change-video').addEventListener('click', () => {
                     openPickerModal(index);
                 });
 
-                featuredSlotsGrid.appendChild(card);
+                if (cfg.isPortrait) {
+                    portraitBox.appendChild(card);
+                } else {
+                    landscapeBox.appendChild(card);
+                }
             });
         }
 
@@ -1146,22 +1275,20 @@
         const pickerGrid = document.getElementById('picker-grid');
         const pickerSearchInput = document.getElementById('picker-search-input');
         const pickerModalTitle = document.getElementById('picker-modal-title');
-        let currentFilter = 'all';
+        const pickerModalDesc = document.getElementById('picker-modal-desc');
 
         function openPickerModal(slotIndex) {
             currentTargetSlot = slotIndex;
             const cfg = slotConfig[slotIndex];
-            pickerModalTitle.textContent = `${cfg.name} 영상 선택 (${cfg.type})`;
+            const currentWork = localWorks.find(w => w.id === featuredSlotIds[slotIndex]);
 
-            // Default filter to slot type
-            if (cfg.isPortrait) {
-                currentFilter = 'portrait';
-            } else {
-                currentFilter = 'landscape';
-            }
+            pickerModalTitle.textContent = `${cfg.name} 영상 선택 (${cfg.roleDesc})`;
+            pickerModalDesc.textContent = `현재 선택됨: [ID #${currentWork ? currentWork.id : ''}] ${currentWork ? currentWork.title : ''}`;
 
+            // Reset filter to 'recommend' (auto filters by orientation)
+            currentFilter = 'recommend';
             document.querySelectorAll('.filter-chip').forEach(chip => {
-                chip.classList.toggle('active', chip.dataset.filter === currentFilter);
+                chip.classList.toggle('active', chip.dataset.filter === 'recommend');
             });
 
             pickerSearchInput.value = '';
@@ -1179,21 +1306,27 @@
             if (e.target === pickerModal) closePickerModal();
         });
 
-        // Search and Filter logic
         function renderPickerVideos() {
             const query = pickerSearchInput.value.trim().toLowerCase();
             const currentSelectedId = featuredSlotIds[currentTargetSlot];
+            const cfg = slotConfig[currentTargetSlot];
 
             const filtered = localWorks.filter(w => {
-                // Type or category filter
-                if (currentFilter === 'landscape' && w.orientation !== 'landscape') return false;
-                if (currentFilter === 'portrait' && w.orientation !== 'portrait') return false;
-                if (['BRAND', 'BEAUTY', 'AD', 'VIRAL'].includes(currentFilter)) {
+                // Filter by chip
+                if (currentFilter === 'recommend') {
+                    // Filter automatically according to current slot's orientation!
+                    if (cfg.isPortrait && w.orientation !== 'portrait') return false;
+                    if (!cfg.isPortrait && w.orientation !== 'landscape') return false;
+                } else if (currentFilter === 'landscape') {
+                    if (w.orientation !== 'landscape') return false;
+                } else if (currentFilter === 'portrait') {
+                    if (w.orientation !== 'portrait') return false;
+                } else if (['BRAND', 'BEAUTY', 'AD', 'VIRAL'].includes(currentFilter)) {
                     const cats = Array.isArray(w.category) ? w.category : [w.category];
                     if (!cats.includes(currentFilter)) return false;
                 }
 
-                // Query search
+                // Filter by query (title or client or id)
                 if (query) {
                     const matchTitle = w.title && w.title.toLowerCase().includes(query);
                     const matchClient = w.client && w.client.toLowerCase().includes(query);
@@ -1208,9 +1341,10 @@
 
             if (filtered.length === 0) {
                 pickerGrid.innerHTML = `
-                    <div style="grid-column: 1/-1; text-align: center; padding: 50px 20px; color: #666;">
-                        <i class="fas fa-search" style="font-size: 2rem; margin-bottom: 12px; display: block;"></i>
-                        검색 조건과 일치하는 작품이 없습니다.
+                    <div style="grid-column: 1/-1; text-align: center; padding: 60px 20px; color: #71717a;">
+                        <i class="fas fa-search" style="font-size: 2.2rem; margin-bottom: 14px; display: block; opacity: 0.5;"></i>
+                        <p style="margin: 0; font-size: 0.95rem; font-weight: 600;">검색 결과와 일치하는 영상이 없습니다.</p>
+                        <p style="margin: 6px 0 0; font-size: 0.8rem; color: #52525b;">검색어를 확인하시거나 다른 필터 버튼을 눌러보세요.</p>
                     </div>
                 `;
                 return;
@@ -1218,19 +1352,24 @@
 
             filtered.forEach(work => {
                 const card = document.createElement('div');
-                card.className = `picker-item-card ${work.id === currentSelectedId ? 'is-current' : ''}`;
+                const isSelected = (work.id === currentSelectedId);
+                card.className = `picker-card ${isSelected ? 'is-current' : ''}`;
                 const thumb = getWorkThumb(work);
 
                 card.innerHTML = `
                     <div class="picker-thumb-box ${work.orientation === 'portrait' ? 'portrait' : ''}">
-                        <img src="${thumb}" alt="${work.title}" class="picker-thumb" loading="lazy">
+                        <img src="${thumb}" alt="${work.title}" class="picker-thumb-img" loading="lazy">
+                        ${isSelected ? '<span class="picker-badge-current"><i class="fas fa-check"></i> 현재 적용중</span>' : ''}
+                        <div class="picker-hover-action">
+                            <span class="btn-select-this"><i class="fas fa-check-circle"></i> 이 영상으로 선택</span>
+                        </div>
                     </div>
-                    <div class="picker-card-info">
-                        <span class="picker-client">${work.client || 'CLIENT'}</span>
-                        <h5 class="picker-title">${work.title}</h5>
-                        <div class="picker-badges">
-                            <span class="picker-badge">ID #${work.id}</span>
-                            <span class="picker-badge">${work.orientation === 'portrait' ? '세로' : '가로'}</span>
+                    <div class="picker-card-body">
+                        <span class="picker-card-client">${work.client || 'CLIENT'}</span>
+                        <h5 class="picker-card-title">${work.title}</h5>
+                        <div class="picker-card-footer">
+                            <span>ID #${work.id}</span>
+                            <span>${work.orientation === 'portrait' ? '쇼츠(세로)' : '가로(16:9)'}</span>
                         </div>
                     </div>
                 `;
@@ -1275,6 +1414,9 @@
         });
 
         // ----------------- REORDER LIST (LANDSCAPE / PORTRAIT) -----------------
+        const landscapeList = document.getElementById('landscape-list');
+        const portraitList = document.getElementById('portrait-list');
+
         function renderReorderList(type) {
             const list = type === 'landscape' ? landscapeList : portraitList;
             const data = type === 'landscape' ? sortedLandscape : sortedPortrait;
@@ -1322,7 +1464,6 @@
                         if (itemToUpdate) {
                             const checked = Array.from(li.querySelectorAll('input:checked')).map(i => i.value);
                             itemToUpdate.category = checked;
-                            // Also update localWorks
                             const lw = localWorks.find(w => w.id === id);
                             if (lw) lw.category = checked;
                         }
@@ -1384,10 +1525,8 @@
         const exportModal = document.getElementById('export-modal');
 
         function generateWorksCode() {
-            // Merge landscape and portrait in their sorted order
             const combined = [...sortedLandscape, ...sortedPortrait];
 
-            // Assign featuredSlot attributes according to featuredSlotIds
             combined.forEach(item => {
                 delete item.featuredSlot;
                 const slotIdx = featuredSlotIds.indexOf(item.id);
@@ -1400,7 +1539,6 @@
         }
 
         document.getElementById('export-btn').addEventListener('click', () => {
-            // Save featured to localStorage
             localStorage.setItem('wwwwwo_featured_ids', JSON.stringify(featuredSlotIds));
 
             const jsCode = generateWorksCode();
@@ -1437,7 +1575,7 @@
             showToast('works.js 파일이 다운로드되었습니다.');
         });
 
-        // ESC key to close modals
+        // ESC key to close modal
         document.addEventListener('keydown', (e) => {
             if (e.key === 'Escape') {
                 closePickerModal();
