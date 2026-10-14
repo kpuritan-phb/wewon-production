@@ -7,7 +7,7 @@
     <title>ADMIN MANAGER | WWWWWO PRODUCTION</title>
     <link rel="stylesheet" href="style.css?v=20260318_v5">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Noto+Sans+KR:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Noto+Sans+KR:wght@300;400;500;700;900&display=swap" rel="stylesheet">
     <style>
         :root {
             --admin-bg: #09090b;
@@ -274,7 +274,6 @@
             box-shadow: 0 12px 30px rgba(0, 0, 0, 0.5);
         }
 
-        /* Landscape Slot Card */
         .slot-card.landscape-card {
             display: grid;
             grid-template-columns: 280px 1fr;
@@ -286,7 +285,6 @@
             }
         }
 
-        /* Portrait Slot Card (Vertical in Right Column) */
         .slot-card.portrait-card {
             flex-direction: column;
         }
@@ -298,16 +296,16 @@
         }
 
         .landscape-card .slot-card-thumb-wrap {
-            aspect-ratio: 16/9;
             width: 100%;
             height: 100%;
-            min-height: 160px;
+            min-height: 170px;
+            aspect-ratio: 16/9;
         }
 
         .portrait-card .slot-card-thumb-wrap {
-            aspect-ratio: 9/16;
             width: 100%;
-            max-height: 480px;
+            height: 480px;
+            aspect-ratio: 9/16;
         }
 
         .slot-card-thumb {
@@ -359,8 +357,8 @@
             gap: 6px;
         }
 
-        .slot-card-role-desc {
-            font-size: 0.72rem;
+        .slot-card-roleDesc {
+            font-size: 0.75rem;
             font-weight: 700;
             color: var(--admin-gold);
             text-transform: uppercase;
@@ -488,14 +486,14 @@
 
         .item-thumb-container {
             width: 100%;
-            aspect-ratio: 16/9;
+            height: 160px;
             overflow: hidden;
             background: #000;
             position: relative;
         }
 
         .item-thumb-container.portrait {
-            aspect-ratio: 9/16;
+            height: 320px;
         }
 
         .item-thumb {
@@ -592,8 +590,8 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: rgba(0, 0, 0, 0.85);
-            backdrop-filter: blur(10px);
+            background: rgba(0, 0, 0, 0.88);
+            backdrop-filter: blur(12px);
             justify-content: center;
             align-items: center;
             z-index: 2000;
@@ -607,16 +605,16 @@
 
         .modal-inner {
             background: #121214;
-            padding: 28px;
+            padding: 26px 30px;
             border-radius: 20px;
-            max-width: 1120px;
+            max-width: 1200px;
             width: 100%;
-            max-height: 90vh;
+            max-height: 92vh;
             display: flex;
             flex-direction: column;
             border: 1px solid #27272a;
             animation: modalFadeIn 0.25s cubic-bezier(0.165, 0.84, 0.44, 1);
-            box-shadow: 0 30px 80px rgba(0, 0, 0, 0.9);
+            box-shadow: 0 30px 80px rgba(0, 0, 0, 0.95);
         }
 
         @keyframes modalFadeIn {
@@ -633,40 +631,59 @@
         .modal-header {
             display: flex;
             justify-content: space-between;
-            align-items: center;
-            margin-bottom: 20px;
+            align-items: flex-start;
+            margin-bottom: 18px;
             padding-bottom: 16px;
             border-bottom: 1px solid #27272a;
+            gap: 20px;
         }
 
-        .modal-header-text h2 {
-            margin: 0 0 4px;
-            font-size: 1.35rem;
-            font-weight: 800;
+        .modal-header-left {
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+        }
+
+        .modal-slot-title {
+            margin: 0;
+            font-size: 1.4rem;
+            font-weight: 900;
             display: flex;
             align-items: center;
             gap: 10px;
+            color: #fff;
         }
 
-        .modal-header-text p {
-            margin: 0;
-            font-size: 0.85rem;
+        .modal-current-bar {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: #1a1a1e;
+            padding: 6px 14px;
+            border-radius: 8px;
+            border: 1px solid #2a2a30;
+            font-size: 0.82rem;
             color: #a1a1aa;
+        }
+
+        .modal-current-bar b {
+            color: var(--admin-gold);
         }
 
         .btn-close-modal {
             background: #27272a;
             border: 1px solid #3f3f46;
             color: #d4d4d8;
-            width: 36px;
-            height: 36px;
+            width: 38px;
+            height: 38px;
             border-radius: 50%;
-            font-size: 1.2rem;
+            font-size: 1.3rem;
             cursor: pointer;
             display: flex;
             align-items: center;
             justify-content: center;
             transition: all 0.2s;
+            flex-shrink: 0;
         }
 
         .btn-close-modal:hover {
@@ -675,7 +692,7 @@
             transform: rotate(90deg);
         }
 
-        /* Video Picker Controls */
+        /* Video Picker Controls Bar */
         .picker-controls {
             display: flex;
             flex-direction: column;
@@ -683,9 +700,15 @@
             margin-bottom: 20px;
         }
 
+        .picker-search-row {
+            display: flex;
+            gap: 12px;
+            align-items: center;
+        }
+
         .picker-search-bar {
             position: relative;
-            width: 100%;
+            flex: 1;
         }
 
         .picker-search-bar i {
@@ -716,6 +739,36 @@
             box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.1);
         }
 
+        /* View Mode Toggle */
+        .view-mode-toggle {
+            display: flex;
+            background: #18181b;
+            border: 1px solid #3f3f46;
+            border-radius: 10px;
+            padding: 3px;
+            gap: 2px;
+        }
+
+        .btn-view-mode {
+            background: none;
+            border: none;
+            color: #71717a;
+            padding: 8px 12px;
+            border-radius: 7px;
+            cursor: pointer;
+            font-size: 0.85rem;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            transition: all 0.2s;
+        }
+
+        .btn-view-mode.active {
+            background: #27272a;
+            color: #fff;
+        }
+
         .picker-filter-chips {
             display: flex;
             gap: 8px;
@@ -729,7 +782,7 @@
             border: 1px solid #27272a;
             padding: 8px 16px;
             border-radius: 50px;
-            font-size: 0.8rem;
+            font-size: 0.82rem;
             font-weight: 700;
             cursor: pointer;
             white-space: nowrap;
@@ -751,55 +804,58 @@
             border-color: #fff;
         }
 
-        /* Video Picker Grid - 시원하고 큼직한 카드 UI */
+        /* ---------------- 2번 화면: 직관적인 비디오 그리드 ---------------- */
+        .picker-grid-container {
+            overflow-y: auto;
+            max-height: 58vh;
+            padding-right: 6px;
+            padding-bottom: 20px;
+        }
+
+        /* Card View Mode */
         .picker-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
-            gap: 18px;
-            overflow-y: auto;
-            max-height: 56vh;
-            padding-right: 8px;
-            padding-bottom: 20px;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 20px;
         }
 
         .picker-card {
             background: #18181b;
             border: 1px solid #27272a;
-            border-radius: 12px;
+            border-radius: 14px;
             overflow: hidden;
             cursor: pointer;
             transition: all 0.25s cubic-bezier(0.165, 0.84, 0.44, 1);
-            display: flex;
-            flex-direction: column;
             position: relative;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
         }
 
         .picker-card:hover {
             border-color: #fff;
             transform: translateY(-4px);
             background: #222226;
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.6);
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.7);
         }
 
         .picker-card.is-current {
             border: 2px solid var(--admin-gold);
-            box-shadow: 0 0 20px var(--admin-gold-glow);
+            box-shadow: 0 0 25px var(--admin-gold-glow);
         }
 
-        .picker-thumb-box {
+        /* Fixed Thumbnail Containers to prevent browser collapsing bug */
+        .picker-card-thumb-wrap {
             width: 100%;
-            aspect-ratio: 16/9;
+            height: 180px;
             background: #000;
-            overflow: hidden;
             position: relative;
+            overflow: hidden;
         }
 
-        .picker-thumb-box.portrait {
-            aspect-ratio: 9/16;
-            max-height: 280px;
+        .picker-card.portrait-card .picker-card-thumb-wrap {
+            height: 280px;
         }
 
-        .picker-thumb-img {
+        .picker-card-img {
             width: 100%;
             height: 100%;
             object-fit: cover;
@@ -807,12 +863,46 @@
             transition: transform 0.3s ease;
         }
 
-        .picker-card:hover .picker-thumb-img {
+        .picker-card:hover .picker-card-img {
             transform: scale(1.05);
         }
 
-        /* Hover Overlay with Action Button */
-        .picker-hover-action {
+        /* Badges over thumbnail */
+        .picker-top-badges {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            right: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            pointer-events: none;
+            z-index: 2;
+        }
+
+        .picker-type-tag {
+            background: rgba(0, 0, 0, 0.85);
+            backdrop-filter: blur(4px);
+            color: #fff;
+            font-size: 0.7rem;
+            font-weight: 700;
+            padding: 3px 8px;
+            border-radius: 4px;
+            border: 1px solid rgba(255, 255, 255, 0.15);
+        }
+
+        .picker-badge-applied {
+            background: var(--admin-gold);
+            color: #000;
+            font-size: 0.72rem;
+            font-weight: 900;
+            padding: 4px 10px;
+            border-radius: 4px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+        }
+
+        /* Hover Overlay */
+        .picker-card-overlay {
             position: absolute;
             inset: 0;
             background: rgba(0, 0, 0, 0.65);
@@ -824,81 +914,177 @@
             backdrop-filter: blur(2px);
         }
 
-        .picker-card:hover .picker-hover-action {
+        .picker-card:hover .picker-card-overlay {
             opacity: 1;
         }
 
-        .btn-select-this {
+        .btn-select-confirm {
             background: #fff;
             color: #000;
-            padding: 10px 18px;
+            padding: 12px 22px;
             border-radius: 50px;
-            font-size: 0.82rem;
+            font-size: 0.88rem;
             font-weight: 800;
             display: inline-flex;
             align-items: center;
-            gap: 6px;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
-            transform: scale(0.95);
+            gap: 8px;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.6);
+            transform: scale(0.92);
             transition: transform 0.2s;
         }
 
-        .picker-card:hover .btn-select-this {
+        .picker-card:hover .btn-select-confirm {
             transform: scale(1);
         }
 
-        .picker-badge-current {
-            position: absolute;
-            top: 10px;
-            right: 10px;
-            background: var(--admin-gold);
-            color: #000;
-            font-size: 0.68rem;
-            font-weight: 800;
-            padding: 3px 8px;
-            border-radius: 4px;
-            z-index: 2;
-        }
-
-        .picker-card-body {
-            padding: 14px;
+        /* Card Information Details */
+        .picker-card-info-box {
+            padding: 16px;
             display: flex;
             flex-direction: column;
             gap: 6px;
-            flex: 1;
         }
 
-        .picker-card-client {
-            font-size: 0.7rem;
-            font-weight: 700;
-            color: #a1a1aa;
+        .picker-card-client-name {
+            font-size: 0.75rem;
+            font-weight: 800;
+            color: var(--admin-gold);
             text-transform: uppercase;
             letter-spacing: 0.5px;
+            margin: 0;
         }
 
-        .picker-card-title {
+        .picker-card-work-title {
             margin: 0;
-            font-size: 0.85rem;
+            font-size: 0.95rem;
             font-weight: 700;
             color: #fff;
-            line-height: 1.35;
+            line-height: 1.4;
             display: -webkit-box;
             -webkit-line-clamp: 2;
             line-clamp: 2;
             -webkit-box-orient: vertical;
             overflow: hidden;
-            height: 2.7em;
+            min-height: 2.7em;
         }
 
-        .picker-card-footer {
+        .picker-card-bottom {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            margin-top: 6px;
-            font-size: 0.68rem;
+            margin-top: 10px;
+            padding-top: 10px;
+            border-top: 1px solid #27272a;
+            font-size: 0.72rem;
             color: #71717a;
         }
 
+        .picker-select-action-label {
+            color: #fff;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        /* List View Mode (Alternative) */
+        .picker-list-view {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .picker-list-row {
+            background: #18181b;
+            border: 1px solid #27272a;
+            border-radius: 10px;
+            padding: 10px 16px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 16px;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .picker-list-row:hover {
+            border-color: #fff;
+            background: #222226;
+            transform: translateX(4px);
+        }
+
+        .picker-list-row.is-current {
+            border: 1px solid var(--admin-gold);
+            background: rgba(245, 158, 11, 0.05);
+        }
+
+        .picker-list-left {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            flex: 1;
+            min-width: 0;
+        }
+
+        .picker-list-thumb {
+            width: 70px;
+            height: 44px;
+            border-radius: 6px;
+            object-fit: cover;
+            background: #000;
+            flex-shrink: 0;
+        }
+
+        .picker-list-texts {
+            display: flex;
+            flex-direction: column;
+            gap: 3px;
+            min-width: 0;
+        }
+
+        .picker-list-client {
+            font-size: 0.7rem;
+            font-weight: 800;
+            color: var(--admin-gold);
+            text-transform: uppercase;
+        }
+
+        .picker-list-title {
+            font-size: 0.88rem;
+            font-weight: 700;
+            color: #fff;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            margin: 0;
+        }
+
+        .picker-list-right {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            flex-shrink: 0;
+        }
+
+        .btn-list-select {
+            background: #27272a;
+            color: #fff;
+            border: 1px solid #3f3f46;
+            padding: 7px 14px;
+            border-radius: 6px;
+            font-size: 0.78rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .picker-list-row:hover .btn-list-select {
+            background: #fff;
+            color: #000;
+            border-color: #fff;
+        }
+
+        /* Code export modal */
         .code-area {
             background: #09090b;
             color: #4ade80;
@@ -1065,29 +1251,41 @@
         </main>
     </div>
 
-    <!-- Video Picker Modal -->
+    <!-- 2번 화면: 직관적인 비디오 선택 모달 (Video Picker Modal) -->
     <div id="picker-modal" class="admin-modal">
         <div class="modal-inner">
+            <!-- Modal Header -->
             <div class="modal-header">
-                <div class="modal-header-text">
-                    <h2>
+                <div class="modal-header-left">
+                    <h2 class="modal-slot-title">
                         <i class="fas fa-photo-video" style="color: var(--admin-gold);"></i>
                         <span id="picker-modal-title">SLOT 01 영상 선택</span>
                     </h2>
-                    <p id="picker-modal-desc">원하는 영상을 클릭하면 즉시 슬롯에 적용됩니다.</p>
+                    <div class="modal-current-bar" id="picker-current-info">
+                        현재 적용 중: <b>미라벨 코리아 2025 브랜드 필름</b> (ID #22)
+                    </div>
                 </div>
                 <button id="close-picker-modal" class="btn-close-modal" aria-label="닫기">&times;</button>
             </div>
 
+            <!-- Controls (Search + View Mode + Filter Chips) -->
             <div class="picker-controls">
-                <!-- Search bar -->
-                <div class="picker-search-bar">
-                    <i class="fas fa-search"></i>
-                    <input type="text" id="picker-search-input" class="picker-search-input" placeholder="작품 제목 또는 브랜드명(클라이언트) 검색...">
+                <div class="picker-search-row">
+                    <div class="picker-search-bar">
+                        <i class="fas fa-search"></i>
+                        <input type="text" id="picker-search-input" class="picker-search-input" placeholder="작품 제목 또는 브랜드명(예: 닥터포헤어, 에스쁘아, 자동차...) 검색">
+                    </div>
+                    <div class="view-mode-toggle">
+                        <button type="button" class="btn-view-mode active" id="btn-mode-card" title="큰 카드 보기">
+                            <i class="fas fa-th-large"></i> 카드
+                        </button>
+                        <button type="button" class="btn-view-mode" id="btn-mode-list" title="목록형 보기">
+                            <i class="fas fa-list"></i> 목록
+                        </button>
+                    </div>
                 </div>
 
-                <!-- Filter Chips -->
-                <div class="picker-filter-chips" id="filter-chips-box">
+                <div class="picker-filter-chips">
                     <button class="filter-chip active" data-filter="recommend">⭐ 추천 (슬롯 맞춤)</button>
                     <button class="filter-chip" data-filter="all">전체보기</button>
                     <button class="filter-chip" data-filter="landscape">가로형 (16:9)</button>
@@ -1099,9 +1297,14 @@
                 </div>
             </div>
 
-            <!-- Video Grid -->
-            <div id="picker-grid" class="picker-grid">
-                <!-- Cards dynamically populated -->
+            <!-- Video Grid / List Container -->
+            <div class="picker-grid-container" id="picker-scroll-container">
+                <div id="picker-grid" class="picker-grid">
+                    <!-- Cards dynamically populated -->
+                </div>
+                <div id="picker-list" class="picker-list-view" style="display: none;">
+                    <!-- List items dynamically populated -->
+                </div>
             </div>
         </div>
     </div>
@@ -1110,9 +1313,9 @@
     <div id="export-modal" class="admin-modal">
         <div class="modal-inner">
             <div class="modal-header">
-                <div class="modal-header-text">
-                    <h2><i class="fas fa-check-circle" style="color: #10b981;"></i> 코드 내보내기 및 배포 준비</h2>
-                    <p>대문 슬롯 설정과 변경된 순서가 완벽히 포함된 최신 works.js 코드입니다.</p>
+                <div class="modal-header-left">
+                    <h2 class="modal-slot-title"><i class="fas fa-check-circle" style="color: #10b981;"></i> 코드 내보내기 및 배포 준비</h2>
+                    <p style="color: #a1a1aa; font-size: 0.85rem; margin: 4px 0 0;">대문 슬롯 설정과 변경된 순서가 완벽히 포함된 최신 works.js 코드입니다.</p>
                 </div>
                 <button id="close-export-modal" class="btn-close-modal">&times;</button>
             </div>
@@ -1143,7 +1346,7 @@
         let sortedLandscape = localWorks.filter(w => w.orientation === 'landscape');
         let sortedPortrait = localWorks.filter(w => w.orientation === 'portrait');
 
-        // Initial default featured IDs (1: 닥터포헤어, 2: 프리메라, 3: 에스쁘아, 4: 한율 쇼츠)
+        // Initial default featured IDs (1: 미라벨, 2: 벤츠AMG, 3: 한성트레저, 4: 쇼츠)
         const DEFAULT_FEATURED_IDS = [22, 44, 46, 56];
 
         function loadFeaturedIds() {
@@ -1171,6 +1374,7 @@
         let featuredSlotIds = loadFeaturedIds();
         let currentTargetSlot = 0; // 0: Slot 1, 1: Slot 2, 2: Slot 3, 3: Slot 4
         let currentFilter = 'recommend';
+        let currentViewMode = 'card'; // 'card' or 'list'
 
         // Update badge counts
         document.getElementById('count-landscape').textContent = sortedLandscape.length;
@@ -1204,7 +1408,7 @@
             }, 3000);
         }
 
-        // ----------------- RENDER FEATURED SLOTS -----------------
+        // ----------------- RENDER FEATURED SLOTS (1번 화면) -----------------
         const slotConfig = [
             { slotNum: 1, name: 'SLOT 01', type: 'Landscape', roleDesc: '메인 상단 와이드 (16:9)', isPortrait: false },
             { slotNum: 2, name: 'SLOT 02', type: 'Landscape', roleDesc: '중간 메인 와이드 (16:9)', isPortrait: false },
@@ -1270,12 +1474,15 @@
             });
         }
 
-        // ----------------- VIDEO PICKER MODAL -----------------
+        // ----------------- 2번 화면: 비디오 선택 모달 (Video Picker Modal) -----------------
         const pickerModal = document.getElementById('picker-modal');
         const pickerGrid = document.getElementById('picker-grid');
+        const pickerList = document.getElementById('picker-list');
         const pickerSearchInput = document.getElementById('picker-search-input');
         const pickerModalTitle = document.getElementById('picker-modal-title');
-        const pickerModalDesc = document.getElementById('picker-modal-desc');
+        const pickerCurrentInfo = document.getElementById('picker-current-info');
+        const btnModeCard = document.getElementById('btn-mode-card');
+        const btnModeList = document.getElementById('btn-mode-list');
 
         function openPickerModal(slotIndex) {
             currentTargetSlot = slotIndex;
@@ -1283,9 +1490,9 @@
             const currentWork = localWorks.find(w => w.id === featuredSlotIds[slotIndex]);
 
             pickerModalTitle.textContent = `${cfg.name} 영상 선택 (${cfg.roleDesc})`;
-            pickerModalDesc.textContent = `현재 선택됨: [ID #${currentWork ? currentWork.id : ''}] ${currentWork ? currentWork.title : ''}`;
+            pickerCurrentInfo.innerHTML = `현재 대문 적용 중: <b>${currentWork ? currentWork.title : '선택 없음'}</b> (ID #${currentWork ? currentWork.id : ''})`;
 
-            // Reset filter to 'recommend' (auto filters by orientation)
+            // Default filter to 'recommend' (auto filters by orientation)
             currentFilter = 'recommend';
             document.querySelectorAll('.filter-chip').forEach(chip => {
                 chip.classList.toggle('active', chip.dataset.filter === 'recommend');
@@ -1306,15 +1513,30 @@
             if (e.target === pickerModal) closePickerModal();
         });
 
-        function renderPickerVideos() {
+        // View Mode Switcher
+        btnModeCard.addEventListener('click', () => {
+            currentViewMode = 'card';
+            btnModeCard.classList.add('active');
+            btnModeList.classList.remove('active');
+            pickerGrid.style.display = 'grid';
+            pickerList.style.display = 'none';
+        });
+
+        btnModeList.addEventListener('click', () => {
+            currentViewMode = 'list';
+            btnModeList.classList.add('active');
+            btnModeCard.classList.remove('active');
+            pickerGrid.style.display = 'none';
+            pickerList.style.display = 'flex';
+        });
+
+        function getFilteredVideos() {
             const query = pickerSearchInput.value.trim().toLowerCase();
-            const currentSelectedId = featuredSlotIds[currentTargetSlot];
             const cfg = slotConfig[currentTargetSlot];
 
-            const filtered = localWorks.filter(w => {
+            return localWorks.filter(w => {
                 // Filter by chip
                 if (currentFilter === 'recommend') {
-                    // Filter automatically according to current slot's orientation!
                     if (cfg.isPortrait && w.orientation !== 'portrait') return false;
                     if (!cfg.isPortrait && w.orientation !== 'landscape') return false;
                 } else if (currentFilter === 'landscape') {
@@ -1336,40 +1558,59 @@
 
                 return true;
             });
+        }
+
+        function renderPickerVideos() {
+            const filtered = getFilteredVideos();
+            const currentSelectedId = featuredSlotIds[currentTargetSlot];
 
             pickerGrid.innerHTML = '';
+            pickerList.innerHTML = '';
 
             if (filtered.length === 0) {
-                pickerGrid.innerHTML = `
+                const emptyHtml = `
                     <div style="grid-column: 1/-1; text-align: center; padding: 60px 20px; color: #71717a;">
                         <i class="fas fa-search" style="font-size: 2.2rem; margin-bottom: 14px; display: block; opacity: 0.5;"></i>
-                        <p style="margin: 0; font-size: 0.95rem; font-weight: 600;">검색 결과와 일치하는 영상이 없습니다.</p>
-                        <p style="margin: 6px 0 0; font-size: 0.8rem; color: #52525b;">검색어를 확인하시거나 다른 필터 버튼을 눌러보세요.</p>
+                        <p style="margin: 0; font-size: 0.95rem; font-weight: 700; color: #fff;">검색 결과와 일치하는 영상이 없습니다.</p>
+                        <p style="margin: 6px 0 0; font-size: 0.8rem; color: #71717a;">다른 검색어를 입력하시거나 [전체보기] 필터를 눌러보세요.</p>
                     </div>
                 `;
+                pickerGrid.innerHTML = emptyHtml;
+                pickerList.innerHTML = emptyHtml;
                 return;
             }
 
+            // 1. Render Card View
             filtered.forEach(work => {
-                const card = document.createElement('div');
                 const isSelected = (work.id === currentSelectedId);
-                card.className = `picker-card ${isSelected ? 'is-current' : ''}`;
+                const isPortrait = (work.orientation === 'portrait');
                 const thumb = getWorkThumb(work);
 
+                // --- Card Element ---
+                const card = document.createElement('div');
+                card.className = `picker-card ${isPortrait ? 'portrait-card' : ''} ${isSelected ? 'is-current' : ''}`;
+
                 card.innerHTML = `
-                    <div class="picker-thumb-box ${work.orientation === 'portrait' ? 'portrait' : ''}">
-                        <img src="${thumb}" alt="${work.title}" class="picker-thumb-img" loading="lazy">
-                        ${isSelected ? '<span class="picker-badge-current"><i class="fas fa-check"></i> 현재 적용중</span>' : ''}
-                        <div class="picker-hover-action">
-                            <span class="btn-select-this"><i class="fas fa-check-circle"></i> 이 영상으로 선택</span>
+                    <div class="picker-card-thumb-wrap">
+                        <img src="${thumb}" alt="${work.title}" class="picker-card-img" loading="lazy">
+                        <div class="picker-top-badges">
+                            <span class="picker-type-tag">ID #${work.id} · ${isPortrait ? '쇼츠(9:16)' : '와이드(16:9)'}</span>
+                            ${isSelected ? '<span class="picker-badge-applied"><i class="fas fa-check"></i> 현재 적용중</span>' : ''}
+                        </div>
+                        <div class="picker-card-overlay">
+                            <span class="btn-select-confirm">
+                                <i class="fas fa-check-circle"></i> 이 영상으로 선택
+                            </span>
                         </div>
                     </div>
-                    <div class="picker-card-body">
-                        <span class="picker-card-client">${work.client || 'CLIENT'}</span>
-                        <h5 class="picker-card-title">${work.title}</h5>
-                        <div class="picker-card-footer">
-                            <span>ID #${work.id}</span>
-                            <span>${work.orientation === 'portrait' ? '쇼츠(세로)' : '가로(16:9)'}</span>
+                    <div class="picker-card-info-box">
+                        <p class="picker-card-client-name">${work.client || 'CLIENT'}</p>
+                        <h5 class="picker-card-work-title">${work.title}</h5>
+                        <div class="picker-card-bottom">
+                            <span>${Array.isArray(work.category) ? work.category.join(', ') : (work.category || '')}</span>
+                            <span class="picker-select-action-label">
+                                클릭하여 선택 <i class="fas fa-arrow-right"></i>
+                            </span>
                         </div>
                     </div>
                 `;
@@ -1379,6 +1620,30 @@
                 });
 
                 pickerGrid.appendChild(card);
+
+                // --- List Element ---
+                const row = document.createElement('div');
+                row.className = `picker-list-row ${isSelected ? 'is-current' : ''}`;
+
+                row.innerHTML = `
+                    <div class="picker-list-left">
+                        <img src="${thumb}" alt="${work.title}" class="picker-list-thumb" loading="lazy">
+                        <div class="picker-list-texts">
+                            <span class="picker-list-client">${work.client || 'CLIENT'} · ID #${work.id}</span>
+                            <h5 class="picker-list-title">${work.title}</h5>
+                        </div>
+                    </div>
+                    <div class="picker-list-right">
+                        ${isSelected ? '<span class="picker-badge-applied" style="font-size:0.7rem;"><i class="fas fa-check"></i> 적용중</span>' : ''}
+                        <button class="btn-list-select">선택하기</button>
+                    </div>
+                `;
+
+                row.addEventListener('click', () => {
+                    selectVideoForSlot(currentTargetSlot, work.id);
+                });
+
+                pickerList.appendChild(row);
             });
         }
 
