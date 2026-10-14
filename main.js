@@ -701,4 +701,154 @@ ${params.detail || '기재 안 함'}
         });
     });
 
+    // --- Notice Popups Logic (공지 팝업: 리뉴얼 & 예약 마감) ---
+    function initNoticePopups() {
+        const overlay = document.getElementById('notice-popup-overlay');
+        if (!overlay) return;
+
+        const popups = [
+            { id: 'renewal', el: document.getElementById('notice-popup-renewal') },
+            { id: 'booking', el: document.getElementById('notice-popup-booking') }
+        ];
+
+        function getTodayExpiry() {
+            const d = new Date();
+            return new Date(d.getFullYear(), d.getMonth(), d.getDate(), 23, 59, 59, 999).getTime();
+        }
+
+        function isDismissedToday(id) {
+            try {
+                const val = localStorage.getItem(`wwwwwo_hide_${id}`);
+                if (!val) return false;
+                const expireTime = parseInt(val, 10);
+                return !isNaN(expireTime) && Date.now() < expireTime;
+            } catch (e) {
+                return false;
+            }
+        }
+
+        function setDismissedToday(id) {
+            try {
+                localStorage.setItem(`wwwwwo_hide_${id}`, getTodayExpiry().toString());
+            } catch (e) {
+                console.warn('localStorage access failed:', e);
+            }
+        }
+
+        function removeDismissedToday(id) {
+            try {
+                localStorage.removeItem(`wwwwwo_hide_${id}`);
+            } catch (e) {
+                console.warn('localStorage access failed:', e);
+            }
+        }
+
+        // Check which popups should be displayed on page load
+        let activeCount = 0;
+        popups.forEach(p => {
+            if (!p.el) return;
+            if (isDismissedToday(p.id)) {
+                p.el.classList.add('is-hidden');
+            } else {
+                activeCount++;
+            }
+        });
+
+        if (activeCount === 0) {
+            overlay.classList.add('is-hidden');
+            return;
+        }
+
+        // Show overlay with animation and lock background scroll
+        requestAnimationFrame(() => {
+            overlay.classList.add('is-active');
+            document.body.classList.add('notice-popup-locked');
+        });
+
+        function closePopupCard(id) {
+            const popupObj = popups.find(p => p.id === id);
+            if (!popupObj || !popupObj.el || popupObj.el.classList.contains('is-hidden')) return;
+
+            const checkEl = popupObj.el.querySelector('.notice-popup-today-check');
+            if (checkEl && checkEl.checked) {
+                setDismissedToday(id);
+            }
+
+            popupObj.el.classList.add('is-closing');
+            setTimeout(() => {
+                popupObj.el.classList.add('is-hidden');
+                popupObj.el.classList.remove('is-closing');
+
+                const remaining = popups.filter(p => p.el && !p.el.classList.contains('is-hidden'));
+                if (remaining.length === 0) {
+                    closeNoticeOverlay();
+                }
+            }, 250);
+        }
+
+        function closeNoticeOverlay() {
+            overlay.classList.remove('is-active');
+            document.body.classList.remove('notice-popup-locked');
+            setTimeout(() => {
+                overlay.classList.add('is-hidden');
+            }, 350);
+        }
+
+        function closeAllActivePopups() {
+            popups.forEach(p => {
+                if (p.el && !p.el.classList.contains('is-hidden')) {
+                    const checkEl = p.el.querySelector('.notice-popup-today-check');
+                    if (checkEl && checkEl.checked) {
+                        setDismissedToday(p.id);
+                    }
+                    p.el.classList.add('is-hidden');
+                }
+            });
+            closeNoticeOverlay();
+        }
+
+        // Checkbox change listener
+        popups.forEach(p => {
+            if (!p.el) return;
+            const checkEl = p.el.querySelector('.notice-popup-today-check');
+            if (checkEl) {
+                checkEl.addEventListener('change', (e) => {
+                    if (e.target.checked) {
+                        setDismissedToday(p.id);
+                    } else {
+                        removeDismissedToday(p.id);
+                    }
+                });
+            }
+        });
+
+        // Close button handlers (X icon and bottom "닫기" button)
+        overlay.querySelectorAll('.notice-popup-close-x, .notice-popup-close-btn').forEach(btn => {
+            btn.addEventListener('click', (e) => {
+                e.preventDefault();
+                e.stopPropagation();
+                const id = btn.getAttribute('data-popup-id');
+                if (id) {
+                    closePopupCard(id);
+                }
+            });
+        });
+
+        // Clicking backdrop closes all visible popups
+        overlay.addEventListener('click', (e) => {
+            if (e.target === overlay || e.target.classList.contains('notice-popups-wrapper')) {
+                closeAllActivePopups();
+            }
+        });
+
+        // ESC key closes popups
+        document.addEventListener('keydown', (e) => {
+            if ((e.key === 'Escape' || e.key === 'Esc') && overlay.classList.contains('is-active')) {
+                closeAllActivePopups();
+            }
+        });
+    }
+
+    initNoticePopups();
+
 });
