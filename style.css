@@ -2965,12 +2965,16 @@ body.notice-popup-locked .chat-widget-container {
     transform: translateX(3px);
 }
 
-/* Signature */
+/* Signature & Date */
 .notice-popup-signature {
     margin-top: auto;
     margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
 }
 
+.notice-popup-signature .notice-popup-brand,
 .notice-popup-signature span {
     display: inline-block;
     font-family: var(--font-body);
@@ -2979,6 +2983,16 @@ body.notice-popup-locked .chat-widget-container {
     letter-spacing: 0.08em;
     color: #777777;
     text-transform: uppercase;
+}
+
+.notice-popup-signature .notice-popup-date {
+    display: inline-block;
+    font-family: var(--font-body);
+    font-size: 0.78rem;
+    font-weight: 500;
+    letter-spacing: 0.03em;
+    color: #666666;
+    text-transform: none;
 }
 
 /* Footer (Bottom options) */
