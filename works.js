@@ -661,6 +661,7 @@ const works = [
   },
   {
     "id": 46,
+    "featuredSlot": 3,
     "title": "📢숨겨진 최고의 인증 중고차 보물을 찾아라! 한성트레저 EP.1💎",
     "client": "한성자동차",
     "category": [
@@ -685,6 +686,7 @@ const works = [
   },
   {
     "id": 44,
+    "featuredSlot": 2,
     "title": "Mercedes-AMG G 63 오너의 남다른 일상 ㅣ 한성 SEE. Vol.2",
     "client": "한성자동차",
     "category": [
@@ -709,6 +711,7 @@ const works = [
   },
   {
     "id": 22,
+    "featuredSlot": 1,
     "title": "미라벨 코리아 2025 브랜드 필름 (Mirabelle Korea)",
     "client": "미라벨 코리아 (Mirabelle Korea)",
     "category": [
@@ -1141,6 +1144,7 @@ const works = [
   },
   {
     "id": 56,
+    "featuredSlot": 4,
     "title": "Instagram Reel DUsIfnhEs4y",
     "client": "Instagram",
     "category": [

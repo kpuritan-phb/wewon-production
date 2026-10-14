@@ -54,25 +54,86 @@ document.addEventListener('DOMContentLoaded', () => {
         sectionObserver.observe(el);
     });
 
-    // --- Index Page: Latest Shorts Logic ---
-    const latestShortsEl = document.getElementById('index-latest-shorts');
-    if (latestShortsEl) {
-        const latestShortsData = works.find(w => w.orientation === 'portrait');
-        if (latestShortsData) {
-            latestShortsEl.setAttribute('data-id', latestShortsData.id);
-            const img = latestShortsEl.querySelector('img');
-            if (img) {
-                let thumb = latestShortsData.thumbnail;
-                if (!thumb || !thumb.startsWith('thumbnails/')) {
-                    if (latestShortsData.videoUrl && latestShortsData.videoUrl.includes('youtube')) {
-                        const vid = latestShortsData.videoUrl.split('embed/')[1]?.split('?')[0];
-                        if (vid) thumb = `https://img.youtube.com/vi/${vid}/maxresdefault.jpg`;
-                    }
+    // --- Index Page: Dynamic Featured Works (Selected Projects) ---
+    function initFeaturedWorks() {
+        const featuredGrid = document.querySelector('.featured-grid');
+        if (!featuredGrid) return;
+
+        // Resolve 4 featured IDs
+        let featuredIds = null;
+        try {
+            const stored = localStorage.getItem('wwwwwo_featured_ids');
+            if (stored) {
+                const parsed = JSON.parse(stored);
+                if (Array.isArray(parsed) && parsed.length === 4) {
+                    featuredIds = parsed;
                 }
-                if (thumb) img.src = thumb;
+            }
+        } catch (e) {
+            console.warn('Failed to parse wwwwwo_featured_ids from localStorage', e);
+        }
+
+        if (!featuredIds) {
+            // Check works.js for featuredSlot properties
+            const s1 = works.find(w => w.featuredSlot === 1)?.id;
+            const s2 = works.find(w => w.featuredSlot === 2)?.id;
+            const s3 = works.find(w => w.featuredSlot === 3)?.id;
+            const s4 = works.find(w => w.featuredSlot === 4)?.id;
+            if (s1 && s2 && s3 && s4) {
+                featuredIds = [s1, s2, s3, s4];
+            } else {
+                // Default fallback IDs (Mirabelle, Mercedes-AMG, Hanseong Treasure, Shorts)
+                featuredIds = [22, 44, 46, 56];
             }
         }
+
+        function getWorkThumb(item) {
+            if (!item) return '';
+            let thumb = item.thumbnail;
+            if (!thumb || thumb.includes('unsplash') || !thumb.startsWith('thumbnails/')) {
+                if (item.videoUrl && (item.videoUrl.includes('youtube.com') || item.videoUrl.includes('youtu.be'))) {
+                    let videoId = '';
+                    if (item.videoUrl.includes('embed/')) {
+                        videoId = item.videoUrl.split('embed/')[1].split('?')[0];
+                    } else {
+                        videoId = item.videoUrl.split('/').pop().split('?')[0];
+                    }
+                    if (videoId) thumb = `https://img.youtube.com/vi/${videoId}/maxresdefault.jpg`;
+                }
+            }
+            return thumb || item.thumbnail || '';
+        }
+
+        const slotIds = ['featured-slot-1', 'featured-slot-2', 'featured-slot-3', 'featured-slot-4'];
+        slotIds.forEach((slotId, index) => {
+            const slotEl = document.getElementById(slotId) || document.querySelectorAll('.featured-grid .featured-item')[index];
+            const targetId = featuredIds[index];
+            const workItem = works.find(w => w.id === targetId);
+
+            if (slotEl && workItem) {
+                slotEl.setAttribute('data-id', workItem.id);
+
+                const img = slotEl.querySelector('.featured-thumb img');
+                if (img) {
+                    const thumbUrl = getWorkThumb(workItem);
+                    if (thumbUrl) img.src = thumbUrl;
+                    img.alt = workItem.title;
+                }
+
+                const titleEl = slotEl.querySelector('.f-title');
+                if (titleEl) {
+                    titleEl.textContent = workItem.title;
+                }
+
+                const clientEl = slotEl.querySelector('.f-client');
+                if (clientEl) {
+                    clientEl.textContent = workItem.client;
+                }
+            }
+        });
     }
+
+    initFeaturedWorks();
 
     // --- Index Page: Hero & Global Background ---
     const globalBg = document.querySelector('.global-bg-layer');

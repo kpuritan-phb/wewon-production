@@ -4,95 +4,143 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ORDER MANAGER | ADMIN</title>
+    <title>ADMIN MANAGER | WWWWWO PRODUCTION</title>
     <link rel="stylesheet" href="style.css?v=20260318_v5">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet">
     <style>
         :root {
-            --admin-bg: #050505;
-            --admin-card: #111;
+            --admin-bg: #070707;
+            --admin-card: #121212;
+            --admin-card-hover: #181818;
             --admin-accent: #ffffff;
-            --admin-text: #eee;
-            --admin-secondary: #666;
+            --admin-gold: #f59e0b;
+            --admin-text: #f0f0f0;
+            --admin-secondary: #777;
             --admin-border: #222;
+            --admin-border-light: #333;
         }
 
         body.admin-body {
             background-color: var(--admin-bg);
             color: var(--admin-text);
-            font-family: 'Inter', sans-serif;
+            font-family: 'Inter', 'Noto Sans KR', sans-serif;
             margin: 0;
-            padding: 40px 20px;
+            padding: 40px 24px 80px;
             min-height: 100vh;
+            -webkit-font-smoothing: antialiased;
         }
 
         .admin-container {
-            max-width: 1200px;
+            max-width: 1300px;
             margin: 0 auto;
         }
 
+        /* Header */
         .admin-header {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            margin-bottom: 50px;
-            padding-bottom: 20px;
+            margin-bottom: 35px;
+            padding-bottom: 24px;
             border-bottom: 1px solid var(--admin-border);
+            gap: 20px;
+            flex-wrap: wrap;
         }
 
         .admin-title-group h1 {
             margin: 0;
-            font-size: 2rem;
+            font-size: 1.8rem;
             font-weight: 800;
-            letter-spacing: -1px;
+            letter-spacing: -0.5px;
             text-transform: uppercase;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .admin-title-group h1 .badge-admin {
+            font-size: 0.65rem;
+            background: #fff;
+            color: #000;
+            padding: 3px 8px;
+            border-radius: 4px;
+            font-weight: 700;
+            letter-spacing: 1px;
         }
 
         .admin-title-group p {
-            margin: 5px 0 0;
+            margin: 6px 0 0;
             color: var(--admin-secondary);
-            font-size: 0.9rem;
+            font-size: 0.88rem;
         }
 
-        .btn-save {
-            background: var(--admin-accent);
-            color: #000;
-            border: none;
-            padding: 14px 28px;
-            border-radius: 50px;
-            cursor: pointer;
-            font-weight: 700;
-            font-size: 0.9rem;
-            transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+        .header-actions {
             display: flex;
             align-items: center;
-            gap: 10px;
+            gap: 12px;
         }
 
-        .btn-save:hover {
-            transform: translateY(-3px) scale(1.02);
-            box-shadow: 0 10px 30px rgba(255, 255, 255, 0.15);
+        .btn-action {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 12px 22px;
+            border-radius: 50px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.25s cubic-bezier(0.165, 0.84, 0.44, 1);
+            text-decoration: none;
+            border: 1px solid var(--admin-border-light);
+            background: #151515;
+            color: #fff;
         }
 
+        .btn-action:hover {
+            border-color: #555;
+            background: #202020;
+            transform: translateY(-2px);
+        }
+
+        .btn-primary {
+            background: #fff;
+            color: #000;
+            border: none;
+        }
+
+        .btn-primary:hover {
+            background: #e0e0e0;
+            color: #000;
+            box-shadow: 0 8px 24px rgba(255, 255, 255, 0.15);
+        }
+
+        /* Tab Controls */
         .tab-controls {
             display: flex;
-            gap: 20px;
-            margin-bottom: 40px;
+            gap: 25px;
+            margin-bottom: 35px;
             border-bottom: 1px solid var(--admin-border);
-            padding-bottom: 10px;
+            padding-bottom: 12px;
         }
 
         .tab-btn {
             background: none;
             color: var(--admin-secondary);
             border: none;
-            padding: 10px 5px;
+            padding: 10px 4px;
             cursor: pointer;
-            font-size: 0.9rem;
+            font-size: 0.95rem;
             font-weight: 600;
             position: relative;
-            transition: color 0.3s;
+            transition: all 0.25s;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .tab-btn:hover {
+            color: #bbb;
         }
 
         .tab-btn.active {
@@ -102,17 +150,298 @@
         .tab-btn.active::after {
             content: '';
             position: absolute;
-            bottom: -11px;
+            bottom: -13px;
             left: 0;
             width: 100%;
             height: 2px;
             background: #fff;
         }
 
+        .tab-btn .badge-count {
+            background: #222;
+            color: #aaa;
+            font-size: 0.7rem;
+            padding: 2px 7px;
+            border-radius: 10px;
+        }
+
+        .tab-btn.active .badge-count {
+            background: #333;
+            color: #fff;
+        }
+
+        /* ---------------- Featured Manager UI ---------------- */
+        .featured-intro {
+            background: linear-gradient(135deg, rgba(245, 158, 11, 0.08) 0%, rgba(255, 255, 255, 0.02) 100%);
+            border: 1px solid rgba(245, 158, 11, 0.25);
+            border-radius: 14px;
+            padding: 22px 26px;
+            margin-bottom: 35px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .featured-intro-text h3 {
+            margin: 0 0 6px;
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: #fff;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .featured-intro-text p {
+            margin: 0;
+            font-size: 0.85rem;
+            color: #aaa;
+            line-height: 1.5;
+        }
+
+        .featured-intro-actions {
+            display: flex;
+            gap: 10px;
+        }
+
+        .btn-reset-featured {
+            background: rgba(255, 255, 255, 0.06);
+            color: #ccc;
+            border: 1px solid #333;
+            padding: 9px 16px;
+            border-radius: 8px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .btn-reset-featured:hover {
+            background: rgba(255, 255, 255, 0.12);
+            color: #fff;
+        }
+
+        .slots-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 24px;
+            margin-bottom: 40px;
+        }
+
+        @media (max-width: 1100px) {
+            .slots-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 600px) {
+            .slots-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .slot-card {
+            background: var(--admin-card);
+            border: 1px solid var(--admin-border);
+            border-radius: 14px;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+            position: relative;
+        }
+
+        .slot-card:hover {
+            border-color: #444;
+            transform: translateY(-4px);
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.5);
+        }
+
+        .slot-card-header {
+            padding: 14px 18px;
+            background: #171717;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid var(--admin-border);
+        }
+
+        .slot-label {
+            font-size: 0.82rem;
+            font-weight: 800;
+            letter-spacing: 0.5px;
+            color: #fff;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .slot-label i {
+            color: var(--admin-gold);
+        }
+
+        .slot-type-badge {
+            font-size: 0.65rem;
+            background: #252525;
+            color: #aaa;
+            padding: 3px 8px;
+            border-radius: 4px;
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+
+        .slot-thumb-wrapper {
+            position: relative;
+            width: 100%;
+            aspect-ratio: 16/9;
+            background: #000;
+            overflow: hidden;
+        }
+
+        .slot-card.portrait-slot .slot-thumb-wrapper {
+            aspect-ratio: 9/16;
+            max-height: 380px;
+        }
+
+        .slot-thumb {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.4s ease;
+        }
+
+        .slot-card:hover .slot-thumb {
+            transform: scale(1.04);
+        }
+
+        .slot-thumb-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(180deg, transparent 50%, rgba(0,0,0,0.85) 100%);
+            display: flex;
+            align-items: flex-end;
+            padding: 12px;
+            pointer-events: none;
+        }
+
+        .slot-work-id {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            background: rgba(0, 0, 0, 0.8);
+            backdrop-filter: blur(4px);
+            padding: 3px 8px;
+            border-radius: 4px;
+            font-size: 0.68rem;
+            font-weight: 700;
+            color: #fff;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .slot-body {
+            padding: 18px;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            flex-grow: 1;
+        }
+
+        .slot-client {
+            font-size: 0.72rem;
+            font-weight: 700;
+            color: #888;
+            text-transform: uppercase;
+            letter-spacing: 0.8px;
+            margin: 0;
+        }
+
+        .slot-title {
+            margin: 0;
+            font-size: 0.95rem;
+            font-weight: 700;
+            line-height: 1.4;
+            color: #f5f5f5;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+            min-height: 2.8em;
+        }
+
+        .slot-meta {
+            display: flex;
+            gap: 6px;
+            flex-wrap: wrap;
+            margin-top: 4px;
+        }
+
+        .slot-cat-chip {
+            font-size: 0.68rem;
+            background: #1c1c1c;
+            color: #aaa;
+            padding: 2px 7px;
+            border-radius: 4px;
+            border: 1px solid #282828;
+        }
+
+        .slot-actions {
+            padding: 14px 18px;
+            border-top: 1px solid var(--admin-border);
+            display: flex;
+            gap: 10px;
+            background: #141414;
+        }
+
+        .btn-change-slot {
+            flex: 1;
+            background: #fff;
+            color: #000;
+            border: none;
+            padding: 10px 14px;
+            border-radius: 8px;
+            font-size: 0.82rem;
+            font-weight: 700;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 7px;
+            transition: all 0.2s;
+        }
+
+        .btn-change-slot:hover {
+            background: #e2e2e2;
+            transform: translateY(-1px);
+        }
+
+        .btn-view-slot {
+            background: #222;
+            color: #ccc;
+            border: 1px solid #333;
+            width: 38px;
+            height: 38px;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all 0.2s;
+            text-decoration: none;
+        }
+
+        .btn-view-slot:hover {
+            background: #333;
+            color: #fff;
+        }
+
+        /* ---------------- Works Reorder List UI ---------------- */
         .reorder-list {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-            gap: 25px;
+            grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+            gap: 22px;
             padding: 0;
             list-style: none;
         }
@@ -129,7 +458,7 @@
 
         .reorder-item:hover {
             border-color: #444;
-            transform: translateY(-5px);
+            transform: translateY(-4px);
         }
 
         .reorder-item:active {
@@ -157,7 +486,7 @@
             width: 100%;
             height: 100%;
             object-fit: cover;
-            opacity: 0.8;
+            opacity: 0.85;
             transition: opacity 0.3s;
         }
 
@@ -166,15 +495,23 @@
         }
 
         .item-info {
-            padding: 12px;
+            padding: 14px;
             display: flex;
             flex-direction: column;
             gap: 10px;
             cursor: default;
         }
 
+        .item-client {
+            font-size: 0.68rem;
+            font-weight: 700;
+            color: #777;
+            text-transform: uppercase;
+            margin: 0;
+        }
+
         .item-title {
-            font-size: 0.75rem;
+            font-size: 0.82rem;
             font-weight: 600;
             margin: 0;
             display: -webkit-box;
@@ -182,124 +519,355 @@
             line-clamp: 2;
             -webkit-box-orient: vertical;
             overflow: hidden;
-            color: #aaa;
+            color: #ccc;
             line-height: 1.4;
             height: 2.8em;
-        }
-
-        .cat-selector {
-            width: 100%;
-            background: #222;
-            color: #fff;
-            border: 1px solid #333;
-            padding: 8px;
-            border-radius: 6px;
-            font-size: 0.75rem;
-            cursor: pointer;
-            outline: none;
-            transition: all 0.3s;
-        }
-
-        .cat-selector:focus {
-            border-color: #fff;
-            background: #333;
         }
 
         .item-id {
             position: absolute;
             top: 10px;
             left: 10px;
-            background: rgba(0, 0, 0, 0.8);
+            background: rgba(0, 0, 0, 0.85);
             backdrop-filter: blur(4px);
-            padding: 4px 8px;
+            padding: 3px 8px;
             border-radius: 4px;
-            font-size: 0.65rem;
+            font-size: 0.68rem;
             color: #fff;
             z-index: 2;
+            font-weight: 700;
         }
 
-        /* Modal */
-        #export-modal {
+        .cat-checkboxes {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
+            margin-top: 4px;
+        }
+
+        .cat-check {
+            display: inline-flex;
+            align-items: center;
+            gap: 4px;
+            font-size: 0.68rem;
+            color: #888;
+            cursor: pointer;
+            background: #181818;
+            padding: 3px 7px;
+            border-radius: 4px;
+            border: 1px solid #282828;
+            user-select: none;
+        }
+
+        .cat-check input {
+            cursor: pointer;
+            margin: 0;
+            width: 11px;
+            height: 11px;
+            accent-color: #fff;
+        }
+
+        .cat-check:has(input:checked) {
+            background: #252525;
+            color: #fff;
+            border-color: #444;
+        }
+
+        /* ---------------- Modal ---------------- */
+        .admin-modal {
             display: none;
             position: fixed;
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
-            background: rgba(0, 0, 0, 0.95);
+            background: rgba(0, 0, 0, 0.88);
+            backdrop-filter: blur(8px);
             justify-content: center;
             align-items: center;
-            z-index: 1000;
+            z-index: 2000;
             padding: 20px;
+            box-sizing: border-box;
+        }
+
+        .admin-modal.open {
+            display: flex;
         }
 
         .modal-inner {
             background: #111;
-            padding: 40px;
-            border-radius: 20px;
-            max-width: 900px;
+            padding: 30px;
+            border-radius: 18px;
+            max-width: 950px;
             width: 100%;
             max-height: 90vh;
             display: flex;
             flex-direction: column;
-            border: 1px solid #222;
-            animation: modalFadeIn 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+            border: 1px solid #252525;
+            animation: modalFadeIn 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+            box-shadow: 0 25px 60px rgba(0, 0, 0, 0.8);
         }
 
         @keyframes modalFadeIn {
             from {
                 opacity: 0;
-                transform: translateY(20px);
+                transform: translateY(15px) scale(0.98);
             }
-
             to {
                 opacity: 1;
-                transform: translateY(0);
+                transform: translateY(0) scale(1);
             }
         }
 
-        .code-area {
+        .modal-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+            padding-bottom: 16px;
+            border-bottom: 1px solid #222;
+        }
+
+        .modal-header h2 {
+            margin: 0;
+            font-size: 1.35rem;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .btn-close-modal {
+            background: none;
+            border: none;
+            color: #777;
+            font-size: 1.3rem;
+            cursor: pointer;
+            padding: 4px 8px;
+            transition: color 0.2s;
+        }
+
+        .btn-close-modal:hover {
+            color: #fff;
+        }
+
+        /* Video Picker Modal Elements */
+        .picker-controls {
+            display: flex;
+            flex-direction: column;
+            gap: 14px;
+            margin-bottom: 20px;
+        }
+
+        .picker-search-bar {
+            position: relative;
+            width: 100%;
+        }
+
+        .picker-search-bar i {
+            position: absolute;
+            left: 16px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #666;
+            font-size: 0.95rem;
+        }
+
+        .picker-search-input {
+            width: 100%;
+            background: #181818;
+            border: 1px solid #2a2a2a;
+            color: #fff;
+            padding: 13px 18px 13px 44px;
+            border-radius: 10px;
+            font-size: 0.92rem;
+            outline: none;
+            box-sizing: border-box;
+            transition: all 0.25s;
+        }
+
+        .picker-search-input:focus {
+            border-color: #fff;
+            background: #1f1f1f;
+        }
+
+        .picker-filter-chips {
+            display: flex;
+            gap: 8px;
+            overflow-x: auto;
+            padding-bottom: 4px;
+        }
+
+        .filter-chip {
+            background: #1a1a1a;
+            color: #888;
+            border: 1px solid #282828;
+            padding: 6px 14px;
+            border-radius: 50px;
+            font-size: 0.78rem;
+            font-weight: 600;
+            cursor: pointer;
+            white-space: nowrap;
+            transition: all 0.2s;
+        }
+
+        .filter-chip:hover {
+            color: #fff;
+            border-color: #444;
+        }
+
+        .filter-chip.active {
+            background: #fff;
+            color: #000;
+            border-color: #fff;
+        }
+
+        .picker-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(190px, 1fr));
+            gap: 16px;
+            overflow-y: auto;
+            max-height: 55vh;
+            padding-right: 6px;
+        }
+
+        .picker-item-card {
+            background: #161616;
+            border: 1px solid #242424;
+            border-radius: 10px;
+            overflow: hidden;
+            cursor: pointer;
+            transition: all 0.2s;
+            display: flex;
+            flex-direction: column;
+            text-align: left;
+        }
+
+        .picker-item-card:hover {
+            border-color: #fff;
+            transform: translateY(-3px);
+            background: #1d1d1d;
+        }
+
+        .picker-item-card.is-current {
+            border-color: var(--admin-gold);
+            box-shadow: 0 0 15px rgba(245, 158, 11, 0.2);
+        }
+
+        .picker-thumb-box {
+            width: 100%;
+            aspect-ratio: 16/9;
             background: #000;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .picker-thumb-box.portrait {
+            aspect-ratio: 9/16;
+        }
+
+        .picker-thumb {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .picker-card-info {
+            padding: 10px 12px 14px;
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+        }
+
+        .picker-client {
+            font-size: 0.65rem;
+            font-weight: 700;
+            color: #777;
+            text-transform: uppercase;
+        }
+
+        .picker-title {
+            margin: 0;
+            font-size: 0.78rem;
+            font-weight: 600;
+            color: #ddd;
+            line-height: 1.35;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+            height: 2.7em;
+        }
+
+        .picker-badges {
+            display: flex;
+            gap: 5px;
+            margin-top: 4px;
+        }
+
+        .picker-badge {
+            font-size: 0.62rem;
+            padding: 2px 6px;
+            border-radius: 3px;
+            background: #252525;
+            color: #aaa;
+        }
+
+        .code-area {
+            background: #050505;
             color: #00ffaa;
             padding: 20px;
             border-radius: 12px;
             font-family: 'Fira Code', 'Courier New', monospace;
             overflow-y: auto;
             flex-grow: 1;
-            margin: 25px 0;
-            font-size: 0.8rem;
+            margin: 20px 0;
+            font-size: 0.78rem;
             white-space: pre;
             border: 1px solid #1a1a1a;
+            max-height: 50vh;
         }
 
         .modal-footer {
             display: flex;
             justify-content: flex-end;
-            gap: 15px;
+            gap: 12px;
+            padding-top: 12px;
+            border-top: 1px solid #222;
         }
 
-        .btn-outline {
-            background: none;
+        /* Toast Notice */
+        .admin-toast {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background: #1c1c1c;
             color: #fff;
+            padding: 16px 24px;
+            border-radius: 12px;
             border: 1px solid #333;
-            padding: 12px 24px;
-            border-radius: 50px;
-            cursor: pointer;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.6);
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-size: 0.88rem;
             font-weight: 600;
-            transition: all 0.3s;
+            z-index: 3000;
+            transform: translateY(100px);
+            opacity: 0;
+            transition: all 0.35s cubic-bezier(0.165, 0.84, 0.44, 1);
+            pointer-events: none;
         }
 
-        .btn-outline:hover {
-            border-color: #fff;
+        .admin-toast.show {
+            transform: translateY(0);
+            opacity: 1;
         }
 
-        ::-webkit-scrollbar {
-            width: 6px;
-        }
-
-        ::-webkit-scrollbar-thumb {
-            background: #333;
-            border-radius: 10px;
+        .admin-toast i {
+            color: #10b981;
+            font-size: 1.1rem;
         }
     </style>
 </head>
@@ -307,55 +875,407 @@
 <body class="admin-body">
 
     <div class="admin-container">
+        <!-- Header -->
         <header class="admin-header">
             <div class="admin-title-group">
-                <h1>Works Manager</h1>
-                <p>드래그하여 순서를 변경하거나 카테고리를 분류하고 아래 버튼을 눌러 확정하세요.</p>
+                <h1>WWWWWO PRODUCTION <span class="badge-admin">ADMIN</span></h1>
+                <p>홈페이지 대문(SELECTED PROJECTS) 및 전체 포트폴리오 순서를 관리합니다.</p>
             </div>
-            <button id="export-btn" class="btn-save">
-                <i class="fas fa-check-circle"></i> 순서 확정 및 코드 생성
-            </button>
+            <div class="header-actions">
+                <a href="index.html" target="_blank" class="btn-action">
+                    <i class="fas fa-external-link-alt"></i> 대문 미리보기
+                </a>
+                <button id="export-btn" class="btn-action btn-primary">
+                    <i class="fas fa-save"></i> 순서 확정 및 코드 생성
+                </button>
+            </div>
         </header>
 
+        <!-- Navigation Tabs -->
         <nav class="tab-controls">
-            <button class="tab-btn active" data-type="landscape">LONG FORM (Landscape)</button>
-            <button class="tab-btn" data-type="portrait">SHORT FORM (Portrait)</button>
+            <button class="tab-btn active" data-type="featured">
+                <i class="fas fa-star" style="color: var(--admin-gold);"></i>
+                대문 관리 (SELECTED PROJECTS)
+                <span class="badge-count">4 SLOTS</span>
+            </button>
+            <button class="tab-btn" data-type="landscape">
+                <i class="fas fa-desktop"></i>
+                LONG FORM (Landscape)
+                <span class="badge-count" id="count-landscape">0</span>
+            </button>
+            <button class="tab-btn" data-type="portrait">
+                <i class="fas fa-mobile-alt"></i>
+                SHORT FORM (Portrait)
+                <span class="badge-count" id="count-portrait">0</span>
+            </button>
         </nav>
 
-        <main id="landscape-container">
+        <!-- Tab 1: Featured Manager -->
+        <main id="featured-container">
+            <div class="featured-intro">
+                <div class="featured-intro-text">
+                    <h3><i class="fas fa-bolt" style="color: var(--admin-gold);"></i> 실시간 대문 영상 관리</h3>
+                    <p>홈페이지 첫 화면(SELECTED PROJECTS)의 4개 슬롯에 노출될 작품을 지정하세요. 교체 즉시 현재 브라우저에 바로 반영되며, 상단의 [순서 확정 및 코드 생성]을 통해 공식 배포용 코드를 내보낼 수 있습니다.</p>
+                </div>
+                <div class="featured-intro-actions">
+                    <button id="btn-reset-featured" class="btn-reset-featured">
+                        <i class="fas fa-undo"></i> 기본 추천작으로 초기화
+                    </button>
+                </div>
+            </div>
+
+            <div class="slots-grid" id="featured-slots-grid">
+                <!-- Dynamically rendered slots -->
+            </div>
+        </main>
+
+        <!-- Tab 2: Landscape Reorder -->
+        <main id="landscape-container" style="display: none;">
+            <p style="color: #888; font-size: 0.85rem; margin-bottom: 20px;">
+                <i class="fas fa-info-circle"></i> 카드를 마우스로 드래그하여 포트폴리오 순서를 조정하고, 카테고리를 변경할 수 있습니다.
+            </p>
             <ul id="landscape-list" class="reorder-list"></ul>
         </main>
 
+        <!-- Tab 3: Portrait Reorder -->
         <main id="portrait-container" style="display: none;">
+            <p style="color: #888; font-size: 0.85rem; margin-bottom: 20px;">
+                <i class="fas fa-info-circle"></i> 세로형(쇼츠) 포트폴리오 순서를 드래그하여 변경할 수 있습니다.
+            </p>
             <ul id="portrait-list" class="reorder-list"></ul>
         </main>
     </div>
 
-    <div id="export-modal">
+    <!-- Video Picker Modal -->
+    <div id="picker-modal" class="admin-modal">
         <div class="modal-inner">
-            <h2 style="margin: 0; font-size: 1.5rem;">순서가 변경되었습니다</h2>
-            <p style="color: #666; font-size: 0.95rem; margin-top: 10px;">아래 코드를 <b>모두 복사</b>하여 채팅창에 붙여넣어주세요.</p>
-            <div id="code-output" class="code-area"></div>
-            <div class="modal-footer">
-                <button id="copy-btn" class="btn-save" style="background: #fff; color: #000;">
-                    <i class="fas fa-copy"></i> 복사하기
-                </button>
-                <button id="close-modal" class="btn-outline">닫기</button>
+            <div class="modal-header">
+                <h2>
+                    <i class="fas fa-photo-video" style="color: var(--admin-gold);"></i>
+                    <span id="picker-modal-title">작품 선택하기</span>
+                </h2>
+                <button id="close-picker-modal" class="btn-close-modal">&times;</button>
+            </div>
+
+            <div class="picker-controls">
+                <div class="picker-search-bar">
+                    <i class="fas fa-search"></i>
+                    <input type="text" id="picker-search-input" class="picker-search-input" placeholder="작품 제목 또는 브랜드(클라이언트) 검색...">
+                </div>
+
+                <div class="picker-filter-chips">
+                    <button class="filter-chip active" data-filter="all">전체보기</button>
+                    <button class="filter-chip" data-filter="landscape">가로형 (Landscape)</button>
+                    <button class="filter-chip" data-filter="portrait">쇼츠/세로형 (Portrait)</button>
+                    <button class="filter-chip" data-filter="BRAND">BRAND</button>
+                    <button class="filter-chip" data-filter="BEAUTY">BEAUTY</button>
+                    <button class="filter-chip" data-filter="AD">AD</button>
+                    <button class="filter-chip" data-filter="VIRAL">VIRAL</button>
+                </div>
+            </div>
+
+            <div id="picker-grid" class="picker-grid">
+                <!-- Dynamically populated video cards -->
             </div>
         </div>
+    </div>
+
+    <!-- Export Code Modal -->
+    <div id="export-modal" class="admin-modal">
+        <div class="modal-inner">
+            <div class="modal-header">
+                <h2><i class="fas fa-check-circle" style="color: #10b981;"></i> 코드 내보내기 및 배포 준비</h2>
+                <button id="close-export-modal" class="btn-close-modal">&times;</button>
+            </div>
+            <p style="color: #888; font-size: 0.88rem; margin: 0 0 10px;">
+                대문(SELECTED PROJECTS) 4개 슬롯 설정 및 변경된 순서/카테고리가 모두 적용된 최신 <code>works.js</code> 코드입니다.
+            </p>
+            <div id="code-output" class="code-area"></div>
+            <div class="modal-footer">
+                <button id="download-btn" class="btn-action">
+                    <i class="fas fa-download"></i> works.js 파일 다운로드
+                </button>
+                <button id="copy-btn" class="btn-action btn-primary">
+                    <i class="fas fa-copy"></i> 전체 코드 복사
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Toast Notification -->
+    <div id="admin-toast" class="admin-toast">
+        <i class="fas fa-check-circle"></i>
+        <span id="toast-message">변경되었습니다.</span>
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/sortablejs@1.15.0/Sortable.min.js"></script>
     <script type="module">
         import works from './works.js';
 
-        let sortedLandscape = works.filter(w => w.orientation === 'landscape');
-        let sortedPortrait = works.filter(w => w.orientation === 'portrait');
+        // Deep copy works for local modifications
+        let localWorks = JSON.parse(JSON.stringify(works));
+        let sortedLandscape = localWorks.filter(w => w.orientation === 'landscape');
+        let sortedPortrait = localWorks.filter(w => w.orientation === 'portrait');
+
+        // Initial default featured IDs
+        const DEFAULT_FEATURED_IDS = [22, 44, 46, 56];
+
+        // Load featured IDs from localStorage or works.js or fallback
+        function loadFeaturedIds() {
+            const saved = localStorage.getItem('wwwwwo_featured_ids');
+            if (saved) {
+                try {
+                    const parsed = JSON.parse(saved);
+                    if (Array.isArray(parsed) && parsed.length === 4) {
+                        return parsed;
+                    }
+                } catch (e) {
+                    console.error('Failed to parse localStorage featured_ids', e);
+                }
+            }
+
+            // Fallback to works marked with featuredSlot
+            const marked = [];
+            for (let i = 1; i <= 4; i++) {
+                const item = localWorks.find(w => w.featuredSlot === i);
+                marked.push(item ? item.id : DEFAULT_FEATURED_IDS[i - 1]);
+            }
+            return marked;
+        }
+
+        let featuredSlotIds = loadFeaturedIds();
+        let currentTargetSlot = 0; // 0 to 3
 
         const landscapeList = document.getElementById('landscape-list');
         const portraitList = document.getElementById('portrait-list');
+        const featuredSlotsGrid = document.getElementById('featured-slots-grid');
 
-        function renderList(type) {
+        // Badge counts
+        document.getElementById('count-landscape').textContent = sortedLandscape.length;
+        document.getElementById('count-portrait').textContent = sortedPortrait.length;
+
+        // Thumbnail resolver helper
+        function getWorkThumb(item) {
+            if (!item) return '';
+            let thumb = item.thumbnail;
+            if (!thumb || thumb.includes('unsplash') || !thumb.startsWith('thumbnails/')) {
+                if (item.videoUrl && (item.videoUrl.includes('youtube.com') || item.videoUrl.includes('youtu.be'))) {
+                    let videoId = '';
+                    if (item.videoUrl.includes('embed/')) {
+                        videoId = item.videoUrl.split('embed/')[1].split('?')[0];
+                    } else {
+                        videoId = item.videoUrl.split('/').pop().split('?')[0];
+                    }
+                    if (videoId) thumb = `https://img.youtube.com/vi/${videoId}/hqdefault.jpg`;
+                }
+            }
+            return thumb || item.thumbnail || '';
+        }
+
+        // Show toast notification
+        function showToast(msg) {
+            const toast = document.getElementById('admin-toast');
+            document.getElementById('toast-message').textContent = msg;
+            toast.classList.add('show');
+            setTimeout(() => {
+                toast.classList.remove('show');
+            }, 3000);
+        }
+
+        // ----------------- RENDER FEATURED SLOTS -----------------
+        const slotConfig = [
+            { slotNum: 1, name: 'SLOT 01', type: 'Landscape', desc: '대문 상단 메인 와이드 영상 (16:9)', isPortrait: false },
+            { slotNum: 2, name: 'SLOT 02', type: 'Landscape', desc: '대문 중간 와이드 영상 (16:9)', isPortrait: false },
+            { slotNum: 3, name: 'SLOT 03', type: 'Landscape', desc: '대문 하단 와이드 영상 (16:9)', isPortrait: false },
+            { slotNum: 4, name: 'SLOT 04', type: 'Portrait', desc: '대문 우측 쇼츠/세로 영상 (9:16)', isPortrait: true }
+        ];
+
+        function renderFeaturedSlots() {
+            featuredSlotsGrid.innerHTML = '';
+
+            slotConfig.forEach((cfg, index) => {
+                const workId = featuredSlotIds[index];
+                const work = localWorks.find(w => w.id === workId) || localWorks[0];
+                const thumb = getWorkThumb(work);
+
+                const card = document.createElement('div');
+                card.className = `slot-card ${cfg.isPortrait ? 'portrait-slot' : ''}`;
+                
+                const cats = Array.isArray(work.category) ? work.category : (work.category ? [work.category] : []);
+                const catChips = cats.map(c => `<span class="slot-cat-chip">${c}</span>`).join('');
+
+                card.innerHTML = `
+                    <div class="slot-card-header">
+                        <span class="slot-label"><i class="fas fa-play-circle"></i> ${cfg.name}</span>
+                        <span class="slot-type-badge">${cfg.type}</span>
+                    </div>
+                    <div class="slot-thumb-wrapper">
+                        <span class="slot-work-id">ID #${work.id}</span>
+                        <img src="${thumb}" alt="${work.title}" class="slot-thumb" loading="lazy">
+                        <div class="slot-thumb-overlay">
+                            <span style="font-size: 0.72rem; color: #ccc;">${cfg.desc}</span>
+                        </div>
+                    </div>
+                    <div class="slot-body">
+                        <p class="slot-client">${work.client || 'CLIENT'}</p>
+                        <h4 class="slot-title">${work.title}</h4>
+                        <div class="slot-meta">
+                            ${catChips}
+                        </div>
+                    </div>
+                    <div class="slot-actions">
+                        <button class="btn-change-slot" data-slot-index="${index}">
+                            <i class="fas fa-exchange-alt"></i> 영상 교체하기
+                        </button>
+                        <a href="project.html?id=${work.id}" target="_blank" class="btn-view-slot" title="상세보기">
+                            <i class="fas fa-arrow-up-right-from-square"></i>
+                        </a>
+                    </div>
+                `;
+
+                card.querySelector('.btn-change-slot').addEventListener('click', () => {
+                    openPickerModal(index);
+                });
+
+                featuredSlotsGrid.appendChild(card);
+            });
+        }
+
+        // ----------------- VIDEO PICKER MODAL -----------------
+        const pickerModal = document.getElementById('picker-modal');
+        const pickerGrid = document.getElementById('picker-grid');
+        const pickerSearchInput = document.getElementById('picker-search-input');
+        const pickerModalTitle = document.getElementById('picker-modal-title');
+        let currentFilter = 'all';
+
+        function openPickerModal(slotIndex) {
+            currentTargetSlot = slotIndex;
+            const cfg = slotConfig[slotIndex];
+            pickerModalTitle.textContent = `${cfg.name} 영상 선택 (${cfg.type})`;
+
+            // Default filter to slot type
+            if (cfg.isPortrait) {
+                currentFilter = 'portrait';
+            } else {
+                currentFilter = 'landscape';
+            }
+
+            document.querySelectorAll('.filter-chip').forEach(chip => {
+                chip.classList.toggle('active', chip.dataset.filter === currentFilter);
+            });
+
+            pickerSearchInput.value = '';
+            renderPickerVideos();
+            pickerModal.classList.add('open');
+            pickerSearchInput.focus();
+        }
+
+        function closePickerModal() {
+            pickerModal.classList.remove('open');
+        }
+
+        document.getElementById('close-picker-modal').addEventListener('click', closePickerModal);
+        pickerModal.addEventListener('click', (e) => {
+            if (e.target === pickerModal) closePickerModal();
+        });
+
+        // Search and Filter logic
+        function renderPickerVideos() {
+            const query = pickerSearchInput.value.trim().toLowerCase();
+            const currentSelectedId = featuredSlotIds[currentTargetSlot];
+
+            const filtered = localWorks.filter(w => {
+                // Type or category filter
+                if (currentFilter === 'landscape' && w.orientation !== 'landscape') return false;
+                if (currentFilter === 'portrait' && w.orientation !== 'portrait') return false;
+                if (['BRAND', 'BEAUTY', 'AD', 'VIRAL'].includes(currentFilter)) {
+                    const cats = Array.isArray(w.category) ? w.category : [w.category];
+                    if (!cats.includes(currentFilter)) return false;
+                }
+
+                // Query search
+                if (query) {
+                    const matchTitle = w.title && w.title.toLowerCase().includes(query);
+                    const matchClient = w.client && w.client.toLowerCase().includes(query);
+                    const matchId = w.id && w.id.toString() === query;
+                    if (!matchTitle && !matchClient && !matchId) return false;
+                }
+
+                return true;
+            });
+
+            pickerGrid.innerHTML = '';
+
+            if (filtered.length === 0) {
+                pickerGrid.innerHTML = `
+                    <div style="grid-column: 1/-1; text-align: center; padding: 50px 20px; color: #666;">
+                        <i class="fas fa-search" style="font-size: 2rem; margin-bottom: 12px; display: block;"></i>
+                        검색 조건과 일치하는 작품이 없습니다.
+                    </div>
+                `;
+                return;
+            }
+
+            filtered.forEach(work => {
+                const card = document.createElement('div');
+                card.className = `picker-item-card ${work.id === currentSelectedId ? 'is-current' : ''}`;
+                const thumb = getWorkThumb(work);
+
+                card.innerHTML = `
+                    <div class="picker-thumb-box ${work.orientation === 'portrait' ? 'portrait' : ''}">
+                        <img src="${thumb}" alt="${work.title}" class="picker-thumb" loading="lazy">
+                    </div>
+                    <div class="picker-card-info">
+                        <span class="picker-client">${work.client || 'CLIENT'}</span>
+                        <h5 class="picker-title">${work.title}</h5>
+                        <div class="picker-badges">
+                            <span class="picker-badge">ID #${work.id}</span>
+                            <span class="picker-badge">${work.orientation === 'portrait' ? '세로' : '가로'}</span>
+                        </div>
+                    </div>
+                `;
+
+                card.addEventListener('click', () => {
+                    selectVideoForSlot(currentTargetSlot, work.id);
+                });
+
+                pickerGrid.appendChild(card);
+            });
+        }
+
+        function selectVideoForSlot(slotIndex, workId) {
+            featuredSlotIds[slotIndex] = workId;
+            localStorage.setItem('wwwwwo_featured_ids', JSON.stringify(featuredSlotIds));
+
+            const chosenWork = localWorks.find(w => w.id === workId);
+            renderFeaturedSlots();
+            closePickerModal();
+            showToast(`${slotConfig[slotIndex].name}이(가) "${chosenWork ? chosenWork.title : workId}"(으)로 교체되었습니다!`);
+        }
+
+        pickerSearchInput.addEventListener('input', renderPickerVideos);
+
+        document.querySelectorAll('.filter-chip').forEach(chip => {
+            chip.addEventListener('click', () => {
+                document.querySelectorAll('.filter-chip').forEach(c => c.classList.remove('active'));
+                chip.classList.add('active');
+                currentFilter = chip.dataset.filter;
+                renderPickerVideos();
+            });
+        });
+
+        // Reset to default
+        document.getElementById('btn-reset-featured').addEventListener('click', () => {
+            if (confirm('대문 4개 슬롯을 기본 추천작으로 초기화하시겠습니까?')) {
+                featuredSlotIds = [...DEFAULT_FEATURED_IDS];
+                localStorage.setItem('wwwwwo_featured_ids', JSON.stringify(featuredSlotIds));
+                renderFeaturedSlots();
+                showToast('대문 슬롯이 기본값으로 초기화되었습니다.');
+            }
+        });
+
+        // ----------------- REORDER LIST (LANDSCAPE / PORTRAIT) -----------------
+        function renderReorderList(type) {
             const list = type === 'landscape' ? landscapeList : portraitList;
             const data = type === 'landscape' ? sortedLandscape : sortedPortrait;
 
@@ -365,29 +1285,11 @@
                 li.className = 'reorder-item';
                 li.dataset.id = item.id;
 
-                let thumb = item.thumbnail;
-                if (!thumb || thumb.includes('unsplash')) {
-                    if (item.videoUrl && (item.videoUrl.includes('youtube.com') || item.videoUrl.includes('youtu.be'))) {
-                        let videoId = '';
-                        if (item.videoUrl.includes('embed/')) {
-                            videoId = item.videoUrl.split('embed/')[1].split('?')[0];
-                        } else {
-                            videoId = item.videoUrl.split('/').pop().split('?')[0];
-                        }
-                        thumb = `https://img.youtube.com/vi/${videoId}/hqdefault.jpg`;
-                    }
-                }
-
+                const thumb = getWorkThumb(item);
                 const categories = ['BRAND', 'BEAUTY', 'SPORTS', 'VIRAL', 'YOUTUBE', 'AD', 'MUSIC', 'OTHERS'];
                 const catLabels = {
-                    'BRAND': '브랜드',
-                    'BEAUTY': '뷰티',
-                    'SPORTS': '스포츠',
-                    'VIRAL': '바이럴',
-                    'YOUTUBE': '유튜브',
-                    'AD': '광고',
-                    'MUSIC': '뮤직',
-                    'OTHERS': '기타'
+                    'BRAND': '브랜드', 'BEAUTY': '뷰티', 'SPORTS': '스포츠', 'VIRAL': '바이럴',
+                    'YOUTUBE': '유튜브', 'AD': '광고', 'MUSIC': '뮤직', 'OTHERS': '기타'
                 };
                 const itemCats = Array.isArray(item.category) ? item.category : (item.category ? [item.category] : []);
                 const catCheckboxes = categories.map(cat =>
@@ -403,6 +1305,7 @@
                         <img src="${thumb}" class="item-thumb" loading="lazy">
                     </div>
                     <div class="item-info">
+                        <p class="item-client">${item.client || 'CLIENT'}</p>
                         <p class="item-title">${item.title}</p>
                         <div class="cat-checkboxes">
                             ${catCheckboxes}
@@ -410,7 +1313,6 @@
                     </div>
                 `;
 
-                // Event listener for category changes
                 li.querySelectorAll('input[type="checkbox"]').forEach(input => {
                     input.addEventListener('change', () => {
                         const id = parseInt(li.dataset.id);
@@ -420,6 +1322,9 @@
                         if (itemToUpdate) {
                             const checked = Array.from(li.querySelectorAll('input:checked')).map(i => i.value);
                             itemToUpdate.category = checked;
+                            // Also update localWorks
+                            const lw = localWorks.find(w => w.id === id);
+                            if (lw) lw.category = checked;
                         }
                     });
                 });
@@ -439,7 +1344,7 @@
                     if (item) newSorted.push(item);
                 });
                 sortedLandscape = newSorted;
-                renderList('landscape');
+                renderReorderList('landscape');
             }
         });
 
@@ -454,43 +1359,96 @@
                     if (item) newSorted.push(item);
                 });
                 sortedPortrait = newSorted;
-                renderList('portrait');
+                renderReorderList('portrait');
             }
         });
 
+        // ----------------- TAB NAVIGATION -----------------
         document.querySelectorAll('.tab-btn').forEach(btn => {
             btn.addEventListener('click', () => {
                 document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
                 btn.classList.add('active');
 
                 const type = btn.dataset.type;
+                document.getElementById('featured-container').style.display = type === 'featured' ? 'block' : 'none';
                 document.getElementById('landscape-container').style.display = type === 'landscape' ? 'block' : 'none';
                 document.getElementById('portrait-container').style.display = type === 'portrait' ? 'block' : 'none';
-                renderList(type);
+
+                if (type === 'landscape') renderReorderList('landscape');
+                if (type === 'portrait') renderReorderList('portrait');
+                if (type === 'featured') renderFeaturedSlots();
             });
         });
 
-        document.getElementById('export-btn').addEventListener('click', () => {
-            const combined = [...sortedLandscape, ...sortedPortrait];
-            const jsCode = `const works = ${JSON.stringify(combined, null, 4)};\n\nexport default works;`;
+        // ----------------- EXPORT & CODE GENERATION -----------------
+        const exportModal = document.getElementById('export-modal');
 
+        function generateWorksCode() {
+            // Merge landscape and portrait in their sorted order
+            const combined = [...sortedLandscape, ...sortedPortrait];
+
+            // Assign featuredSlot attributes according to featuredSlotIds
+            combined.forEach(item => {
+                delete item.featuredSlot;
+                const slotIdx = featuredSlotIds.indexOf(item.id);
+                if (slotIdx !== -1) {
+                    item.featuredSlot = slotIdx + 1;
+                }
+            });
+
+            return `const works = ${JSON.stringify(combined, null, 4)};\n\nexport default works;`;
+        }
+
+        document.getElementById('export-btn').addEventListener('click', () => {
+            // Save featured to localStorage
+            localStorage.setItem('wwwwwo_featured_ids', JSON.stringify(featuredSlotIds));
+
+            const jsCode = generateWorksCode();
             document.getElementById('code-output').textContent = jsCode;
-            document.getElementById('export-modal').style.display = 'flex';
+            exportModal.classList.add('open');
         });
 
-        document.getElementById('close-modal').addEventListener('click', () => {
-            document.getElementById('export-modal').style.display = 'none';
+        document.getElementById('close-export-modal').addEventListener('click', () => {
+            exportModal.classList.remove('open');
+        });
+
+        exportModal.addEventListener('click', (e) => {
+            if (e.target === exportModal) exportModal.classList.remove('open');
         });
 
         document.getElementById('copy-btn').addEventListener('click', () => {
             const code = document.getElementById('code-output').textContent;
             navigator.clipboard.writeText(code).then(() => {
-                alert('코드가 복사되었습니다! 이제 AI 채팅창에 "이 코드로 업데이트해줘"라고 메시지를 보내주세요.');
+                showToast('works.js 코드가 클립보드에 복사되었습니다!');
             });
         });
 
-        renderList('landscape');
-        renderList('portrait');
+        document.getElementById('download-btn').addEventListener('click', () => {
+            const code = document.getElementById('code-output').textContent;
+            const blob = new Blob([code], { type: 'application/javascript;charset=utf-8' });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = 'works.js';
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+            URL.revokeObjectURL(url);
+            showToast('works.js 파일이 다운로드되었습니다.');
+        });
+
+        // ESC key to close modals
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') {
+                closePickerModal();
+                exportModal.classList.remove('open');
+            }
+        });
+
+        // Initial render
+        renderFeaturedSlots();
+        renderReorderList('landscape');
+        renderReorderList('portrait');
     </script>
 </body>
 
