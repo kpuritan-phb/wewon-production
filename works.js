@@ -703,450 +703,6 @@ const works = [
         "description": "촉촉한 피부를 위한 멜비유 스킨케어 심포니 ASMR 영상입니다."
     },
     {
-        "id": 156,
-        "title": "돈 한 푼 없이 창업한 직장인, 결국 대표가 된 이 #창업 #직장인공감 #직장생활",
-        "client": "옆집대표 임지은",
-        "category": [
-            "BRAND"
-        ],
-        "orientation": "portrait",
-        "thumbnail": "thumbnails/thumb_156.jpg",
-        "videoUrl": "https://www.youtube.com/embed/jrcBQZH-a_M",
-        "description": "옆집대표 임지은의 세로형 숏폼 영상 콘텐츠입니다."
-    },
-    {
-        "id": 157,
-        "title": "팀원들이 나를 피하는 진짜 이유 #리더십 #소통법",
-        "client": "옆집대표 임지은",
-        "category": [
-            "BRAND"
-        ],
-        "orientation": "portrait",
-        "thumbnail": "thumbnails/thumb_157.jpg",
-        "videoUrl": "https://www.youtube.com/embed/VPjKsoBHiBI",
-        "description": "옆집대표 임지은의 세로형 숏폼 영상 콘텐츠입니다."
-    },
-    {
-        "id": 158,
-        "title": "GPT로 자소서 쓰면 면접도 못 가고 탈락하는 이유 #취업 #자소서",
-        "client": "옆집대표 임지은",
-        "category": [
-            "BRAND"
-        ],
-        "orientation": "portrait",
-        "thumbnail": "thumbnails/thumb_158.jpg",
-        "videoUrl": "https://www.youtube.com/embed/LhqmKYnkmu8",
-        "description": "옆집대표 임지은의 세로형 숏폼 영상 콘텐츠입니다."
-    },
-    {
-        "id": 159,
-        "title": "얼굴이 완벽하면 더 예쁠까? 😳 #얼굴비대칭 #미의기준 #동안",
-        "client": "라인만드는 의사 DR.권병소",
-        "category": [
-            "BEAUTY"
-        ],
-        "orientation": "portrait",
-        "thumbnail": "thumbnails/thumb_159.jpg",
-        "videoUrl": "https://www.youtube.com/embed/kJnA7Bwlk4I",
-        "description": "라인만드는 의사 DR.권병소의 세로형 숏폼 영상 콘텐츠입니다."
-    },
-    {
-        "id": 160,
-        "title": "40대인데 30대같은 동안 특징 #노화 #리프팅 #레이저 #시술",
-        "client": "라인만드는 의사 DR.권병소",
-        "category": [
-            "BEAUTY"
-        ],
-        "orientation": "portrait",
-        "thumbnail": "thumbnails/thumb_160.jpg",
-        "videoUrl": "https://www.youtube.com/embed/gKRd58gsDHM",
-        "description": "라인만드는 의사 DR.권병소의 세로형 숏폼 영상 콘텐츠입니다."
-    },
-    {
-        "id": 161,
-        "title": "나이 들면 얼굴이...?😳",
-        "client": "라인만드는 의사 DR.권병소",
-        "category": [
-            "BEAUTY"
-        ],
-        "orientation": "portrait",
-        "thumbnail": "thumbnails/thumb_161.jpg",
-        "videoUrl": "https://www.youtube.com/embed/s0bgLvMmwlU",
-        "description": "라인만드는 의사 DR.권병소의 세로형 숏폼 영상 콘텐츠입니다."
-    },
-    {
-        "id": 162,
-        "title": "Creamy, smooth, and made to melt into your skin. 🤍",
-        "client": "Mirabelle Korea",
-        "category": [
-            "BEAUTY"
-        ],
-        "orientation": "portrait",
-        "thumbnail": "thumbnails/thumb_162.jpg",
-        "videoUrl": "https://www.instagram.com/reel/Dc3f480BnRC/embed",
-        "description": "Creamy, smooth, and made to melt into your skin. 🤍 Meet the texture of Mirabelle Micro Code PDRN Revive Cream — a soft, moisture-rich formula that spr"
-    },
-    {
-        "id": 163,
-        "title": "A slow morning, a fresh wash, and a moment of care...",
-        "client": "Mirabelle Korea",
-        "category": [
-            "BEAUTY"
-        ],
-        "orientation": "portrait",
-        "thumbnail": "thumbnails/thumb_163.jpg",
-        "videoUrl": "https://www.instagram.com/reel/Dbx-XFPBnWM/embed",
-        "description": "A slow morning, a fresh wash, and a moment of care worth taking everywhere. 🤍🧳 From cleansing the scalp to softening every strand, the MIRABELLE Core "
-    },
-    {
-        "id": 164,
-        "title": "When the chaotic Gen Z new hire becomes the office...",
-        "client": "Mirabelle TV",
-        "category": [
-            "BEAUTY"
-        ],
-        "orientation": "portrait",
-        "thumbnail": "thumbnails/thumb_164.jpg",
-        "videoUrl": "https://www.instagram.com/reel/Da2wLhwBtHJ/embed",
-        "description": "When the chaotic Gen Z new hire becomes the office content guru overnight… only for your reel to get 61 views. 😭 Who are you in the Mirabelle Office—S"
-    },
-    {
-        "id": 165,
-        "title": "POV: You got left out of the India conversation… s...",
-        "client": "Mirabelle TV",
-        "category": [
-            "BEAUTY"
-        ],
-        "orientation": "portrait",
-        "thumbnail": "thumbnails/thumb_165.jpg",
-        "videoUrl": "https://www.instagram.com/reel/DZowOnwy9zf/embed",
-        "description": "POV: You got left out of the India conversation… so now you’re in your full Dowon Namaste era. 🇮🇳😭 Are you Team Dowon or Team Everyone? Comment below "
-    },
-    {
-        "id": 166,
-        "title": "Plot twist: Dowon wasn’t being weird. He was tryin...",
-        "client": "Mirabelle TV",
-        "category": [
-            "BEAUTY"
-        ],
-        "orientation": "portrait",
-        "thumbnail": "thumbnails/thumb_166.jpg",
-        "videoUrl": "https://www.instagram.com/reel/DZhB0S1BGnF/embed",
-        "description": "Plot twist: Dowon wasn’t being weird. He was trying his best. 😭🇮🇳 Dowon just wanted to be part of the India talk! And honestly, isn’t that kind of ado"
-    },
-    {
-        "id": 167,
-        "title": "POV: You accidentally exposed your skincare habits...",
-        "client": "Mirabelle TV",
-        "category": [
-            "BEAUTY"
-        ],
-        "orientation": "portrait",
-        "thumbnail": "thumbnails/thumb_167.jpg",
-        "videoUrl": "https://www.instagram.com/reel/DX_7pXthpUQ/embed",
-        "description": "POV: You accidentally exposed your skincare habits in a Korean beauty office 💀 One skipped face wash turned into a full-scale skincare intervention. N"
-    },
-    {
-        "id": 168,
-        "title": "POV: new sunscreen dropped and your team leader di...",
-        "client": "Mirabelle TV",
-        "category": [
-            "BEAUTY"
-        ],
-        "orientation": "portrait",
-        "thumbnail": "thumbnails/thumb_168.jpg",
-        "videoUrl": "https://www.instagram.com/reel/DXwe9PKSO9H/embed",
-        "description": "POV: new sunscreen dropped and your team leader didn’t get it first… 😬 suddenly everything you do is “wrong” but don’t worry… it’s just “office life” "
-    },
-    {
-        "id": 169,
-        "title": "Start your morning with deep hydration. ✨",
-        "client": "Mirabelle Korea",
-        "category": [
-            "BEAUTY"
-        ],
-        "orientation": "portrait",
-        "thumbnail": "thumbnails/thumb_169.jpg",
-        "videoUrl": "https://www.instagram.com/reel/DXhCMREhCwP/embed",
-        "description": "Start your morning with deep hydration. ✨ Powered by Hyaluronic Acid and Collagen, the HyaColla line helps replenish moisture, smooth skin texture, an"
-    },
-    {
-        "id": 170,
-        "title": "A quiet picnic in the forest. 🌿",
-        "client": "Mirabelle Korea",
-        "category": [
-            "BEAUTY"
-        ],
-        "orientation": "portrait",
-        "thumbnail": "thumbnails/thumb_170.jpg",
-        "videoUrl": "https://www.instagram.com/reel/DXzDwZBh--R/embed",
-        "description": "A quiet picnic in the forest. 🌿 Just like nature calming everything around it, our skin sometimes needs a moment to reset too. Mirabelle Korea CicaPep"
-    },
-    {
-        "id": 171,
-        "title": "Different moments. Different moods. Same hydration...",
-        "client": "Mirabelle Korea",
-        "category": [
-            "BEAUTY"
-        ],
-        "orientation": "portrait",
-        "thumbnail": "thumbnails/thumb_171.jpg",
-        "videoUrl": "https://www.instagram.com/reel/DYj-xxSh0JC/embed",
-        "description": "Different moments. Different moods. Same hydration. 💧 Pick up hydration. Get better skin. Wherever the day goes, HyaColla keeps skin feeling deeply hy"
-    },
-    {
-        "id": 172,
-        "title": "Your body drinks water.",
-        "client": "Mirabelle Korea",
-        "category": [
-            "BEAUTY"
-        ],
-        "orientation": "portrait",
-        "thumbnail": "thumbnails/thumb_172.jpg",
-        "videoUrl": "https://www.instagram.com/reel/DYzbn4jvepj/embed",
-        "description": "Your body drinks water. Your skin wants it too. 💧 HyaColla delivers deep hydration with Hyaluronic Acid + Collagen care for skin that feels fresh, plu"
-    },
-    {
-        "id": 173,
-        "title": "Some things change every day.",
-        "client": "Mirabelle Korea",
-        "category": [
-            "BEAUTY"
-        ],
-        "orientation": "portrait",
-        "thumbnail": "thumbnails/thumb_173.jpg",
-        "videoUrl": "https://www.instagram.com/reel/DYUiEgZPFkU/embed",
-        "description": "Some things change every day. The weather, the mood, the routine. But your skin always asks for the same thing — hydration. 💧 Powered by Hyaluronic Ac"
-    },
-    {
-        "id": 174,
-        "title": "Fresh greens, fresh care, fresh skin. 🌿",
-        "client": "Mirabelle Korea",
-        "category": [
-            "BEAUTY"
-        ],
-        "orientation": "portrait",
-        "thumbnail": "thumbnails/thumb_174.jpg",
-        "videoUrl": "https://www.instagram.com/reel/DY6Z8oEP02V/embed",
-        "description": "Fresh greens, fresh care, fresh skin. 🌿 A calming skincare reset with the MIRABELLE Cica-Pep Intensive Line — made to soothe, cleanse, balance, and re"
-    },
-    {
-        "id": 175,
-        "title": "Expectation: cinematic Mirabelle commercial",
-        "client": "Mirabelle TV",
-        "category": [
-            "BEAUTY"
-        ],
-        "orientation": "portrait",
-        "thumbnail": "thumbnails/thumb_175.jpg",
-        "videoUrl": "https://www.instagram.com/reel/DXdvl6EEh-r/embed",
-        "description": "Expectation: cinematic Mirabelle commercial Reality: this. #mirabelleoffice #kbeauty #fyp #reelsindia #iphone17"
-    },
-    {
-        "id": 176,
-        "title": "Everyone thought Mirabelle Korea’s cream sales dro...",
-        "client": "Mirabelle TV",
-        "category": [
-            "BEAUTY"
-        ],
-        "orientation": "portrait",
-        "thumbnail": "thumbnails/thumb_176.jpg",
-        "videoUrl": "https://www.instagram.com/reel/DWY1Ezjh4En/embed",
-        "description": "Everyone thought Mirabelle Korea’s cream sales dropped in March… but that wasn’t the real reason 👀 The creams sold out faster than Mirabelle expected,"
-    },
-    {
-        "id": 177,
-        "title": "A Korean CEO.",
-        "client": "Mirabelle TV",
-        "category": [
-            "BEAUTY"
-        ],
-        "orientation": "portrait",
-        "thumbnail": "thumbnails/thumb_177.jpg",
-        "videoUrl": "https://www.instagram.com/reel/DUDe9S4Et4u/embed",
-        "description": "A Korean CEO. 30 years between Korea and India 🇰🇷🇮🇳 That’s how this brand was born. This brand didn’t happen overnight. For decades, our CEO traveled "
-    },
-    {
-        "id": 178,
-        "title": "“좋은 시술을 받으려면 꼭 서울까지 가야 할까요?” 🤔",
-        "client": "닥터새새(닥터튠즈의원)",
-        "category": [
-            "BEAUTY"
-        ],
-        "orientation": "portrait",
-        "thumbnail": "thumbnails/thumb_178.jpg",
-        "videoUrl": "https://www.instagram.com/p/DcqKW61pZP5/embed",
-        "description": "“좋은 시술을 받으려면 꼭 서울까지 가야 할까요?” 🤔 저는 아니라고 생각합니다. 저는 대구에서 태어나 중·고등학교를 다녔고, 결혼도 하고 아이도 낳으며 계속 대구에서 살아왔어요. 🏡 그만큼 대구를 정말 좋아하고, 애정이 많은 사람입니다. ❤️ 물론 솔직히 말하면 서울"
-    },
-    {
-        "id": 179,
-        "title": "저도 학생 시절, 여드름 때문에 3년 정도 정말 많이 힘들었어요.",
-        "client": "닥터새새(닥터튠즈의원)",
-        "category": [
-            "BEAUTY"
-        ],
-        "orientation": "portrait",
-        "thumbnail": "thumbnails/thumb_179.jpg",
-        "videoUrl": "https://www.instagram.com/p/DcswtwtphWU/embed",
-        "description": "저도 학생 시절, 여드름 때문에 3년 정도 정말 많이 힘들었어요. 거울을 보는 것도 스트레스였고, 외모 때문에 자신감이 떨어질 때도 많았습니다. 그러다 피부과에서 여러 시술을 받으면서 피부가 조금씩 좋아졌고, 신기하게 피부만 좋아진 게 아니라 제 자신감도 함께 돌아오기"
-    },
-    {
-        "id": 180,
-        "title": "한창 놀 나이 16살에 아득바득 밤샘 아르바이트하면서",
-        "client": "늘 오늘해",
-        "category": [
-            "VIRAL"
-        ],
-        "orientation": "portrait",
-        "thumbnail": "thumbnails/thumb_180.jpg",
-        "videoUrl": "https://www.instagram.com/reel/DZ4tj1uu5g4/embed",
-        "description": "한창 놀 나이 16살에 아득바득 밤샘 아르바이트하면서 동생 키우고, 동생 앞에서 울 수도 없고, 힘들고 지쳐도 꾹 참아왔던 이런 저, 어때요? 붐업? 붐따? 눌러줘🫶 K-장녀 야호~! #소녀가장 #띠동갑 #막둥이 #K장녀 #자매"
-    },
-    {
-        "id": 181,
-        "title": "4일 연속 먹은 자궁근종 관리 식단 🤍",
-        "client": "늘 오늘해",
-        "category": [
-            "VIRAL"
-        ],
-        "orientation": "portrait",
-        "thumbnail": "thumbnails/thumb_181.jpg",
-        "videoUrl": "https://www.instagram.com/reel/DXMKq5NkoIQ/embed",
-        "description": "4일 연속 먹은 자궁근종 관리 식단 🤍 주문 실수로 팽이버섯 20개, 순두부 10봉지나 시켜버렸어요 😅 “이걸 언제 다 먹지…?” 싶더라고요 원래는 순두부찌개용이었는데 유통기한 때문에 계속 먹기엔 속이 부담될 것 같아서 고민하다가 만들어본 팽이 순두부탕! 🍲 그리고 마"
-    },
-    {
-        "id": 182,
-        "title": "자궁이 7cm인데",
-        "client": "늘 오늘해",
-        "category": [
-            "VIRAL"
-        ],
-        "orientation": "portrait",
-        "thumbnail": "thumbnails/thumb_182.jpg",
-        "videoUrl": "https://www.instagram.com/reel/DV0cwYskhWD/embed",
-        "description": "자궁이 7cm인데 저는 최대 10cm 자궁근종 8개를 수술했어요. 디엠으로 자궁근종 수술 후기를 많이 물어봐 주셔서 제가 겪은 입원 과정과 수술 준비를 브이로그로 기록해 보기로 했어요. 막상 입원하고 나니까 “아… 진짜 수술이구나” 그때부터 긴장이 확 되더라고요. 수술"
-    },
-    {
-        "id": 183,
-        "title": "나랑 같이 득근할 사람? 😏",
-        "client": "늘 오늘해",
-        "category": [
-            "SPORTS"
-        ],
-        "orientation": "portrait",
-        "thumbnail": "thumbnails/thumb_183.jpg",
-        "videoUrl": "https://www.instagram.com/reel/DaSUUnDNTjn/embed",
-        "description": "나랑 같이 득근할 사람? 😏 #득근 #건강 #운동 #운동일지 #대전"
-    },
-    {
-        "id": 184,
-        "title": "이번 생활스포츠지도사 2급 보디빌딩 필기시험, 진짜 어려웠어요…🥲",
-        "client": "늘 오늘해",
-        "category": [
-            "SPORTS"
-        ],
-        "orientation": "portrait",
-        "thumbnail": "thumbnails/thumb_184.jpg",
-        "videoUrl": "https://www.instagram.com/reel/DbDR7WSvvwD/embed",
-        "description": "이번 생활스포츠지도사 2급 보디빌딩 필기시험, 진짜 어려웠어요…🥲 저 같은 헬린이는 혼자였다면 절대 못 붙었을 거예요. 도와주신 선생님들, 선배님들, 그리고 함께 준비한 친구들 모두 정말 감사합니다! 🥹 필기에서 떨어질 줄 알고 실기 준비를 전혀 안 했는데… 과연 실기"
-    },
-    {
-        "id": 185,
-        "title": "“사실 저희는 병원 공사 실적이 단 한 건도 없습니다.”",
-        "client": "블루핀 | 사무실인테리어•오피스인테리어•스페이스컨설팅",
-        "category": [
-            "BRAND"
-        ],
-        "orientation": "portrait",
-        "thumbnail": "thumbnails/thumb_185.jpg",
-        "videoUrl": "https://www.instagram.com/reel/DdQfk0KCNyI/embed",
-        "description": "“사실 저희는 병원 공사 실적이 단 한 건도 없습니다.” 이미 업계 1위 업체가 내정되어 있던 상황. 객관적으로 보면 고객이 저희를 선택할 이유가 전혀 없었습니다. 하지만 지키지 못할 말은 하지 않는 솔직함, 그리고 끝까지 책임지겠다는 진정성을 보여드렸습니다. 결국 4"
-    },
-    {
-        "id": 186,
-        "title": "아모레퍼시픽은 왜 본사 건물을 개방했을까?🤔",
-        "client": "블루핀 | 사무실인테리어•오피스인테리어•스페이스컨설팅",
-        "category": [
-            "BRAND"
-        ],
-        "orientation": "portrait",
-        "thumbnail": "thumbnails/thumb_186.jpg",
-        "videoUrl": "https://www.instagram.com/reel/DeJjl15CBY4/embed",
-        "description": "아모레퍼시픽은 왜 본사 건물을 개방했을까?🤔 외부인의 출입이 제한적인 일반적인 사옥과 달리, 서울 용산의 아모레퍼시픽 본사는 누구에게나 열려 있는 공간을 만들었습니다. 자연과 건축이 하나가 되고, 수직적인 위계보다 사람과 사람의 관계가 연결되도록. 좋은 오피스는 단순히"
-    },
-    {
-        "id": 187,
-        "title": "2026년, 욕실 온풍기 구매 기준이 완전히 달라졌습니다.🔥",
-        "client": "에어리어",
-        "category": [
-            "BRAND"
-        ],
-        "orientation": "portrait",
-        "thumbnail": "thumbnails/thumb_187.jpg",
-        "videoUrl": "https://www.instagram.com/reel/DeWmGf7T950/embed",
-        "description": "2026년, 욕실 온풍기 구매 기준이 완전히 달라졌습니다.🔥 작년에 제가 욕실 온풍기 살 때 꼭 확인하라고 말씀드렸던 6가지, 기억하시나요? ✅ 방수등급 ✅ 무타공 설치 가능 여부 ✅ 송풍구 각도 ✅ 소비전력 ✅ 디자인 ✅ 전선 & 콘센트 구조 그런데 올해부터는 이것만"
-    },
-    {
-        "id": 188,
-        "title": "쓰레기통 고를 때 다들 자동 센서만 보는데,",
-        "client": "오브룸(OVROOM)",
-        "category": [
-            "BRAND"
-        ],
-        "orientation": "portrait",
-        "thumbnail": "thumbnails/thumb_188.jpg",
-        "videoUrl": "https://www.instagram.com/reel/DbsDbt1PvVc/embed",
-        "description": "쓰레기통 고를 때 다들 자동 센서만 보는데, 사실 제일 힘든 건 쓰레기 봉투를 비울 때예요. 오브룸 센스빈은 전용 봉투의 조이개 끈을 당기면 봉투 입구가 알아서 조여져 따로 묶을 필요가 없어요! 새 봉투를 갈아 끼울 때도 대충 걸치고 뚜껑만 닫으면 안에서 송풍 팬이 작"
-    },
-    {
-        "id": 189,
-        "title": "이게 바로 피클볼입니다 🏓🔥",
-        "client": "CNU SPOREXㅣ충남대학교 스포렉스",
-        "category": [
-            "SPORTS"
-        ],
-        "orientation": "portrait",
-        "thumbnail": "thumbnails/thumb_189.jpg",
-        "videoUrl": "https://www.instagram.com/reel/DVLfXToEcFd/embed",
-        "description": "이게 바로 피클볼입니다 🏓🔥 배드민턴 같기도 하고 탁구 같기도 하고 테니스 같기도 한데… 아뇨! 이거 피클볼입니다 피클볼! 트랜드를 아는 사람은 모르는 사람이 없다구요 😆 라켓 한 번 잡으면 시간 순삭. 땀은 폭발. 스트레스는 삭제🔥 근데 웃긴 건 이렇게 재밌는데 살이"
-    },
-    {
-        "id": 190,
-        "title": "[카드뉴스] “좋은 시술을 받으려면 꼭 서울까지 가야 할까요?” 🤔",
-        "client": "닥터새새(닥터튠즈의원)",
-        "category": [
-            "BEAUTY"
-        ],
-        "orientation": "portrait",
-        "thumbnail": "thumbnails/thumb_190.jpg",
-        "videoUrl": "https://www.instagram.com/p/Ddi82R1Ev0R/embed",
-        "description": "“좋은 시술을 받으려면 꼭 서울까지 가야 할까요?” 🤔 저는 아니라고 생각합니다. 저는 대구에서 태어나 중·고등학교를 다녔고, 이곳에서 결혼하고 아이를 낳았습니다. 대구는 저에게 단순히 병원을 개원한 지역이 아니라 제 삶이 고스란히 담겨 있는 고향이에요. 🏡 저 역시 "
-    },
-    {
-        "id": 191,
-        "title": "[카드뉴스] 🌊 9월 THALASSO 문제성 복부 집중관리",
-        "client": "Neul Bodre | 늘보드레 | 당신의 피부를 늘 보드랍게 | 대표 원장 오아영",
-        "category": [
-            "BEAUTY"
-        ],
-        "orientation": "portrait",
-        "thumbnail": "thumbnails/thumb_191.jpg",
-        "videoUrl": "https://www.instagram.com/p/DdD8FJ7GsoM/embed",
-        "description": "🌊 9월 THALASSO 문제성 복부 집중관리 살은 빠졌지만 복부 탄력과 라인이 여전히 고민이라면? 👀 9월, 복부 슬리밍 + 탄력 케어를 함께 시작해보세요! 해양수 미네랄 탈라소 테라피와 문제성 복부 집중 테크닉으로 붓고 무거운 복부, 팽만감과 떨어진 탄력까지 세심하"
-    },
-    {
-        "id": 192,
-        "title": "[카드뉴스] 욕실의 기준을 다시 세웁니다.",
-        "client": "에어리어",
-        "category": [
-            "BRAND"
-        ],
-        "orientation": "portrait",
-        "thumbnail": "thumbnails/thumb_192.jpg",
-        "videoUrl": "https://www.instagram.com/p/DdqYgdlk1yL/embed",
-        "description": "욕실의 기준을 다시 세웁니다. 추운 욕실에 들어가서 온풍기가 따뜻해지기를 기다리는 시간까지 줄이고 싶었습니다. 그래서 에어리어 이즘온풍기는 더 빠르고, 더 편리하고, 더 스마트하게 새로워졌습니다. 욕실에 들어가기 전 미리 켜두는 앱 원격 제어, 원하는 시간에 맞춰 사용"
-    },
-    {
         "id": 56,
         "title": "Instagram Reel DUsIfnhEs4y",
         "client": "Instagram",
@@ -1184,6 +740,378 @@ const works = [
         "description": "Instagram Reel content."
     },
     {
+        "id": 82,
+        "title": "Instagram Reel DHdqtHHvJJv",
+        "client": "Instagram",
+        "category": [
+            "BRAND"
+        ],
+        "orientation": "portrait",
+        "thumbnail": "thumbnails/thumb_82.jpg",
+        "videoUrl": "https://www.instagram.com/reel/DHdqtHHvJJv/embed",
+        "description": "Instagram Reel content."
+    },
+    {
+        "id": 61,
+        "title": "Instagram Reel DUU3U4Nj9Oy",
+        "client": "Instagram",
+        "category": [
+            "BRAND"
+        ],
+        "orientation": "portrait",
+        "thumbnail": "thumbnails/thumb_61.jpg",
+        "videoUrl": "https://www.instagram.com/reel/DUU3U4Nj9Oy/embed",
+        "description": "Instagram Reel content."
+    },
+    {
+        "id": 62,
+        "title": "Instagram Reel DTsarj4FIAl",
+        "client": "Instagram",
+        "category": [
+            "BRAND"
+        ],
+        "orientation": "portrait",
+        "thumbnail": "thumbnails/thumb_62.jpg",
+        "videoUrl": "https://www.instagram.com/reel/DTsarj4FIAl/embed",
+        "description": "Instagram Reel content."
+    },
+    {
+        "id": 65,
+        "title": "Instagram Reel DSARTElEvOg",
+        "client": "Instagram",
+        "category": [
+            "BRAND"
+        ],
+        "orientation": "portrait",
+        "thumbnail": "thumbnails/thumb_65.jpg",
+        "videoUrl": "https://www.instagram.com/reel/DSARTElEvOg/embed",
+        "description": "Instagram Reel content."
+    },
+    {
+        "id": 59,
+        "title": "Instagram Reel DGDvPqESLjF",
+        "client": "Instagram",
+        "category": [
+            "BRAND"
+        ],
+        "orientation": "portrait",
+        "thumbnail": "thumbnails/thumb_59.jpg",
+        "videoUrl": "https://www.instagram.com/reel/DGDvPqESLjF/embed",
+        "description": "Instagram Reel content."
+    },
+    {
+        "id": 69,
+        "title": "Instagram Reel DQhVtwJkuUQ",
+        "client": "Instagram",
+        "category": [
+            "BRAND"
+        ],
+        "orientation": "portrait",
+        "thumbnail": "thumbnails/thumb_69.jpg",
+        "videoUrl": "https://www.instagram.com/reel/DQhVtwJkuUQ/embed",
+        "description": "Instagram Reel content."
+    },
+    {
+        "id": 68,
+        "title": "Instagram Reel DQ9fLHUEv3Y",
+        "client": "Instagram",
+        "category": [
+            "BRAND"
+        ],
+        "orientation": "portrait",
+        "thumbnail": "thumbnails/thumb_68.jpg",
+        "videoUrl": "https://www.instagram.com/reel/DQ9fLHUEv3Y/embed",
+        "description": "Instagram Reel content."
+    },
+    {
+        "id": 67,
+        "title": "Instagram Reel DRCoTnqkouY",
+        "client": "Instagram",
+        "category": [
+            "BRAND"
+        ],
+        "orientation": "portrait",
+        "thumbnail": "thumbnails/thumb_67.jpg",
+        "videoUrl": "https://www.instagram.com/reel/DRCoTnqkouY/embed",
+        "description": "Instagram Reel content."
+    },
+    {
+        "id": 101,
+        "title": "쇼츠 (Shorts)",
+        "client": "Instagram",
+        "category": [
+            "BRAND"
+        ],
+        "orientation": "portrait",
+        "thumbnail": "thumbnails/thumb_101.jpg",
+        "videoUrl": "https://www.instagram.com/reel/DMsRLOYybjI/embed",
+        "description": "Vertical video content."
+    },
+    {
+        "id": 172,
+        "title": "Your body drinks water.",
+        "client": "Mirabelle Korea",
+        "category": [
+            "BEAUTY"
+        ],
+        "orientation": "portrait",
+        "thumbnail": "thumbnails/thumb_172.jpg",
+        "videoUrl": "https://www.instagram.com/reel/DYzbn4jvepj/embed",
+        "description": "Your body drinks water. Your skin wants it too. 💧 HyaColla delivers deep hydration with Hyaluronic Acid + Collagen care for skin that feels fresh, plu"
+    },
+    {
+        "id": 173,
+        "title": "Some things change every day.",
+        "client": "Mirabelle Korea",
+        "category": [
+            "BEAUTY"
+        ],
+        "orientation": "portrait",
+        "thumbnail": "thumbnails/thumb_173.jpg",
+        "videoUrl": "https://www.instagram.com/reel/DYUiEgZPFkU/embed",
+        "description": "Some things change every day. The weather, the mood, the routine. But your skin always asks for the same thing — hydration. 💧 Powered by Hyaluronic Ac"
+    },
+    {
+        "id": 171,
+        "title": "Different moments. Different moods. Same hydration...",
+        "client": "Mirabelle Korea",
+        "category": [
+            "BEAUTY"
+        ],
+        "orientation": "portrait",
+        "thumbnail": "thumbnails/thumb_171.jpg",
+        "videoUrl": "https://www.instagram.com/reel/DYj-xxSh0JC/embed",
+        "description": "Different moments. Different moods. Same hydration. 💧 Pick up hydration. Get better skin. Wherever the day goes, HyaColla keeps skin feeling deeply hy"
+    },
+    {
+        "id": 174,
+        "title": "Fresh greens, fresh care, fresh skin. 🌿",
+        "client": "Mirabelle Korea",
+        "category": [
+            "BEAUTY"
+        ],
+        "orientation": "portrait",
+        "thumbnail": "thumbnails/thumb_174.jpg",
+        "videoUrl": "https://www.instagram.com/reel/DY6Z8oEP02V/embed",
+        "description": "Fresh greens, fresh care, fresh skin. 🌿 A calming skincare reset with the MIRABELLE Cica-Pep Intensive Line — made to soothe, cleanse, balance, and re"
+    },
+    {
+        "id": 166,
+        "title": "Plot twist: Dowon wasn’t being weird. He was tryin...",
+        "client": "Mirabelle TV",
+        "category": [
+            "BEAUTY"
+        ],
+        "orientation": "portrait",
+        "thumbnail": "thumbnails/thumb_166.jpg",
+        "videoUrl": "https://www.instagram.com/reel/DZhB0S1BGnF/embed",
+        "description": "Plot twist: Dowon wasn’t being weird. He was trying his best. 😭🇮🇳 Dowon just wanted to be part of the India talk! And honestly, isn’t that kind of ado"
+    },
+    {
+        "id": 165,
+        "title": "POV: You got left out of the India conversation… s...",
+        "client": "Mirabelle TV",
+        "category": [
+            "BEAUTY"
+        ],
+        "orientation": "portrait",
+        "thumbnail": "thumbnails/thumb_165.jpg",
+        "videoUrl": "https://www.instagram.com/reel/DZowOnwy9zf/embed",
+        "description": "POV: You got left out of the India conversation… so now you’re in your full Dowon Namaste era. 🇮🇳😭 Are you Team Dowon or Team Everyone? Comment below "
+    },
+    {
+        "id": 164,
+        "title": "When the chaotic Gen Z new hire becomes the office...",
+        "client": "Mirabelle TV",
+        "category": [
+            "BEAUTY"
+        ],
+        "orientation": "portrait",
+        "thumbnail": "thumbnails/thumb_164.jpg",
+        "videoUrl": "https://www.instagram.com/reel/Da2wLhwBtHJ/embed",
+        "description": "When the chaotic Gen Z new hire becomes the office content guru overnight… only for your reel to get 61 views. 😭 Who are you in the Mirabelle Office—S"
+    },
+    {
+        "id": 167,
+        "title": "POV: You accidentally exposed your skincare habits...",
+        "client": "Mirabelle TV",
+        "category": [
+            "BEAUTY"
+        ],
+        "orientation": "portrait",
+        "thumbnail": "thumbnails/thumb_167.jpg",
+        "videoUrl": "https://www.instagram.com/reel/DX_7pXthpUQ/embed",
+        "description": "POV: You accidentally exposed your skincare habits in a Korean beauty office 💀 One skipped face wash turned into a full-scale skincare intervention. N"
+    },
+    {
+        "id": 87,
+        "title": "쇼츠 (Shorts)",
+        "client": "Instagram",
+        "category": [
+            "BRAND"
+        ],
+        "orientation": "portrait",
+        "thumbnail": "thumbnails/thumb_87.jpg",
+        "videoUrl": "https://www.instagram.com/reel/DD153vky7gc/embed",
+        "description": "Vertical video content."
+    },
+    {
+        "id": 86,
+        "title": "쇼츠 (Shorts)",
+        "client": "Instagram",
+        "category": [
+            "BRAND"
+        ],
+        "orientation": "portrait",
+        "thumbnail": "thumbnails/thumb_86.jpg",
+        "videoUrl": "https://www.instagram.com/reel/DD7JO-ry1mL/embed",
+        "description": "Vertical video content."
+    },
+    {
+        "id": 85,
+        "title": "쇼츠 (Shorts)",
+        "client": "Instagram",
+        "category": [
+            "BRAND"
+        ],
+        "orientation": "portrait",
+        "thumbnail": "thumbnails/thumb_85.jpg",
+        "videoUrl": "https://www.instagram.com/reel/DEX20xjS8KP/embed",
+        "description": "Vertical video content."
+    },
+    {
+        "id": 66,
+        "title": "Instagram Reel DRPaZ8pEkZu",
+        "client": "Instagram",
+        "category": [
+            "BRAND"
+        ],
+        "orientation": "portrait",
+        "thumbnail": "thumbnails/thumb_66.jpg",
+        "videoUrl": "https://www.instagram.com/reel/DRPaZ8pEkZu/embed",
+        "description": "Instagram Reel content."
+    },
+    {
+        "id": 114,
+        "title": "쇼츠 (Shorts)",
+        "client": "Instagram",
+        "category": [
+            "BRAND"
+        ],
+        "orientation": "portrait",
+        "thumbnail": "thumbnails/thumb_114.jpg",
+        "videoUrl": "https://www.instagram.com/reel/DQomVcwicD7/embed",
+        "description": "Vertical video content."
+    },
+    {
+        "id": 112,
+        "title": "(클린본)셀레오스",
+        "client": "Vimeo",
+        "category": [
+            "BRAND"
+        ],
+        "orientation": "portrait",
+        "thumbnail": "thumbnails/thumb_112.jpg",
+        "videoUrl": "https://player.vimeo.com/video/1167993641",
+        "description": "Vertical video content."
+    },
+    {
+        "id": 191,
+        "title": "[카드뉴스] 🌊 9월 THALASSO 문제성 복부 집중관리",
+        "client": "Neul Bodre | 늘보드레 | 당신의 피부를 늘 보드랍게 | 대표 원장 오아영",
+        "category": [
+            "BEAUTY"
+        ],
+        "orientation": "portrait",
+        "thumbnail": "thumbnails/thumb_191.jpg",
+        "videoUrl": "https://www.instagram.com/p/DdD8FJ7GsoM/embed",
+        "description": "🌊 9월 THALASSO 문제성 복부 집중관리 살은 빠졌지만 복부 탄력과 라인이 여전히 고민이라면? 👀 9월, 복부 슬리밍 + 탄력 케어를 함께 시작해보세요! 해양수 미네랄 탈라소 테라피와 문제성 복부 집중 테크닉으로 붓고 무거운 복부, 팽만감과 떨어진 탄력까지 세심하"
+    },
+    {
+        "id": 113,
+        "title": "쇼츠 (Shorts)",
+        "client": "Instagram",
+        "category": [
+            "BRAND"
+        ],
+        "orientation": "portrait",
+        "thumbnail": "thumbnails/thumb_113.jpg",
+        "videoUrl": "https://www.instagram.com/reel/DQoyGT3icUf/embed",
+        "description": "Vertical video content."
+    },
+    {
+        "id": 162,
+        "title": "Creamy, smooth, and made to melt into your skin. 🤍",
+        "client": "Mirabelle Korea",
+        "category": [
+            "BEAUTY"
+        ],
+        "orientation": "portrait",
+        "thumbnail": "thumbnails/thumb_162.jpg",
+        "videoUrl": "https://www.instagram.com/reel/Dc3f480BnRC/embed",
+        "description": "Creamy, smooth, and made to melt into your skin. 🤍 Meet the texture of Mirabelle Micro Code PDRN Revive Cream — a soft, moisture-rich formula that spr"
+    },
+    {
+        "id": 163,
+        "title": "A slow morning, a fresh wash, and a moment of care...",
+        "client": "Mirabelle Korea",
+        "category": [
+            "BEAUTY"
+        ],
+        "orientation": "portrait",
+        "thumbnail": "thumbnails/thumb_163.jpg",
+        "videoUrl": "https://www.instagram.com/reel/Dbx-XFPBnWM/embed",
+        "description": "A slow morning, a fresh wash, and a moment of care worth taking everywhere. 🤍🧳 From cleansing the scalp to softening every strand, the MIRABELLE Core "
+    },
+    {
+        "id": 170,
+        "title": "A quiet picnic in the forest. 🌿",
+        "client": "Mirabelle Korea",
+        "category": [
+            "BEAUTY"
+        ],
+        "orientation": "portrait",
+        "thumbnail": "thumbnails/thumb_170.jpg",
+        "videoUrl": "https://www.instagram.com/reel/DXzDwZBh--R/embed",
+        "description": "A quiet picnic in the forest. 🌿 Just like nature calming everything around it, our skin sometimes needs a moment to reset too. Mirabelle Korea CicaPep"
+    },
+    {
+        "id": 169,
+        "title": "Start your morning with deep hydration. ✨",
+        "client": "Mirabelle Korea",
+        "category": [
+            "BEAUTY"
+        ],
+        "orientation": "portrait",
+        "thumbnail": "thumbnails/thumb_169.jpg",
+        "videoUrl": "https://www.instagram.com/reel/DXhCMREhCwP/embed",
+        "description": "Start your morning with deep hydration. ✨ Powered by Hyaluronic Acid and Collagen, the HyaColla line helps replenish moisture, smooth skin texture, an"
+    },
+    {
+        "id": 168,
+        "title": "POV: new sunscreen dropped and your team leader di...",
+        "client": "Mirabelle TV",
+        "category": [
+            "BEAUTY"
+        ],
+        "orientation": "portrait",
+        "thumbnail": "thumbnails/thumb_168.jpg",
+        "videoUrl": "https://www.instagram.com/reel/DXwe9PKSO9H/embed",
+        "description": "POV: new sunscreen dropped and your team leader didn’t get it first… 😬 suddenly everything you do is “wrong” but don’t worry… it’s just “office life” "
+    },
+    {
+        "id": 16,
+        "title": "Instagram: Cinematic Reel",
+        "client": "@1ndian2wins",
+        "category": [
+            "FASHION"
+        ],
+        "orientation": "portrait",
+        "thumbnail": "images/works/thumb_hq_16.jpg",
+        "videoUrl": "https://www.instagram.com/reel/DTfRhxVE6f9/embed",
+        "description": "A premium cinematic expression exploring style through Instagram Reels."
+    },
+    {
         "id": 132,
         "title": "오브룸 미니고데기 리뷰",
         "client": "ovroom.korea",
@@ -1208,78 +1136,6 @@ const works = [
         "description": "공감 100%! 한번만 빌려달라는 친구와의 유쾌한 일상을 담았습니다."
     },
     {
-        "id": 16,
-        "title": "Instagram: Cinematic Reel",
-        "client": "@1ndian2wins",
-        "category": [
-            "FASHION"
-        ],
-        "orientation": "portrait",
-        "thumbnail": "images/works/thumb_hq_16.jpg",
-        "videoUrl": "https://www.instagram.com/reel/DTfRhxVE6f9/embed",
-        "description": "A premium cinematic expression exploring style through Instagram Reels."
-    },
-    {
-        "id": 59,
-        "title": "Instagram Reel DGDvPqESLjF",
-        "client": "Instagram",
-        "category": [
-            "BRAND"
-        ],
-        "orientation": "portrait",
-        "thumbnail": "thumbnails/thumb_59.jpg",
-        "videoUrl": "https://www.instagram.com/reel/DGDvPqESLjF/embed",
-        "description": "Instagram Reel content."
-    },
-    {
-        "id": 113,
-        "title": "쇼츠 (Shorts)",
-        "client": "Instagram",
-        "category": [
-            "BRAND"
-        ],
-        "orientation": "portrait",
-        "thumbnail": "thumbnails/thumb_113.jpg",
-        "videoUrl": "https://www.instagram.com/reel/DQoyGT3icUf/embed",
-        "description": "Vertical video content."
-    },
-    {
-        "id": 87,
-        "title": "쇼츠 (Shorts)",
-        "client": "Instagram",
-        "category": [
-            "BRAND"
-        ],
-        "orientation": "portrait",
-        "thumbnail": "thumbnails/thumb_87.jpg",
-        "videoUrl": "https://www.instagram.com/reel/DD153vky7gc/embed",
-        "description": "Vertical video content."
-    },
-    {
-        "id": 85,
-        "title": "쇼츠 (Shorts)",
-        "client": "Instagram",
-        "category": [
-            "BRAND"
-        ],
-        "orientation": "portrait",
-        "thumbnail": "thumbnails/thumb_85.jpg",
-        "videoUrl": "https://www.instagram.com/reel/DEX20xjS8KP/embed",
-        "description": "Vertical video content."
-    },
-    {
-        "id": 86,
-        "title": "쇼츠 (Shorts)",
-        "client": "Instagram",
-        "category": [
-            "BRAND"
-        ],
-        "orientation": "portrait",
-        "thumbnail": "thumbnails/thumb_86.jpg",
-        "videoUrl": "https://www.instagram.com/reel/DD7JO-ry1mL/embed",
-        "description": "Vertical video content."
-    },
-    {
         "id": 104,
         "title": "쇼츠 (Shorts)",
         "client": "YouTube",
@@ -1290,18 +1146,6 @@ const works = [
         "thumbnail": "thumbnails/thumb_104.jpg",
         "videoUrl": "https://www.youtube.com/embed/2UN95KIYAY8",
         "description": "Vertical video content."
-    },
-    {
-        "id": 72,
-        "title": "미라벨 코리아 인스타그램 (Mirabelle Korea on Instagram)",
-        "client": "미라벨 코리아 (Mirabelle Korea)",
-        "category": [
-            "BEAUTY"
-        ],
-        "orientation": "portrait",
-        "thumbnail": "thumbnails/thumb_72.jpg",
-        "videoUrl": "https://www.instagram.com/reel/DN_JgdcEvTd/embed",
-        "description": "102 likes, 15 comments - mirabellekorea on August 30, 2025"
     },
     {
         "id": 73,
@@ -1340,16 +1184,112 @@ const works = [
         "description": "인도를 위한 K-솔루션. 다양한 기후와 피부 타입에 맞춘 현지화된 K-뷰티 스킨케어를 소개합니다."
     },
     {
-        "id": 18,
-        "title": "오방 히터: 오리지널리티 (Obang Heater)",
-        "client": "오방 히터 (Obang Heater)",
+        "id": 115,
+        "title": "쇼츠 (Shorts)",
+        "client": "Instagram",
         "category": [
             "BRAND"
         ],
         "orientation": "portrait",
-        "thumbnail": "images/works/thumb_hq_18.jpg",
-        "videoUrl": "https://www.instagram.com/reel/DRwggvgk791/embed",
-        "description": "기술력에 대한 브랜드의 자신감. 세계 최초 상단 하이라이트 가열 구조를 가진 오방난로의 오리지널리티를 강조합니다."
+        "thumbnail": "thumbnails/thumb_115.jpg",
+        "videoUrl": "https://www.instagram.com/reel/DRlgi0ZE5xy/embed",
+        "description": "Vertical video content."
+    },
+    {
+        "id": 180,
+        "title": "한창 놀 나이 16살에 아득바득 밤샘 아르바이트하면서",
+        "client": "늘 오늘해",
+        "category": [
+            "VIRAL"
+        ],
+        "orientation": "portrait",
+        "thumbnail": "thumbnails/thumb_180.jpg",
+        "videoUrl": "https://www.instagram.com/reel/DZ4tj1uu5g4/embed",
+        "description": "한창 놀 나이 16살에 아득바득 밤샘 아르바이트하면서 동생 키우고, 동생 앞에서 울 수도 없고, 힘들고 지쳐도 꾹 참아왔던 이런 저, 어때요? 붐업? 붐따? 눌러줘🫶 K-장녀 야호~! #소녀가장 #띠동갑 #막둥이 #K장녀 #자매"
+    },
+    {
+        "id": 184,
+        "title": "이번 생활스포츠지도사 2급 보디빌딩 필기시험, 진짜 어려웠어요…🥲",
+        "client": "늘 오늘해",
+        "category": [
+            "SPORTS"
+        ],
+        "orientation": "portrait",
+        "thumbnail": "thumbnails/thumb_184.jpg",
+        "videoUrl": "https://www.instagram.com/reel/DbDR7WSvvwD/embed",
+        "description": "이번 생활스포츠지도사 2급 보디빌딩 필기시험, 진짜 어려웠어요…🥲 저 같은 헬린이는 혼자였다면 절대 못 붙었을 거예요. 도와주신 선생님들, 선배님들, 그리고 함께 준비한 친구들 모두 정말 감사합니다! 🥹 필기에서 떨어질 줄 알고 실기 준비를 전혀 안 했는데… 과연 실기"
+    },
+    {
+        "id": 183,
+        "title": "나랑 같이 득근할 사람? 😏",
+        "client": "늘 오늘해",
+        "category": [
+            "SPORTS"
+        ],
+        "orientation": "portrait",
+        "thumbnail": "thumbnails/thumb_183.jpg",
+        "videoUrl": "https://www.instagram.com/reel/DaSUUnDNTjn/embed",
+        "description": "나랑 같이 득근할 사람? 😏 #득근 #건강 #운동 #운동일지 #대전"
+    },
+    {
+        "id": 77,
+        "title": "Instagram Reel DLm4l5yP0ar",
+        "client": "Instagram",
+        "category": [
+            "BRAND"
+        ],
+        "orientation": "portrait",
+        "thumbnail": "thumbnails/thumb_77.jpg",
+        "videoUrl": "https://www.instagram.com/reel/DLm4l5yP0ar/embed",
+        "description": "Instagram Reel content."
+    },
+    {
+        "id": 78,
+        "title": "Instagram Reel DLsV2s1PKuF",
+        "client": "Instagram",
+        "category": [
+            "BRAND"
+        ],
+        "orientation": "portrait",
+        "thumbnail": "thumbnails/thumb_78.jpg",
+        "videoUrl": "https://www.instagram.com/reel/DLsV2s1PKuF/embed",
+        "description": "Instagram Reel content."
+    },
+    {
+        "id": 79,
+        "title": "Instagram Reel DLkSfvav3Cv",
+        "client": "Instagram",
+        "category": [
+            "BRAND"
+        ],
+        "orientation": "portrait",
+        "thumbnail": "thumbnails/thumb_79.jpg",
+        "videoUrl": "https://www.instagram.com/reel/DLkSfvav3Cv/embed",
+        "description": "Instagram Reel content."
+    },
+    {
+        "id": 76,
+        "title": "Instagram Reel DMhLBwjRb4r",
+        "client": "Instagram",
+        "category": [
+            "BRAND"
+        ],
+        "orientation": "portrait",
+        "thumbnail": "thumbnails/thumb_76.jpg",
+        "videoUrl": "https://www.instagram.com/reel/DMhLBwjRb4r/embed",
+        "description": "Instagram Reel content."
+    },
+    {
+        "id": 188,
+        "title": "쓰레기통 고를 때 다들 자동 센서만 보는데,",
+        "client": "오브룸(OVROOM)",
+        "category": [
+            "BRAND"
+        ],
+        "orientation": "portrait",
+        "thumbnail": "thumbnails/thumb_188.jpg",
+        "videoUrl": "https://www.instagram.com/reel/DbsDbt1PvVc/embed",
+        "description": "쓰레기통 고를 때 다들 자동 센서만 보는데, 사실 제일 힘든 건 쓰레기 봉투를 비울 때예요. 오브룸 센스빈은 전용 봉투의 조이개 끈을 당기면 봉투 입구가 알아서 조여져 따로 묶을 필요가 없어요! 새 봉투를 갈아 끼울 때도 대충 걸치고 뚜껑만 닫으면 안에서 송풍 팬이 작"
     },
     {
         "id": 138,
@@ -1364,64 +1304,40 @@ const works = [
         "description": "Vertical video content."
     },
     {
-        "id": 66,
-        "title": "Instagram Reel DRPaZ8pEkZu",
+        "id": 157,
+        "title": "팀원들이 나를 피하는 진짜 이유 #리더십 #소통법",
+        "client": "옆집대표 임지은",
+        "category": [
+            "BRAND"
+        ],
+        "orientation": "portrait",
+        "thumbnail": "thumbnails/thumb_157.jpg",
+        "videoUrl": "https://www.youtube.com/embed/VPjKsoBHiBI",
+        "description": "옆집대표 임지은의 세로형 숏폼 영상 콘텐츠입니다."
+    },
+    {
+        "id": 63,
+        "title": "Instagram Reel DSmJE5pkjn4",
         "client": "Instagram",
         "category": [
             "BRAND"
         ],
         "orientation": "portrait",
-        "thumbnail": "thumbnails/thumb_66.jpg",
-        "videoUrl": "https://www.instagram.com/reel/DRPaZ8pEkZu/embed",
+        "thumbnail": "thumbnails/thumb_63.jpg",
+        "videoUrl": "https://www.instagram.com/reel/DSmJE5pkjn4/embed",
         "description": "Instagram Reel content."
     },
     {
-        "id": 82,
-        "title": "Instagram Reel DHdqtHHvJJv",
+        "id": 95,
+        "title": "쇼츠 (Shorts)",
         "client": "Instagram",
         "category": [
             "BRAND"
         ],
         "orientation": "portrait",
-        "thumbnail": "thumbnails/thumb_82.jpg",
-        "videoUrl": "https://www.instagram.com/reel/DHdqtHHvJJv/embed",
-        "description": "Instagram Reel content."
-    },
-    {
-        "id": 128,
-        "title": "한의사가 맥 짚을 때 잘생기면 위험한 이유",
-        "client": "@rodamcora",
-        "category": [
-            "VIRAL"
-        ],
-        "orientation": "portrait",
-        "thumbnail": "thumbnails/thumb_128.jpg",
-        "videoUrl": "https://www.youtube.com/embed/4DMQj-Fs9sU",
-        "description": "흉지사 한의원 쇼츠! 부정맥과 관련된 재미있는 의학 정보입니다."
-    },
-    {
-        "id": 129,
-        "title": "한의사 출근룩 얼마면 될까?",
-        "client": "@rodamcora",
-        "category": [
-            "VIRAL"
-        ],
-        "orientation": "portrait",
-        "thumbnail": "thumbnails/thumb_129.jpg",
-        "videoUrl": "https://www.youtube.com/embed/osv4ys0DvUs",
-        "description": "한의사의 출근룩을 알아보는 가벼운 브이로그 쇼츠입니다."
-    },
-    {
-        "id": 130,
-        "title": "민생지원금? 오늘 바로 오시죠!",
-        "client": "@rodamcora",
-        "category": [
-            "BRAND"
-        ],
-        "orientation": "portrait",
-        "thumbnail": "thumbnails/thumb_130.jpg",
-        "videoUrl": "https://www.youtube.com/embed/pqF8Q-lrl1Y",
-        "description": "민생소비쿠폰 활용 꿀팁을 전하는 흉지사 한의원 정보 쇼츠입니다."
+        "thumbnail": "thumbnails/thumb_95.jpg",
+        "videoUrl": "https://www.instagram.com/reel/DQ9g-gFEgRd/embed",
+        "description": "Vertical video content."
     },
     {
         "id": 131,
@@ -1448,16 +1364,40 @@ const works = [
         "description": "글로벌 키보드 브랜드 AJAZZ의 국내 런칭 소식을 담은 숏폼 광고입니다."
     },
     {
-        "id": 135,
-        "title": "얼굴이 까매진 진짜 이유?",
-        "client": "ecowon",
+        "id": 109,
+        "title": "쇼츠 (Shorts)",
+        "client": "YouTube",
         "category": [
-            "VIRAL"
+            "BRAND"
         ],
         "orientation": "portrait",
-        "thumbnail": "thumbnails/thumb_135.jpg",
-        "videoUrl": "https://www.instagram.com/reel/DPjDPPHEprP/embed",
-        "description": "BBQ 그릴 열기 때문일까요? 코믹한 상황 설정이 돋보이는 릴스입니다."
+        "thumbnail": "thumbnails/thumb_109.jpg",
+        "videoUrl": "https://www.youtube.com/embed/pX6bTtZu2Q0",
+        "description": "Vertical video content."
+    },
+    {
+        "id": 89,
+        "title": "쇼츠 (Shorts)",
+        "client": "Instagram",
+        "category": [
+            "BRAND"
+        ],
+        "orientation": "portrait",
+        "thumbnail": "thumbnails/thumb_89.jpg",
+        "videoUrl": "https://www.instagram.com/reel/DUs0e9nEi_2/embed",
+        "description": "Vertical video content."
+    },
+    {
+        "id": 72,
+        "title": "미라벨 코리아 인스타그램 (Mirabelle Korea on Instagram)",
+        "client": "미라벨 코리아 (Mirabelle Korea)",
+        "category": [
+            "BEAUTY"
+        ],
+        "orientation": "portrait",
+        "thumbnail": "thumbnails/thumb_72.jpg",
+        "videoUrl": "https://www.instagram.com/reel/DN_JgdcEvTd/embed",
+        "description": "102 likes, 15 comments - mirabellekorea on August 30, 2025"
     },
     {
         "id": 136,
@@ -1484,99 +1424,39 @@ const works = [
         "description": "명절 음식으로 야식을 즐기는 외국인 친구들의 리액션을 담았습니다."
     },
     {
-        "id": 88,
-        "title": "쇼츠 (Shorts)",
+        "id": 71,
+        "title": "Instagram Reel DO7wD-mktSZ",
         "client": "Instagram",
         "category": [
             "BRAND"
         ],
         "orientation": "portrait",
-        "thumbnail": "thumbnails/thumb_88.jpg",
-        "videoUrl": "https://www.instagram.com/reel/DMcOU6HyuC4/embed",
-        "description": "Vertical video content."
+        "thumbnail": "thumbnails/thumb_71.jpg",
+        "videoUrl": "https://www.instagram.com/reel/DO7wD-mktSZ/embed",
+        "description": "Instagram Reel content."
     },
     {
-        "id": 89,
-        "title": "쇼츠 (Shorts)",
+        "id": 75,
+        "title": "Instagram Reel DMh8t9TyTGA",
         "client": "Instagram",
         "category": [
             "BRAND"
         ],
         "orientation": "portrait",
-        "thumbnail": "thumbnails/thumb_89.jpg",
-        "videoUrl": "https://www.instagram.com/reel/DUs0e9nEi_2/embed",
-        "description": "Vertical video content."
+        "thumbnail": "thumbnails/thumb_75.jpg",
+        "videoUrl": "https://www.instagram.com/reel/DMh8t9TyTGA/embed",
+        "description": "Instagram Reel content."
     },
     {
-        "id": 90,
+        "id": 102,
         "title": "쇼츠 (Shorts)",
         "client": "Instagram",
         "category": [
             "BRAND"
         ],
         "orientation": "portrait",
-        "thumbnail": "thumbnails/thumb_90.jpg",
-        "videoUrl": "https://www.instagram.com/reel/DPB1SBUEmNv/embed",
-        "description": "Vertical video content."
-    },
-    {
-        "id": 95,
-        "title": "쇼츠 (Shorts)",
-        "client": "Instagram",
-        "category": [
-            "BRAND"
-        ],
-        "orientation": "portrait",
-        "thumbnail": "thumbnails/thumb_95.jpg",
-        "videoUrl": "https://www.instagram.com/reel/DQ9g-gFEgRd/embed",
-        "description": "Vertical video content."
-    },
-    {
-        "id": 92,
-        "title": "쇼츠 (Shorts)",
-        "client": "Instagram",
-        "category": [
-            "BRAND"
-        ],
-        "orientation": "portrait",
-        "thumbnail": "thumbnails/thumb_92.jpg",
-        "videoUrl": "https://www.instagram.com/reel/DS1l47rko8w/embed",
-        "description": "Vertical video content."
-    },
-    {
-        "id": 93,
-        "title": "쇼츠 (Shorts)",
-        "client": "Instagram",
-        "category": [
-            "BRAND"
-        ],
-        "orientation": "portrait",
-        "thumbnail": "thumbnails/thumb_93.jpg",
-        "videoUrl": "https://www.instagram.com/reel/DRjW8DKEmIZ/embed",
-        "description": "Vertical video content."
-    },
-    {
-        "id": 94,
-        "title": "쇼츠 (Shorts)",
-        "client": "Instagram",
-        "category": [
-            "BRAND"
-        ],
-        "orientation": "portrait",
-        "thumbnail": "thumbnails/thumb_94.jpg",
-        "videoUrl": "https://www.instagram.com/reel/DRKWve_Ev-A/embed",
-        "description": "Vertical video content."
-    },
-    {
-        "id": 91,
-        "title": "쇼츠 (Shorts)",
-        "client": "Instagram",
-        "category": [
-            "BRAND"
-        ],
-        "orientation": "portrait",
-        "thumbnail": "thumbnails/thumb_91.jpg",
-        "videoUrl": "https://www.instagram.com/reel/DT4HEE0kj8E/embed",
+        "thumbnail": "thumbnails/thumb_102.jpg",
+        "videoUrl": "https://www.instagram.com/reel/DMrnyX0ShXa/embed",
         "description": "Vertical video content."
     },
     {
@@ -1592,15 +1472,15 @@ const works = [
         "description": "Vertical video content."
     },
     {
-        "id": 97,
+        "id": 93,
         "title": "쇼츠 (Shorts)",
         "client": "Instagram",
         "category": [
             "BRAND"
         ],
         "orientation": "portrait",
-        "thumbnail": "thumbnails/thumb_97.jpg",
-        "videoUrl": "https://www.instagram.com/reel/DQUU3LrErHE/embed",
+        "thumbnail": "thumbnails/thumb_93.jpg",
+        "videoUrl": "https://www.instagram.com/reel/DRjW8DKEmIZ/embed",
         "description": "Vertical video content."
     },
     {
@@ -1616,18 +1496,6 @@ const works = [
         "description": "Vertical video content."
     },
     {
-        "id": 99,
-        "title": "쇼츠 (Shorts)",
-        "client": "Instagram",
-        "category": [
-            "BRAND"
-        ],
-        "orientation": "portrait",
-        "thumbnail": "thumbnails/thumb_99.jpg",
-        "videoUrl": "https://www.instagram.com/reel/DNPrZS3SW2k/embed",
-        "description": "Vertical video content."
-    },
-    {
         "id": 100,
         "title": "쇼츠 (Shorts)",
         "client": "Instagram",
@@ -1640,28 +1508,460 @@ const works = [
         "description": "Vertical video content."
     },
     {
-        "id": 101,
+        "id": 90,
         "title": "쇼츠 (Shorts)",
         "client": "Instagram",
         "category": [
             "BRAND"
         ],
         "orientation": "portrait",
-        "thumbnail": "thumbnails/thumb_101.jpg",
-        "videoUrl": "https://www.instagram.com/reel/DMsRLOYybjI/embed",
+        "thumbnail": "thumbnails/thumb_90.jpg",
+        "videoUrl": "https://www.instagram.com/reel/DPB1SBUEmNv/embed",
         "description": "Vertical video content."
     },
     {
-        "id": 102,
+        "id": 94,
         "title": "쇼츠 (Shorts)",
         "client": "Instagram",
         "category": [
             "BRAND"
         ],
         "orientation": "portrait",
-        "thumbnail": "thumbnails/thumb_102.jpg",
-        "videoUrl": "https://www.instagram.com/reel/DMrnyX0ShXa/embed",
+        "thumbnail": "thumbnails/thumb_94.jpg",
+        "videoUrl": "https://www.instagram.com/reel/DRKWve_Ev-A/embed",
         "description": "Vertical video content."
+    },
+    {
+        "id": 92,
+        "title": "쇼츠 (Shorts)",
+        "client": "Instagram",
+        "category": [
+            "BRAND"
+        ],
+        "orientation": "portrait",
+        "thumbnail": "thumbnails/thumb_92.jpg",
+        "videoUrl": "https://www.instagram.com/reel/DS1l47rko8w/embed",
+        "description": "Vertical video content."
+    },
+    {
+        "id": 80,
+        "title": "Instagram Reel DK4wqsYv283",
+        "client": "Instagram",
+        "category": [
+            "BRAND"
+        ],
+        "orientation": "portrait",
+        "thumbnail": "thumbnails/thumb_80.jpg",
+        "videoUrl": "https://www.instagram.com/reel/DK4wqsYv283/embed",
+        "description": "Instagram Reel content."
+    },
+    {
+        "id": 81,
+        "title": "Instagram Reel DKn_IJyyAD-",
+        "client": "Instagram",
+        "category": [
+            "BRAND"
+        ],
+        "orientation": "portrait",
+        "thumbnail": "thumbnails/thumb_81.jpg",
+        "videoUrl": "https://www.instagram.com/reel/DKn_IJyyAD-/embed",
+        "description": "Instagram Reel content."
+    },
+    {
+        "id": 14,
+        "title": "TikTok: Creative Edit",
+        "client": "@1ndian2wins",
+        "category": [
+            "BRAND"
+        ],
+        "orientation": "portrait",
+        "thumbnail": "images/works/thumb_hq_14.jpg",
+        "videoUrl": "https://www.tiktok.com/embed/v2/7600738854332665109",
+        "description": "Fast-paced vertical edit specifically designed for TikTok's visual language."
+    },
+    {
+        "id": 15,
+        "title": "Threads: Storytelling",
+        "client": "@1ndian2wins",
+        "category": [
+            "BRAND"
+        ],
+        "orientation": "portrait",
+        "thumbnail": "images/works/thumb_hq_15.jpg",
+        "videoUrl": "https://www.threads.net/@1ndian2wins/post/DUCiAXOAWxT/embed",
+        "description": "Engaging and raw storytelling produced for the Threads platform."
+    },
+    {
+        "id": 83,
+        "title": "Instagram Reel DGYApawy_Gg",
+        "client": "Instagram",
+        "category": [
+            "BRAND"
+        ],
+        "orientation": "portrait",
+        "thumbnail": "thumbnails/thumb_83.jpg",
+        "videoUrl": "https://www.instagram.com/reel/DGYApawy_Gg/embed",
+        "description": "Instagram Reel content."
+    },
+    {
+        "id": 84,
+        "title": "Instagram Reel DGTO7rAyA9U",
+        "client": "Instagram",
+        "category": [
+            "BRAND"
+        ],
+        "orientation": "portrait",
+        "thumbnail": "thumbnails/thumb_84.jpg",
+        "videoUrl": "https://www.instagram.com/reel/DGTO7rAyA9U/embed",
+        "description": "Instagram Reel content."
+    },
+    {
+        "id": 158,
+        "title": "GPT로 자소서 쓰면 면접도 못 가고 탈락하는 이유 #취업 #자소서",
+        "client": "옆집대표 임지은",
+        "category": [
+            "BRAND"
+        ],
+        "orientation": "portrait",
+        "thumbnail": "thumbnails/thumb_158.jpg",
+        "videoUrl": "https://www.youtube.com/embed/LhqmKYnkmu8",
+        "description": "옆집대표 임지은의 세로형 숏폼 영상 콘텐츠입니다."
+    },
+    {
+        "id": 175,
+        "title": "Expectation: cinematic Mirabelle commercial",
+        "client": "Mirabelle TV",
+        "category": [
+            "BEAUTY"
+        ],
+        "orientation": "portrait",
+        "thumbnail": "thumbnails/thumb_175.jpg",
+        "videoUrl": "https://www.instagram.com/reel/DXdvl6EEh-r/embed",
+        "description": "Expectation: cinematic Mirabelle commercial Reality: this. #mirabelleoffice #kbeauty #fyp #reelsindia #iphone17"
+    },
+    {
+        "id": 18,
+        "title": "오방 히터: 오리지널리티 (Obang Heater)",
+        "client": "오방 히터 (Obang Heater)",
+        "category": [
+            "BRAND"
+        ],
+        "orientation": "portrait",
+        "thumbnail": "images/works/thumb_hq_18.jpg",
+        "videoUrl": "https://www.instagram.com/reel/DRwggvgk791/embed",
+        "description": "기술력에 대한 브랜드의 자신감. 세계 최초 상단 하이라이트 가열 구조를 가진 오방난로의 오리지널리티를 강조합니다."
+    },
+    {
+        "id": 159,
+        "title": "얼굴이 완벽하면 더 예쁠까? 😳 #얼굴비대칭 #미의기준 #동안",
+        "client": "라인만드는 의사 DR.권병소",
+        "category": [
+            "BEAUTY"
+        ],
+        "orientation": "portrait",
+        "thumbnail": "thumbnails/thumb_159.jpg",
+        "videoUrl": "https://www.youtube.com/embed/kJnA7Bwlk4I",
+        "description": "라인만드는 의사 DR.권병소의 세로형 숏폼 영상 콘텐츠입니다."
+    },
+    {
+        "id": 161,
+        "title": "나이 들면 얼굴이...?😳",
+        "client": "라인만드는 의사 DR.권병소",
+        "category": [
+            "BEAUTY"
+        ],
+        "orientation": "portrait",
+        "thumbnail": "thumbnails/thumb_161.jpg",
+        "videoUrl": "https://www.youtube.com/embed/s0bgLvMmwlU",
+        "description": "라인만드는 의사 DR.권병소의 세로형 숏폼 영상 콘텐츠입니다."
+    },
+    {
+        "id": 160,
+        "title": "40대인데 30대같은 동안 특징 #노화 #리프팅 #레이저 #시술",
+        "client": "라인만드는 의사 DR.권병소",
+        "category": [
+            "BEAUTY"
+        ],
+        "orientation": "portrait",
+        "thumbnail": "thumbnails/thumb_160.jpg",
+        "videoUrl": "https://www.youtube.com/embed/gKRd58gsDHM",
+        "description": "라인만드는 의사 DR.권병소의 세로형 숏폼 영상 콘텐츠입니다."
+    },
+    {
+        "id": 177,
+        "title": "A Korean CEO.",
+        "client": "Mirabelle TV",
+        "category": [
+            "BEAUTY"
+        ],
+        "orientation": "portrait",
+        "thumbnail": "thumbnails/thumb_177.jpg",
+        "videoUrl": "https://www.instagram.com/reel/DUDe9S4Et4u/embed",
+        "description": "A Korean CEO. 30 years between Korea and India 🇰🇷🇮🇳 That’s how this brand was born. This brand didn’t happen overnight. For decades, our CEO traveled "
+    },
+    {
+        "id": 178,
+        "title": "“좋은 시술을 받으려면 꼭 서울까지 가야 할까요?” 🤔",
+        "client": "닥터새새(닥터튠즈의원)",
+        "category": [
+            "BEAUTY"
+        ],
+        "orientation": "portrait",
+        "thumbnail": "thumbnails/thumb_178.jpg",
+        "videoUrl": "https://www.instagram.com/p/DcqKW61pZP5/embed",
+        "description": "“좋은 시술을 받으려면 꼭 서울까지 가야 할까요?” 🤔 저는 아니라고 생각합니다. 저는 대구에서 태어나 중·고등학교를 다녔고, 결혼도 하고 아이도 낳으며 계속 대구에서 살아왔어요. 🏡 그만큼 대구를 정말 좋아하고, 애정이 많은 사람입니다. ❤️ 물론 솔직히 말하면 서울"
+    },
+    {
+        "id": 179,
+        "title": "저도 학생 시절, 여드름 때문에 3년 정도 정말 많이 힘들었어요.",
+        "client": "닥터새새(닥터튠즈의원)",
+        "category": [
+            "BEAUTY"
+        ],
+        "orientation": "portrait",
+        "thumbnail": "thumbnails/thumb_179.jpg",
+        "videoUrl": "https://www.instagram.com/p/DcswtwtphWU/embed",
+        "description": "저도 학생 시절, 여드름 때문에 3년 정도 정말 많이 힘들었어요. 거울을 보는 것도 스트레스였고, 외모 때문에 자신감이 떨어질 때도 많았습니다. 그러다 피부과에서 여러 시술을 받으면서 피부가 조금씩 좋아졌고, 신기하게 피부만 좋아진 게 아니라 제 자신감도 함께 돌아오기"
+    },
+    {
+        "id": 181,
+        "title": "4일 연속 먹은 자궁근종 관리 식단 🤍",
+        "client": "늘 오늘해",
+        "category": [
+            "VIRAL"
+        ],
+        "orientation": "portrait",
+        "thumbnail": "thumbnails/thumb_181.jpg",
+        "videoUrl": "https://www.instagram.com/reel/DXMKq5NkoIQ/embed",
+        "description": "4일 연속 먹은 자궁근종 관리 식단 🤍 주문 실수로 팽이버섯 20개, 순두부 10봉지나 시켜버렸어요 😅 “이걸 언제 다 먹지…?” 싶더라고요 원래는 순두부찌개용이었는데 유통기한 때문에 계속 먹기엔 속이 부담될 것 같아서 고민하다가 만들어본 팽이 순두부탕! 🍲 그리고 마"
+    },
+    {
+        "id": 156,
+        "title": "돈 한 푼 없이 창업한 직장인, 결국 대표가 된 이 #창업 #직장인공감 #직장생활",
+        "client": "옆집대표 임지은",
+        "category": [
+            "BRAND"
+        ],
+        "orientation": "portrait",
+        "thumbnail": "thumbnails/thumb_156.jpg",
+        "videoUrl": "https://www.youtube.com/embed/jrcBQZH-a_M",
+        "description": "옆집대표 임지은의 세로형 숏폼 영상 콘텐츠입니다."
+    },
+    {
+        "id": 176,
+        "title": "Everyone thought Mirabelle Korea’s cream sales dro...",
+        "client": "Mirabelle TV",
+        "category": [
+            "BEAUTY"
+        ],
+        "orientation": "portrait",
+        "thumbnail": "thumbnails/thumb_176.jpg",
+        "videoUrl": "https://www.instagram.com/reel/DWY1Ezjh4En/embed",
+        "description": "Everyone thought Mirabelle Korea’s cream sales dropped in March… but that wasn’t the real reason 👀 The creams sold out faster than Mirabelle expected,"
+    },
+    {
+        "id": 192,
+        "title": "[카드뉴스] 욕실의 기준을 다시 세웁니다.",
+        "client": "에어리어",
+        "category": [
+            "BRAND"
+        ],
+        "orientation": "portrait",
+        "thumbnail": "thumbnails/thumb_192.jpg",
+        "videoUrl": "https://www.instagram.com/p/DdqYgdlk1yL/embed",
+        "description": "욕실의 기준을 다시 세웁니다. 추운 욕실에 들어가서 온풍기가 따뜻해지기를 기다리는 시간까지 줄이고 싶었습니다. 그래서 에어리어 이즘온풍기는 더 빠르고, 더 편리하고, 더 스마트하게 새로워졌습니다. 욕실에 들어가기 전 미리 켜두는 앱 원격 제어, 원하는 시간에 맞춰 사용"
+    },
+    {
+        "id": 190,
+        "title": "[카드뉴스] “좋은 시술을 받으려면 꼭 서울까지 가야 할까요?” 🤔",
+        "client": "닥터새새(닥터튠즈의원)",
+        "category": [
+            "BEAUTY"
+        ],
+        "orientation": "portrait",
+        "thumbnail": "thumbnails/thumb_190.jpg",
+        "videoUrl": "https://www.instagram.com/p/Ddi82R1Ev0R/embed",
+        "description": "“좋은 시술을 받으려면 꼭 서울까지 가야 할까요?” 🤔 저는 아니라고 생각합니다. 저는 대구에서 태어나 중·고등학교를 다녔고, 이곳에서 결혼하고 아이를 낳았습니다. 대구는 저에게 단순히 병원을 개원한 지역이 아니라 제 삶이 고스란히 담겨 있는 고향이에요. 🏡 저 역시 "
+    },
+    {
+        "id": 97,
+        "title": "쇼츠 (Shorts)",
+        "client": "Instagram",
+        "category": [
+            "BRAND"
+        ],
+        "orientation": "portrait",
+        "thumbnail": "thumbnails/thumb_97.jpg",
+        "videoUrl": "https://www.instagram.com/reel/DQUU3LrErHE/embed",
+        "description": "Vertical video content."
+    },
+    {
+        "id": 91,
+        "title": "쇼츠 (Shorts)",
+        "client": "Instagram",
+        "category": [
+            "BRAND"
+        ],
+        "orientation": "portrait",
+        "thumbnail": "thumbnails/thumb_91.jpg",
+        "videoUrl": "https://www.instagram.com/reel/DT4HEE0kj8E/embed",
+        "description": "Vertical video content."
+    },
+    {
+        "id": 129,
+        "title": "한의사 출근룩 얼마면 될까?",
+        "client": "@rodamcora",
+        "category": [
+            "VIRAL"
+        ],
+        "orientation": "portrait",
+        "thumbnail": "thumbnails/thumb_129.jpg",
+        "videoUrl": "https://www.youtube.com/embed/osv4ys0DvUs",
+        "description": "한의사의 출근룩을 알아보는 가벼운 브이로그 쇼츠입니다."
+    },
+    {
+        "id": 128,
+        "title": "한의사가 맥 짚을 때 잘생기면 위험한 이유",
+        "client": "@rodamcora",
+        "category": [
+            "VIRAL"
+        ],
+        "orientation": "portrait",
+        "thumbnail": "thumbnails/thumb_128.jpg",
+        "videoUrl": "https://www.youtube.com/embed/4DMQj-Fs9sU",
+        "description": "흉지사 한의원 쇼츠! 부정맥과 관련된 재미있는 의학 정보입니다."
+    },
+    {
+        "id": 187,
+        "title": "2026년, 욕실 온풍기 구매 기준이 완전히 달라졌습니다.🔥",
+        "client": "에어리어",
+        "category": [
+            "BRAND"
+        ],
+        "orientation": "portrait",
+        "thumbnail": "thumbnails/thumb_187.jpg",
+        "videoUrl": "https://www.instagram.com/reel/DeWmGf7T950/embed",
+        "description": "2026년, 욕실 온풍기 구매 기준이 완전히 달라졌습니다.🔥 작년에 제가 욕실 온풍기 살 때 꼭 확인하라고 말씀드렸던 6가지, 기억하시나요? ✅ 방수등급 ✅ 무타공 설치 가능 여부 ✅ 송풍구 각도 ✅ 소비전력 ✅ 디자인 ✅ 전선 & 콘센트 구조 그런데 올해부터는 이것만"
+    },
+    {
+        "id": 182,
+        "title": "자궁이 7cm인데",
+        "client": "늘 오늘해",
+        "category": [
+            "VIRAL"
+        ],
+        "orientation": "portrait",
+        "thumbnail": "thumbnails/thumb_182.jpg",
+        "videoUrl": "https://www.instagram.com/reel/DV0cwYskhWD/embed",
+        "description": "자궁이 7cm인데 저는 최대 10cm 자궁근종 8개를 수술했어요. 디엠으로 자궁근종 수술 후기를 많이 물어봐 주셔서 제가 겪은 입원 과정과 수술 준비를 브이로그로 기록해 보기로 했어요. 막상 입원하고 나니까 “아… 진짜 수술이구나” 그때부터 긴장이 확 되더라고요. 수술"
+    },
+    {
+        "id": 185,
+        "title": "“사실 저희는 병원 공사 실적이 단 한 건도 없습니다.”",
+        "client": "블루핀 | 사무실인테리어•오피스인테리어•스페이스컨설팅",
+        "category": [
+            "BRAND"
+        ],
+        "orientation": "portrait",
+        "thumbnail": "thumbnails/thumb_185.jpg",
+        "videoUrl": "https://www.instagram.com/reel/DdQfk0KCNyI/embed",
+        "description": "“사실 저희는 병원 공사 실적이 단 한 건도 없습니다.” 이미 업계 1위 업체가 내정되어 있던 상황. 객관적으로 보면 고객이 저희를 선택할 이유가 전혀 없었습니다. 하지만 지키지 못할 말은 하지 않는 솔직함, 그리고 끝까지 책임지겠다는 진정성을 보여드렸습니다. 결국 4"
+    },
+    {
+        "id": 186,
+        "title": "아모레퍼시픽은 왜 본사 건물을 개방했을까?🤔",
+        "client": "블루핀 | 사무실인테리어•오피스인테리어•스페이스컨설팅",
+        "category": [
+            "BRAND"
+        ],
+        "orientation": "portrait",
+        "thumbnail": "thumbnails/thumb_186.jpg",
+        "videoUrl": "https://www.instagram.com/reel/DeJjl15CBY4/embed",
+        "description": "아모레퍼시픽은 왜 본사 건물을 개방했을까?🤔 외부인의 출입이 제한적인 일반적인 사옥과 달리, 서울 용산의 아모레퍼시픽 본사는 누구에게나 열려 있는 공간을 만들었습니다. 자연과 건축이 하나가 되고, 수직적인 위계보다 사람과 사람의 관계가 연결되도록. 좋은 오피스는 단순히"
+    },
+    {
+        "id": 135,
+        "title": "얼굴이 까매진 진짜 이유?",
+        "client": "ecowon",
+        "category": [
+            "VIRAL"
+        ],
+        "orientation": "portrait",
+        "thumbnail": "thumbnails/thumb_135.jpg",
+        "videoUrl": "https://www.instagram.com/reel/DPjDPPHEprP/embed",
+        "description": "BBQ 그릴 열기 때문일까요? 코믹한 상황 설정이 돋보이는 릴스입니다."
+    },
+    {
+        "id": 189,
+        "title": "이게 바로 피클볼입니다 🏓🔥",
+        "client": "CNU SPOREXㅣ충남대학교 스포렉스",
+        "category": [
+            "SPORTS"
+        ],
+        "orientation": "portrait",
+        "thumbnail": "thumbnails/thumb_189.jpg",
+        "videoUrl": "https://www.instagram.com/reel/DVLfXToEcFd/embed",
+        "description": "이게 바로 피클볼입니다 🏓🔥 배드민턴 같기도 하고 탁구 같기도 하고 테니스 같기도 한데… 아뇨! 이거 피클볼입니다 피클볼! 트랜드를 아는 사람은 모르는 사람이 없다구요 😆 라켓 한 번 잡으면 시간 순삭. 땀은 폭발. 스트레스는 삭제🔥 근데 웃긴 건 이렇게 재밌는데 살이"
+    },
+    {
+        "id": 88,
+        "title": "쇼츠 (Shorts)",
+        "client": "Instagram",
+        "category": [
+            "BRAND"
+        ],
+        "orientation": "portrait",
+        "thumbnail": "thumbnails/thumb_88.jpg",
+        "videoUrl": "https://www.instagram.com/reel/DMcOU6HyuC4/embed",
+        "description": "Vertical video content."
+    },
+    {
+        "id": 130,
+        "title": "민생지원금? 오늘 바로 오시죠!",
+        "client": "@rodamcora",
+        "category": [
+            "BRAND"
+        ],
+        "orientation": "portrait",
+        "thumbnail": "thumbnails/thumb_130.jpg",
+        "videoUrl": "https://www.youtube.com/embed/pqF8Q-lrl1Y",
+        "description": "민생소비쿠폰 활용 꿀팁을 전하는 흉지사 한의원 정보 쇼츠입니다."
+    },
+    {
+        "id": 99,
+        "title": "쇼츠 (Shorts)",
+        "client": "Instagram",
+        "category": [
+            "BRAND"
+        ],
+        "orientation": "portrait",
+        "thumbnail": "thumbnails/thumb_99.jpg",
+        "videoUrl": "https://www.instagram.com/reel/DNPrZS3SW2k/embed",
+        "description": "Vertical video content."
+    },
+    {
+        "id": 108,
+        "title": "쇼츠 (Shorts)",
+        "client": "Instagram",
+        "category": [
+            "BRAND"
+        ],
+        "orientation": "portrait",
+        "thumbnail": "thumbnails/thumb_108.jpg",
+        "videoUrl": "https://www.instagram.com/reel/DUVT2c8EVfq/embed",
+        "description": "Vertical video content."
+    },
+    {
+        "id": 17,
+        "title": "메종 드 오뉴: 파티 풀 (Maison de Onu)",
+        "client": "메종 드 오뉴 (Maison de Onu)",
+        "category": [
+            "BRAND"
+        ],
+        "orientation": "portrait",
+        "thumbnail": "images/works/thumb_hq_17.jpg",
+        "videoUrl": "https://www.instagram.com/reel/DTU3zQAkV14/embed",
+        "description": "광주 프리미엄 풀빌라 '메종드오누'. 청결하고 프라이빗한 파티풀 시설의 매력을 담은 감성 영상입니다."
     },
     {
         "id": 103,
@@ -1712,30 +2012,6 @@ const works = [
         "description": "Vertical video content."
     },
     {
-        "id": 108,
-        "title": "쇼츠 (Shorts)",
-        "client": "Instagram",
-        "category": [
-            "BRAND"
-        ],
-        "orientation": "portrait",
-        "thumbnail": "thumbnails/thumb_108.jpg",
-        "videoUrl": "https://www.instagram.com/reel/DUVT2c8EVfq/embed",
-        "description": "Vertical video content."
-    },
-    {
-        "id": 109,
-        "title": "쇼츠 (Shorts)",
-        "client": "YouTube",
-        "category": [
-            "BRAND"
-        ],
-        "orientation": "portrait",
-        "thumbnail": "thumbnails/thumb_109.jpg",
-        "videoUrl": "https://www.youtube.com/embed/pX6bTtZu2Q0",
-        "description": "Vertical video content."
-    },
-    {
         "id": 110,
         "title": "쇼츠 (Shorts)",
         "client": "YouTube",
@@ -1757,42 +2033,6 @@ const works = [
         "orientation": "portrait",
         "thumbnail": "thumbnails/thumb_111.jpg",
         "videoUrl": "https://www.youtube.com/embed/4HmpWB2lZuA",
-        "description": "Vertical video content."
-    },
-    {
-        "id": 112,
-        "title": "(클린본)셀레오스",
-        "client": "Vimeo",
-        "category": [
-            "BRAND"
-        ],
-        "orientation": "portrait",
-        "thumbnail": "thumbnails/thumb_112.jpg",
-        "videoUrl": "https://player.vimeo.com/video/1167993641",
-        "description": "Vertical video content."
-    },
-    {
-        "id": 114,
-        "title": "쇼츠 (Shorts)",
-        "client": "Instagram",
-        "category": [
-            "BRAND"
-        ],
-        "orientation": "portrait",
-        "thumbnail": "thumbnails/thumb_114.jpg",
-        "videoUrl": "https://www.instagram.com/reel/DQomVcwicD7/embed",
-        "description": "Vertical video content."
-    },
-    {
-        "id": 115,
-        "title": "쇼츠 (Shorts)",
-        "client": "Instagram",
-        "category": [
-            "BRAND"
-        ],
-        "orientation": "portrait",
-        "thumbnail": "thumbnails/thumb_115.jpg",
-        "videoUrl": "https://www.instagram.com/reel/DRlgi0ZE5xy/embed",
         "description": "Vertical video content."
     },
     {
@@ -1844,54 +2084,6 @@ const works = [
         "description": "Instagram Reel content."
     },
     {
-        "id": 61,
-        "title": "Instagram Reel DUU3U4Nj9Oy",
-        "client": "Instagram",
-        "category": [
-            "BRAND"
-        ],
-        "orientation": "portrait",
-        "thumbnail": "thumbnails/thumb_61.jpg",
-        "videoUrl": "https://www.instagram.com/reel/DUU3U4Nj9Oy/embed",
-        "description": "Instagram Reel content."
-    },
-    {
-        "id": 62,
-        "title": "Instagram Reel DTsarj4FIAl",
-        "client": "Instagram",
-        "category": [
-            "BRAND"
-        ],
-        "orientation": "portrait",
-        "thumbnail": "thumbnails/thumb_62.jpg",
-        "videoUrl": "https://www.instagram.com/reel/DTsarj4FIAl/embed",
-        "description": "Instagram Reel content."
-    },
-    {
-        "id": 65,
-        "title": "Instagram Reel DSARTElEvOg",
-        "client": "Instagram",
-        "category": [
-            "BRAND"
-        ],
-        "orientation": "portrait",
-        "thumbnail": "thumbnails/thumb_65.jpg",
-        "videoUrl": "https://www.instagram.com/reel/DSARTElEvOg/embed",
-        "description": "Instagram Reel content."
-    },
-    {
-        "id": 63,
-        "title": "Instagram Reel DSmJE5pkjn4",
-        "client": "Instagram",
-        "category": [
-            "BRAND"
-        ],
-        "orientation": "portrait",
-        "thumbnail": "thumbnails/thumb_63.jpg",
-        "videoUrl": "https://www.instagram.com/reel/DSmJE5pkjn4/embed",
-        "description": "Instagram Reel content."
-    },
-    {
         "id": 64,
         "title": "Instagram Reel DSFa3bUEoTN",
         "client": "Instagram",
@@ -1901,42 +2093,6 @@ const works = [
         "orientation": "portrait",
         "thumbnail": "thumbnails/thumb_64.jpg",
         "videoUrl": "https://www.instagram.com/reel/DSFa3bUEoTN/embed",
-        "description": "Instagram Reel content."
-    },
-    {
-        "id": 67,
-        "title": "Instagram Reel DRCoTnqkouY",
-        "client": "Instagram",
-        "category": [
-            "BRAND"
-        ],
-        "orientation": "portrait",
-        "thumbnail": "thumbnails/thumb_67.jpg",
-        "videoUrl": "https://www.instagram.com/reel/DRCoTnqkouY/embed",
-        "description": "Instagram Reel content."
-    },
-    {
-        "id": 68,
-        "title": "Instagram Reel DQ9fLHUEv3Y",
-        "client": "Instagram",
-        "category": [
-            "BRAND"
-        ],
-        "orientation": "portrait",
-        "thumbnail": "thumbnails/thumb_68.jpg",
-        "videoUrl": "https://www.instagram.com/reel/DQ9fLHUEv3Y/embed",
-        "description": "Instagram Reel content."
-    },
-    {
-        "id": 69,
-        "title": "Instagram Reel DQhVtwJkuUQ",
-        "client": "Instagram",
-        "category": [
-            "BRAND"
-        ],
-        "orientation": "portrait",
-        "thumbnail": "thumbnails/thumb_69.jpg",
-        "videoUrl": "https://www.instagram.com/reel/DQhVtwJkuUQ/embed",
         "description": "Instagram Reel content."
     },
     {
@@ -1950,162 +2106,6 @@ const works = [
         "thumbnail": "thumbnails/thumb_70.jpg",
         "videoUrl": "https://www.instagram.com/reel/DOn4UymkiqQ/embed",
         "description": "Instagram Reel content."
-    },
-    {
-        "id": 71,
-        "title": "Instagram Reel DO7wD-mktSZ",
-        "client": "Instagram",
-        "category": [
-            "BRAND"
-        ],
-        "orientation": "portrait",
-        "thumbnail": "thumbnails/thumb_71.jpg",
-        "videoUrl": "https://www.instagram.com/reel/DO7wD-mktSZ/embed",
-        "description": "Instagram Reel content."
-    },
-    {
-        "id": 75,
-        "title": "Instagram Reel DMh8t9TyTGA",
-        "client": "Instagram",
-        "category": [
-            "BRAND"
-        ],
-        "orientation": "portrait",
-        "thumbnail": "thumbnails/thumb_75.jpg",
-        "videoUrl": "https://www.instagram.com/reel/DMh8t9TyTGA/embed",
-        "description": "Instagram Reel content."
-    },
-    {
-        "id": 76,
-        "title": "Instagram Reel DMhLBwjRb4r",
-        "client": "Instagram",
-        "category": [
-            "BRAND"
-        ],
-        "orientation": "portrait",
-        "thumbnail": "thumbnails/thumb_76.jpg",
-        "videoUrl": "https://www.instagram.com/reel/DMhLBwjRb4r/embed",
-        "description": "Instagram Reel content."
-    },
-    {
-        "id": 77,
-        "title": "Instagram Reel DLm4l5yP0ar",
-        "client": "Instagram",
-        "category": [
-            "BRAND"
-        ],
-        "orientation": "portrait",
-        "thumbnail": "thumbnails/thumb_77.jpg",
-        "videoUrl": "https://www.instagram.com/reel/DLm4l5yP0ar/embed",
-        "description": "Instagram Reel content."
-    },
-    {
-        "id": 78,
-        "title": "Instagram Reel DLsV2s1PKuF",
-        "client": "Instagram",
-        "category": [
-            "BRAND"
-        ],
-        "orientation": "portrait",
-        "thumbnail": "thumbnails/thumb_78.jpg",
-        "videoUrl": "https://www.instagram.com/reel/DLsV2s1PKuF/embed",
-        "description": "Instagram Reel content."
-    },
-    {
-        "id": 79,
-        "title": "Instagram Reel DLkSfvav3Cv",
-        "client": "Instagram",
-        "category": [
-            "BRAND"
-        ],
-        "orientation": "portrait",
-        "thumbnail": "thumbnails/thumb_79.jpg",
-        "videoUrl": "https://www.instagram.com/reel/DLkSfvav3Cv/embed",
-        "description": "Instagram Reel content."
-    },
-    {
-        "id": 80,
-        "title": "Instagram Reel DK4wqsYv283",
-        "client": "Instagram",
-        "category": [
-            "BRAND"
-        ],
-        "orientation": "portrait",
-        "thumbnail": "thumbnails/thumb_80.jpg",
-        "videoUrl": "https://www.instagram.com/reel/DK4wqsYv283/embed",
-        "description": "Instagram Reel content."
-    },
-    {
-        "id": 81,
-        "title": "Instagram Reel DKn_IJyyAD-",
-        "client": "Instagram",
-        "category": [
-            "BRAND"
-        ],
-        "orientation": "portrait",
-        "thumbnail": "thumbnails/thumb_81.jpg",
-        "videoUrl": "https://www.instagram.com/reel/DKn_IJyyAD-/embed",
-        "description": "Instagram Reel content."
-    },
-    {
-        "id": 83,
-        "title": "Instagram Reel DGYApawy_Gg",
-        "client": "Instagram",
-        "category": [
-            "BRAND"
-        ],
-        "orientation": "portrait",
-        "thumbnail": "thumbnails/thumb_83.jpg",
-        "videoUrl": "https://www.instagram.com/reel/DGYApawy_Gg/embed",
-        "description": "Instagram Reel content."
-    },
-    {
-        "id": 84,
-        "title": "Instagram Reel DGTO7rAyA9U",
-        "client": "Instagram",
-        "category": [
-            "BRAND"
-        ],
-        "orientation": "portrait",
-        "thumbnail": "thumbnails/thumb_84.jpg",
-        "videoUrl": "https://www.instagram.com/reel/DGTO7rAyA9U/embed",
-        "description": "Instagram Reel content."
-    },
-    {
-        "id": 14,
-        "title": "TikTok: Creative Edit",
-        "client": "@1ndian2wins",
-        "category": [
-            "BRAND"
-        ],
-        "orientation": "portrait",
-        "thumbnail": "images/works/thumb_hq_14.jpg",
-        "videoUrl": "https://www.tiktok.com/embed/v2/7600738854332665109",
-        "description": "Fast-paced vertical edit specifically designed for TikTok's visual language."
-    },
-    {
-        "id": 15,
-        "title": "Threads: Storytelling",
-        "client": "@1ndian2wins",
-        "category": [
-            "BRAND"
-        ],
-        "orientation": "portrait",
-        "thumbnail": "images/works/thumb_hq_15.jpg",
-        "videoUrl": "https://www.threads.net/@1ndian2wins/post/DUCiAXOAWxT/embed",
-        "description": "Engaging and raw storytelling produced for the Threads platform."
-    },
-    {
-        "id": 17,
-        "title": "메종 드 오뉴: 파티 풀 (Maison de Onu)",
-        "client": "메종 드 오뉴 (Maison de Onu)",
-        "category": [
-            "BRAND"
-        ],
-        "orientation": "portrait",
-        "thumbnail": "images/works/thumb_hq_17.jpg",
-        "videoUrl": "https://www.instagram.com/reel/DTU3zQAkV14/embed",
-        "description": "광주 프리미엄 풀빌라 '메종드오누'. 청결하고 프라이빗한 파티풀 시설의 매력을 담은 감성 영상입니다."
     }
 ];
 
